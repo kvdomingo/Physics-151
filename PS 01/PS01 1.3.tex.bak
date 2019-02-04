@@ -1,0 +1,53 @@
+\documentclass[12pt,a4paper,twocolumn]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{listings}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{Problem 1.3}
+
+\paragraph{(a)}
+For $N = 8$ particles, there are $2^N = 256$ possible microstates, and $N + 1 = 9$ possible macrostates. Via Pascal's triangle, one can, for reasonable values of $N$ and with a bit of work, determine the number of microstates for one macrostate:
+
+\begin{center}
+\begin{tabular}{>{$}l<{$}|*{9}{c}}
+\multicolumn{1}{l}{$N$} &&&&&&&&&\\\cline{1-1}
+0 &1&&&&&&\\
+1 &1&1&&&&&\\
+2 &1&2&1&&&&\\
+3 &1&3&3&1&&&\\
+4 &1&4&6&4&1&&\\
+5 &1&5&10&10&5&1&\\
+6 &1&6&15&20&15&6&1\\
+7 &1&7&21&35&35&21&7&1\\
+8 &1&8&28&56&70&56&28&8&1\\\hline
+\multicolumn{1}{l}{} &0&1&2&3&4&5&6&7&8\\\cline{2-10}
+\multicolumn{1}{l}{} &\multicolumn{9}{c}{$n$}
+\end{tabular}
+\end{center}
+
+Thus, for $n = 4$, $W(n) = 70$ and $P(n) = 70/256 \approx 27\%$. To generalize this for any $N$ and $n$ without having to explicitly write out Pascal's triangle, we can express the value for $n$ from a selection of $N$ using the combination notation $_N\mathrm{C}_n$, where
+
+\begin{equation}
+	_N\mathrm{C}_n = {N \choose n} = \frac{N!}{n!(N - n)!	}
+\end{equation}
+
+In other words, calculating for $_N\mathrm{C}_n$ yields the number of ways that $n$ particles out of $N$ can be in one partition of the box.
+
+\paragraph{(b)}
+The macrostate $n = N/2$ is much more probable than the macrostate $n = N$ because the macrostate $n = N/2$ is associated with more microstates that are indistinguishable from each other.
+
+
+\end{document}

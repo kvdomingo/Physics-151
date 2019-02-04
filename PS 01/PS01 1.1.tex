@@ -1,0 +1,51 @@
+\documentclass[12pt,a4paper,twocolumn]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{listings}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{Problem 1.1}
+
+\paragraph{(a)}
+For system with a number of particles $N = 6$, the system does not appear to show direction of time. For a system with a specified initial condition at a chosen time $t_0 = 0$, there is a time interval $\tau$ about $t_0$ wherein the directionality of time is obvious (transient period). This transient period is longer and more obvious as the number of particles $N$ is increased.
+
+\paragraph{(b)}
+As time progresses forward, the number of particles $n_1$, $n_2$, and $n_3$ in each third of the box all approach an equal value. As stated in (a), the directionality of time is apparent within time interval $\tau$. By allowing the system to run and approach steady-state, the directionality of time becomes an illusion.
+
+\paragraph{(c)}
+If the time shown in the plots is in terms of $\sigma (m/\epsilon)^{1/2}$, where $\sigma$ has units of length, $\epsilon$ of energy, and $m$ of mass, then
+
+\begin{align}
+	\sigma \sqrt{\frac{m}{\epsilon}} & = [\mathrm{m}]\sqrt{\frac{[\mathrm{kg}]}{[\mathrm{J}]}} \\
+	& = [\mathrm{m}] \sqrt{\frac{[\mathrm{kg}]}{[\mathrm{kg}][\mathrm{m}^2][\mathrm{s}^{-2}]}} \\
+	& = \sqrt{[\mathrm{s}^2]} \\
+	& = [\mathrm{s}]
+\end{align}
+
+For argon, with $\sigma = 3.4 \times 10^{-10}$ m, $\epsilon = 1.65 \times 10^{-21}$ J, and $m = 6.69 \times 10^{-26}$ kg, the real value for one unit of $\sigma (m/\epsilon)^{1/2}$ is \fbox{$2.16 \times 10^{-12}$ s}. Therefore, a simulation time of $t = 100$ corresponds to \fbox{$2.16 \times 10^{-10}$ s} in real time.
+
+\paragraph{(d)}
+For $N = 270$ particles starting at $t = 0$ until the particles are approximately evenly spread out, the direction of time is apparent for the transient period where the system attempts to attain equilibrium, which takes $\approx 4$ s. Beyond that, no directionality of time is apparent. Playing the animation in reverse also does not show any directionality of time, up to the point where the transient period kicks in. As stated in (a), the transient period is longer and obviates the directionality of time as the number $N$ of particles is increased.
+
+\paragraph{(e)}
+For the same conditions as (d) but considering the time only after $t = 20$, the system is well into the steady-state condition and no directionality of time can be observed for values of $N \in [1, 270]$.
+
+\paragraph{(f)}
+For $N = 270$, the simulation was paused at the time when the particles are approximately evenly distributed, at $t \approx 4$ s. The simulation was then resumed but in reverse speed. The particles were observed to return to their initial location, and continuing to play it in reverse shows the same behavior as if the simulation was being played at normal forward speed, albeit with the velocities reversed. This shows the deterministic and time-invariant characteristics of Newtonian motion, which implies that the notion of time and its directionality under Newtonian mechanics is an illusion that is obviated by setting up a system such that its initial conditions are not that of the ground state or steady state.
+
+\paragraph{(g)}
+For a system divided instead into two partitions, similar behavior is observed compared with the previous situations. The particles are confined to one partition initially at time $t = 0$, and shortly after starting the simulation, a transient period is observed to allow the particles to evenly distribute themselves in the system and reach steady state. Likewise, increasing the number of particles lengthens and obviates the directionality of time, after which such a sense disappears and the system is in equilibrium. The toroidal boundary conditions ensure that collisions with the bounding box (surface effects) do not affect the results of the simulation, and that all interactions are purely particle-to-particle.
+
+\end{document}

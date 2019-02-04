@@ -1,0 +1,30 @@
+\documentclass[12pt,a4paper,twocolumn]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{listings}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{Problem 1.5}
+
+\paragraph{(a)}
+Temperature was always described as the ``average kinetic energy of a system''. This is associated with the fact that more kinetic energy implies higher velocity, and the faster particles move or vibrate, the hotter the system is.
+
+\paragraph{(b)}
+Adding energy to a pot of water may or may not change its temperature, depending on the nature of the energy that was introduced. If potential energy was introduced by raising the pot's elevation, the water's temperature would most likely not change. However, if thermal energy was added by increasing the flame of the stove, its temperature would definitely increase.
+
+\paragraph{(c)}
+If hot coffee was left on a table in a room at standard room temperature for a significant duration of time, its temperature would decrease and eventually match that of the room temperature. This change in temperature did not happen out of nowhere: the coffee's heat was radiated into the surroundings, increasing the temperature of the room ever so slightly, in order to achieve thermal equilibrium.
+
+\end{document}

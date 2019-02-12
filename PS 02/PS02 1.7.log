@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  4 FEB 2019 10:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  6 FEB 2019 08:34
 entering extended mode
 **"./PS02 1.7.tex"
 ("PS02 1.7.tex"
@@ -707,14 +707,14 @@ G,.JBIG2,.JB2,.eps]
 * \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=4.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumntrue
+* \@twocolumnfalse
 * \@twosidefalse
 * \@mparswitchfalse
 * \@reversemarginfalse
@@ -849,63 +849,9 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
 
-Underfull \hbox (badness 2165) in paragraph at lines 26--27
-[]\OT1/cmr/bx/n/12 Liquid ther-mome-ter \OT1/cmr/m/n/12 - con-tains
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-\OT1/cmr/m/n/12 al-co-hol or mer-cury (in older
- []
-
-
-Underfull \hbox (badness 4792) in paragraph at lines 26--27
-\OT1/cmr/m/n/12 it-er-a-tions) that rely on ther-mal
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-\OT1/cmr/m/n/12 ex-pan-sion/-con-trac-tion. The
- []
-
-
-Underfull \hbox (badness 1371) in paragraph at lines 28--29
-[]\OT1/cmr/bx/n/12 Digital ther-mome-ter \OT1/cmr/m/n/12 - con-tains
- []
-
-
-Underfull \hbox (badness 6428) in paragraph at lines 28--29
-\OT1/cmr/m/n/12 a metal tip with a ther-mis-tor
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-\OT1/cmr/m/n/12 that re-sponds to changes in
- []
-
-
-Underfull \hbox (badness 7451) in paragraph at lines 28--29
-\OT1/cmr/m/n/12 tem-per-a-ture. The ther-mis-tor's
- []
-
-
-Underfull \hbox (badness 7273) in paragraph at lines 28--29
-\OT1/cmr/m/n/12 out-put cur-rent de-pends on the
- []
-
-
-Underfull \hbox (badness 1418) in paragraph at lines 28--29
-\OT1/cmr/m/n/12 sur-round-ing tem-per-a-ture, and the
- []
-
-
-Underfull \hbox (badness 7273) in paragraph at lines 32--33
-[]\OT1/cmr/m/n/12 These ther-mome-ters op-er-ate on the
- []
-
-
-Underfull \hbox (badness 1205) in paragraph at lines 34--35
-[]\OT1/cmr/m/n/12 The most es-sen-tial re-quire-ments for a
+Overfull \hbox (20.17702pt too wide) in paragraph at lines 26--27
+\OT1/cmr/m/n/12 me-ter on the ex-te-rior of the ther-mome-ter that cor-re-spond
+s to the sur-round-ing tem-per-a-ture. 
  []
 
 
@@ -919,7 +865,6 @@ See the caption package documentation for explanation.
 
 AED: lastpage setting LastPage
 [1{C:/Users/Kenneth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
@@ -935,16 +880,16 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
 Here is how much of TeX's memory you used:
  21467 strings out of 492973
  392603 string characters out of 3135926
- 448574 words of memory out of 3000000
+ 447568 words of memory out of 3000000
  25148 multiletter control sequences out of 15000+200000
  542492 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,16n,63p,400b,715s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,16n,63p,400b,723s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "PS02 1.7.pdf" (1 page, 46527 bytes).
+Output written on "PS02 1.7.pdf" (1 page, 46474 bytes).
 PDF statistics:
  32 PDF objects out of 1000 (max. 8388607)
  6 named destinations out of 1000 (max. 500000)

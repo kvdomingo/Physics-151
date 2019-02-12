@@ -1,0 +1,79 @@
+\documentclass[12pt,a4paper,twocolumn]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{Problem 2.21}
+\bigskip
+
+For the first bath,
+
+\begin{align}\label{eq:entropy1}
+	\Delta S_{11} &= C\ln{\left( \frac{T_b}{T_a} \right)} \\
+	&= 4184\ln{\left( \frac{298}{273} \right)} \nonumber \\
+	&= 366.6 \textrm{ J/K}
+\end{align}
+
+The energy transfer is
+
+\begin{align}
+	Q &= C \left( T_b - T_a \right) \\
+	&= 4184(25) \nonumber \\
+	&= 104 600 \textrm{ J}
+\end{align}
+
+So the entropy of the first bath is
+
+\begin{align}
+	\Delta S_{12} &= -\frac{Q}{T_b} \\
+	&= -\frac{104 600}{298} \nonumber \\
+	&= -351 \textrm{ J/K}
+\end{align}
+
+The total entropy change for the first bath is
+
+\begin{align}
+	\Delta S_1 &= 366.6 - 351 \\
+	&= 15.6 \textrm{ J/K}
+\end{align}
+
+Similarly, for the second bath,
+
+\begin{align}
+	\Delta S_{21} &= 4184\ln{\left( \frac{323}{298} \right)} \\
+	&= 337.1 \textrm{ J/K} \\
+	\Delta S_{22} &= -\frac{Q}{T_b} \\
+	&= -\frac{104 600}{323} \\
+	&= -323.8 \textrm{ J/K} \\
+	\Delta S_2 &= 337.1 - 323.8 \\
+	&= 13.3 \textrm{ J/K}
+\end{align}
+
+The total entropy change for both processes is then
+
+\begin{align}
+	\Delta S &= 15.6 + 13.3 \\
+\Aboxed{\Delta S&= 28.9 \textrm{ J/K}} \label{eq:answer1}
+\end{align}
+
+
+The value obtained is less than that of the water directly placed in contact with the $50^\circ$ bath.
+
+\end{document}

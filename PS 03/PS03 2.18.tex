@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper, twocolumn]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{Problem 2.18}
+\bigskip
+
+\begin{enumerate}[(a)]
+
+\item From the given equations,
+
+\begin{eqnarray}
+	W = C_V \left( T_2 - T_1 \right) \label{eq:workvol} \\
+	PV = \nu RT \label{eq:idealgas} \\
+	C_V = \frac{3}{2} \nu k_B \label{eq:volenergy}
+\end{eqnarray}
+
+Plugin \eqref{eq:idealgas} and \eqref{eq:volenergy} into \eqref{eq:workvol}:
+
+\begin{align}
+	W & = \frac{3}{2} \nu k_B \left( \frac{P_2 V_2}{\nu k_B} - \frac{P_1 V_1}{\nu k_B} \right) \nonumber \\
+	& = \frac{3}{2} \left( P_2 V_2 - P_1 V_1 \right)
+\end{align}
+
+Since $\gamma = \frac{5}{3}$ for monatomic ideal gas,
+
+\begin{align}
+	W & = \frac{\left( P_2 V_2 - P_1 V_1 \right)}{\frac{2}{3}} \nonumber \\
+	& = \frac{\left( P_2 V_2 - P_1 V_1 \right)}{\frac{5}{3} - \frac{3}{3}} \nonumber \\
+	\Aboxed{ W & = \frac{\left( P_2 V_2 - P_1 V_1 \right)}{\gamma - 1}} \label{eq:answer1}
+\end{align}
+
+\item From the given equations,
+
+\begin{eqnarray}
+	PV^\gamma = C \label{eq:constant} \\
+	W = -\int_{V_1}^{V_2} P(T,V) \dd{V} \label{eq:workint}
+\end{eqnarray}
+
+Isolate $P$ from \eqref{eq:constant} and plug into \eqref{eq:workint}:
+
+\begin{align}
+	W &= -\int_{V_1}^{V_2} C V^{-\gamma} \dd{V} \nonumber \\
+	& = -C \frac{V^{1 - \gamma}}{1 - \gamma} \bigg|_{V_1}^{V_2} \nonumber \\
+	& = \frac{1}{\gamma - 1}\left( CV_2^{1-\gamma} - CV_1^{1-\gamma} \right) \nonumber \\
+	& = \frac{1}{\gamma - 1}\left( CV_2^{-\gamma}V_2 - CV_1^{-\gamma}V_1 \right)
+\end{align}
+
+From \eqref{eq:constant},
+
+\begin{equation}
+	P = CV^{-\gamma}
+\end{equation}
+
+Therefore,
+
+\begin{equation}\label{eq:answer2}
+\boxed{	W = \frac{1}{\gamma - 1} \left( P_2 V_2 - P_1 V_1 \right) }
+\end{equation}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,105 @@
+\documentclass[12pt,a4paper,twocolumn]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{PS 17: Problem 2.24}
+\bigskip
+
+\begin{enumerate}[(a)]
+
+\item From the given
+
+\begin{equation}\label{eq:given}
+	\Delta S = \frac{3}{2} Nk \ln{\left( \frac{T_2}{T_1} \right)} + Nk \ln{\left(  \frac{V_2}{V_1} \right)}
+\end{equation}
+
+The change in entropy is zero for a quasistatic adiabatic process:
+
+\begin{align}
+	0 = \frac{3}{2} Nk \ln{\left( \frac{T_2}{T_1} \right)} &+ Nk \ln{\left(  \frac{V_2}{V_1} \right)} \\
+	\frac{3}{2} Nk \ln{\left( \frac{T_2}{T_1} \right)} &= -Nk \ln{\left(  \frac{V_2}{V_1} \right)} \\
+	Nk \ln{\left( \frac{T_2}{T_1} \right)} &= -\frac{2}{3} Nk \ln{\left(  \frac{V_2}{V_1} \right)} \\
+	\ln{\left( \frac{T_2}{T_1} \right)} &= -\frac{2}{3} \ln{\left(  \frac{V_2}{V_1} \right)} \label{eq:lnrelation}
+\end{align}
+
+Recall that for a monatomic ideal gas, $\gamma = \frac{5}{3}$. Expressing the constant coefficient on the RHS of \eqref{eq:lnrelation} in terms of $\gamma$,
+
+\begin{equation}\label{eq:gammarelation}
+	\gamma - 1 = \frac{5}{3} - 1 = \frac{2}{3}
+\end{equation}
+
+Plugging this into \eqref{eq:lnrelation},
+
+\begin{equation}
+	\ln{\left( \frac{T_2}{T_1} \right)} = -\left( \gamma - 1 \right) \ln{\left(  \frac{V_2}{V_1} \right)}
+\end{equation}
+
+By the power rule of exponentials,
+
+\begin{align}
+	\ln{\left( \frac{T_2}{T_1} \right)} &= -\ln{ \left[ \left( \frac{V_2}{V_1} \right)^{\left( \gamma - 1 \right) } \right] } \\
+	\ln{\left( \frac{T_2}{T_1} \right)} &= \ln{ \left[ \left( \frac{V_1}{V_2} \right)^{\left( \gamma - 1 \right) } \right] } \\
+	\left( \frac{T_2}{T_1} \right) &= \left[ \left( \frac{V_1}{V_2} \right)^{\left( \gamma - 1 \right) } \right] \\
+	\frac{T_2}{T_1} &= \frac{V_1^{\gamma - 1}}{V_2^{\gamma - 1}} \\
+	T_1 V_1^{\gamma - 1} &= T_2 V_2^{\gamma - 1}
+\end{align}
+
+Thus,
+
+\begin{equation}\label{eq:answer-a}
+	\boxed{
+	TV^{\gamma - 1} = C
+	}
+\end{equation}
+
+\item If the container is thermally insulated, $T_1 = T_2 = T$, and \eqref{eq:lnrelation} becomes
+
+\begin{align}
+	\Delta S &= \frac{3}{2} Nk \ln{\left( \frac{T}{T} \right)} + Nk \ln{\left(  \frac{V_2}{V_1} \right)} \nonumber \\
+	\Delta S &= \frac{3}{2} Nk \ln{\left( 1 \right)} + Nk \ln{\left(  \frac{V_2}{V_1} \right)} \nonumber \\
+	\Aboxed{
+		\Delta S &= Nk \ln{\left(  \frac{V_2}{V_1} \right)}
+	} \label{eq:answer-b}
+\end{align}
+
+\item From the ideal gas law,
+
+\begin{align}
+	PV = NkT \label{eq:idealgas} \\
+	V = \frac{NkT}{P} \label{eq:idealvol}
+\end{align}
+
+Plugging this into \eqref{eq:lnrelation},
+
+\begin{align}
+	\Delta S &= \frac{3}{2} Nk \ln{\left( \frac{T_2}{T_1} \right)} + Nk \ln{\left(  \frac{\frac{NkT_2}{P_2}}{\frac{NkT_1}{P_1}} \right)} \nonumber \\
+	&= \frac{3}{2} Nk \ln{\left( \frac{T_2}{T_1} \right)} + Nk \ln{\left(  \frac{T_2 P_1}{T_1 P_2} \right)} \nonumber \\
+	&= \frac{3}{2} Nk \ln{\left( \frac{T_2}{T_1} \right)} + Nk \ln{\left(  \frac{T_2}{T_1} \right)} \nonumber \\
+	&\qquad + Nk\ln{\left( \frac{P_1}{P_2} \right) } \nonumber \\
+	&= \frac{5}{2} Nk \ln{\left( \frac{T_2}{T_1} \right)} + Nk \ln{\left(  \frac{P_1}{P_2} \right)} \nonumber \\
+	\Aboxed{
+		\Delta S(T,P) &= \frac{5}{2} Nk \ln{\left( \frac{T_2}{T_1} \right)} + Nk \ln{\left(  \frac{P_1}{P_2} \right)}
+	} \label{eq:answer-c}
+\end{align}
+
+\end{enumerate}
+
+\end{document}

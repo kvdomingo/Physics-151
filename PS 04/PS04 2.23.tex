@@ -1,0 +1,119 @@
+\documentclass[12pt,a4paper,twocolumn]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{PS 16: Problem 2.23}
+\bigskip
+
+\begin{enumerate}[(a)]
+
+\item To show that
+
+\begin{equation}\label{eq:prove}
+	W = C_A \left( T_A - T \right) + C_B \left( T_B - T \right)
+\end{equation}
+
+given
+
+\begin{equation}\label{eq:giventemp}
+	T = T_A^{\frac{C_A}{C_A + C_B}} T_B^{\frac{C_B}{C_A + C_B}}
+\end{equation}
+
+The work done by an engine on bath A for the entire process is
+
+\begin{equation}\label{eq:workengine}
+	W = -P\dd{V}
+\end{equation}
+
+From the ideal gas law,
+
+\begin{equation}\label{eq:idealgas}
+	P\dd{V} = Nk_B \dd{T}
+\end{equation}
+
+the temperature of bath A, from $T_A$, approaches the equilibrium temperature $T$. Express $\dd{V}$ as
+
+\begin{equation}
+	\dd{V} = \frac{Nk_B \dd{T}}{P}
+\end{equation}
+
+Plugging this into \eqref{eq:workengine},
+
+\begin{align}
+	W & = -P \frac{Nk_B\dd{T}}{P} \nonumber \\
+	& = -Nk_B\dd{T} \nonumber \\
+	& = -Nk_B \left( T - T_A \right) \nonumber \\
+	& = Nk_B \left( T_A - T \right)
+\end{align}
+
+Define $C_A = N_A k_B$ as a constant inherent to bath A. The work done on bath A is
+
+\begin{equation}
+	W_A = C_A \left( T_A - T \right)
+\end{equation}
+
+Since the engine also does work on bath B, we can similarly define a constant inherent to bath B as $C_B = N_B k_B$. Consequently, 
+
+\begin{equation}
+	W_B = C_B \left( T_B - T \right)
+\end{equation}
+
+Thus, the total work done by the engine is
+
+\begin{eqnarray}
+	W = W_A + W_B \\
+	\Aboxed{ W = C_A \left( T_A - T \right) + C_B \left( T_B - T \right) } \label{eq:answer-a}
+\end{eqnarray}
+
+\item If we let $C_A = C_B = C$ independent of temperature, \eqref{eq:giventemp} becomes,
+
+\begin{align}
+	T &= T_A^{\frac{C}{2C}} T_B^{\frac{C}{2C}} \nonumber \\
+	& = T_A^\frac{1}{2} T_B^{\frac{1}{2}} \nonumber \\
+	\Aboxed{ T &= \left( T_A T_B \right)^{\frac{1}{2}} } \label{eq:answer-b-engine}
+\end{align}
+
+Thus, the final temperature for heat engine is the square root of the product of the two initial temperatures. For GT(2.94),
+
+\begin{align}
+	T &= \frac{CT_A + CT_B}{2C} \nonumber \\
+	\Aboxed{ T &= \frac{T_A + T_B}{2} } \label{eq:answer-b-contact}
+\end{align}
+
+The final temperature for thermal contact is the mean of the initial temperatures.
+
+\item We have $T_A = 256$ K and $T_B = 144$ K. For the heat engine, the final temperature using \eqref{eq:answer-b-engine} is
+
+\begin{equation}\label{eq:answer-c-engine}
+	\boxed{ T = 192 $K$ }
+\end{equation}
+
+while for thermal contact, using \eqref{eq:answer-b-contact},
+
+\begin{equation}\label{eq:answer-c-contact}
+	\boxed{ T = 200 $K$ }
+\end{equation}
+
+The final temperature for thermal contact is higher because energy from both systems contributed directly to the final temperature. The final temperature with an engine is lower because it converts some of the energy into work.
+
+\end{enumerate}
+
+\end{document}

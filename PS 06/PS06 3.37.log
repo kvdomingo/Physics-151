@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  1 MAR 2019 00:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  8 MAR 2019 03:36
 entering extended mode
-**"./PS05 2.54.tex"
-("PS05 2.54.tex"
+**"./PS06 3.37.tex"
+("PS06 3.37.tex"
 LaTeX2e <2018-04-01> patch level 5
 ("D:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -663,8 +663,8 @@ LaTeX Info: Redefining \_ on input line 43.
 )
 ("D:\Program Files\MiKTeX 2.9\tex\latex\physics\physics.sty"
 Package: physics 
-) ("PS05 2.54.aux")
-\openout1 = `"PS05 2.54.aux"'.
+) ("PS06 3.37.aux")
+\openout1 = `"PS06 3.37.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
@@ -703,9 +703,9 @@ LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
 
-("PS05 2.54.out") ("PS05 2.54.out")
+("PS06 3.37.out") ("PS06 3.37.out")
 \@outlinefile=\write3
-\openout3 = `"PS05 2.54.out"'.
+\openout3 = `"PS06 3.37.out"'.
 
 
 ("D:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
@@ -889,13 +889,20 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 19.
 ("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 2080) in paragraph at lines 75--76
-[]\OT1/cmr/m/n/12 If we con-sider the sys-tem to be-have
+Underfull \hbox (badness 2556) in paragraph at lines 43--44
+[]\OT1/cmr/m/n/12 Since $\OML/cmm/m/it/12 n$ \OT1/cmr/m/n/12 is con-stant, we c
+an write it
  []
 
-[1{C:/Users/Kenneth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-]
+Overfull \hbox (13.6147pt too wide) detected at line 77
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package caption Warning: Unused \captionsetup[table] on input line 46.
 See the caption package documentation for explanation.
@@ -906,38 +913,40 @@ See the caption package documentation for explanation.
 
 
 AED: lastpage setting LastPage
-[2
+[1{C:/Users/Kenneth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
- ("PS05 2.54.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 175.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
-Package rerunfilecheck Info: File `"PS05 2.54".out' has not changed.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
+
+("PS06 3.37.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
+Package rerunfilecheck Info: File `"PS06 3.37".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 22676 strings out of 492973
- 408410 string characters out of 3135926
- 480927 words of memory out of 3000000
- 26316 multiletter control sequences out of 15000+200000
+ 22646 strings out of 492973
+ 408032 string characters out of 3135926
+ 489228 words of memory out of 3000000
+ 26301 multiletter control sequences out of 15000+200000
  542492 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,16n,63p,323b,829s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,16n,63p,323b,715s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr6.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "PS05 2.54.pdf" (2 pages, 114600 bytes).
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr6.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "PS06 3.37.pdf" (1 page, 108483 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
+ 76 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{PS 29: Problem 3.35}
+\bigskip
+
+A random walker takes $n$ right steps and $n'$ left steps for a total of $N$ steps, so $N = n + n'$. Each step is $a$ units long, and the probability of a right step is $p$. The net displacement after $N$ steps is
+
+\begin{align}
+	x = a(n - n') \label{eq:net}
+\end{align}
+
+The mean displacement is
+
+\begin{align}
+	\bar{x} &= a\overline{(n - n')} \\
+	&= a\bar{n} - a\bar{n'} \nonumber \\
+	&= a\bar{n} - a\overline{N - n} \nonumber \\
+	&= a\bar{n} - a\bar{N} + a\bar{n} \nonumber \\
+	&= 2a\bar{n} - a\bar{N} \nonumber \\
+	&= a\qty(2\bar{n} - N) \nonumber
+\end{align}
+
+Recall that the mean can also be expressed as $\bar{n} = pN$. So,
+
+\begin{align}
+	\bar{x} &= a\qty(2pN - N) \nonumber \\
+	\Aboxed{
+		\bar{x} &= aN(2p - 1)
+	} \label{eq:answer-mean}
+\end{align}
+
+If the probabilites of $n$ and $n'$ are equal, \eqref{eq:answer-mean} becomes zero, as expected. The variance is 
+
+\begin{align}
+	\overline{\qty(\Delta x)^2} &= \overline{x^2} - \bar{x}^2 \label{eq:var} \\
+	&= a^2 \overline{\qty(n - n')^2} - \qty[aN(2p-1)]^2 \nonumber \\
+	&= a^2 \overline{\qty(n^2 + n'^2 - 2nn')} - \qty[aN(2p-1)]^2 \nonumber \\
+	&= a^2 \overline{\qty[n^2 + \qty(N - n)^2 - 2n\qty(N-n	)]} - \qty[aN(2p-1)]^2 \nonumber \\
+	&= a^2 \overline{\qty[n^2 + N^2 + n^2 - 2Nn - 2Nn + 2n^2]} - \qty[aN(2p-1)]^2 \nonumber \\
+	&= a^2 \overline{\qty[4n^2 - 4Nn + N^2]} - \qty[aN(2p-1)]^2 \nonumber \\
+	&= a^2 \overline{\qty[4n^2 - 4Nn + N^2]} - \qty[a^2 N^2 (2p-1)^2] \nonumber
+\end{align}
+
+Recall that $\overline{n^2} = Npq + \bar{n}^2$. We write
+
+\begin{align}
+	\overline{\qty(\Delta x)^2} &= a^2 \qty[4Npq + 4\bar{n}^2 - 4N\bar{n} + N^2] - \qty[a^2 N^2 (2p-1)^2] \nonumber \\
+	&= a^2 \qty[4Npq + (2p-1)^2 N^2] - \qty[a^2 N^2 (2p-1)^2] \nonumber \\
+	&= 4a^2 Npq + a^2 (2p - 1)^2 N^2 - \qty[a^2 N^2 (2p-1)^2] \nonumber \\
+	\Aboxed{
+		\overline{\qty(\Delta x)^2} &= 4a^2
+	}
+\end{align}
+
+The variance has no direct dependence on $N$.
+
+\end{document}

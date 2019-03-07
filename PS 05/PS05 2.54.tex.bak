@@ -84,25 +84,19 @@ and from this, we see that we can divide \eqref{eq:photonmomentum} by the photon
 	m_\gamma = \frac{h}{c\lambda}
 \end{equation}
 
-Recall the third law of thermodynamics
+If we assume that the entropy of the black hole is of order $Nk$, where $N$ is the number of particles in the black hole, and that all the particles are photons, we can estimate this entropy to be
 
-\begin{equation}\label{eq:thirdlaw}
-	S = k_B \log \Omega
+\begin{equation}\label{eq:bhentropy}
+	S \approx Nk_B
 \end{equation}
 
-If we assume that $S$ is of the order $Nk$, where $N$ is the number of particles in the black hole, and that all the particles are photons, \eqref{eq:thirdlaw} has the form
+where $k_B$ is Boltzmann's constant. If the total energy of the black hole is given by \eqref{eq:totalenergy}, the number of photons is
 
 \begin{equation}
-	S = k_B \frac{M}{m_\gamma}
+	N = \frac{E}{E_\gamma} = \frac{GM^2}{hc}
 \end{equation}
 
-where $k_B$ is Boltzmann's constant. The black hole's entropy is
-
-\begin{equation}
-	S = k_B \frac{Mc\lambda}{h}
-\end{equation}
-
-Plugging \eqref{eq:wavelen} into this,
+Plugging this into \eqref{eq:bhentropy},
 
 \begin{equation}\label{eq:answer-b}
 	\boxed{
@@ -140,7 +134,7 @@ Thus, entropy increases when black holes coalesce.
 	S = k_B \frac{2GE^2}{hc^5}
 \end{equation}
 
-From the fundamental thermodynamic relation
+From the equation of state of $S$,
 
 \begin{equation}\label{eq:ftr}
 	\dd{E} = T\dd{S} - P\dd{V} + \mu\dd{N}

@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{PS 26: Problem 3.20}
+\bigskip
+
+\begin{enumerate}[(a)]
+
+\item For a coin toss, assuming the coin is unbiased, the probabilities of each side turning up are equal. Hence,
+
+\begin{align}
+	S &= \ln \Omega \label{eq:equalprob} \\
+	\Aboxed{
+		S &= \ln 2 \approx 0.69
+	} \label{eq:answer-a}
+\end{align}
+
+\item For unequal uncertainties $P_1 = 1/5$ and $P_2 = 4/5$,
+
+\begin{align}
+	S &= -\sum_i P_i \ln P_i \label{eq:unequalprob} \\
+	&= -\qty(\frac{1}{5} \ln \frac{1}{5} + \frac{4}{5} \ln \frac{4}{5}) \nonumber \\
+	\Aboxed{	
+		S &= \frac{1}{5}\ln 5 + \frac{4}{5}\ln 4 \approx 0.67 \label{eq:answer-b}
+	}
+\end{align}
+
+The uncertainty is lower since one of the outcomes is now more likely to occur.
+
+\item For third and fourth experiments, all $\qty{P_i}_{i=1}^4 = 1/4$ and $\qty{P_i}_{i=1}^6 = 1/6$, respectively. Their uncertainties are
+
+\begin{align}
+	\Aboxed{	
+		S_3 &= \ln 4 \approx 1.39
+	} \label{eq:answer-c1} \\
+	\Aboxed{
+		S_4 &= \ln 6 \approx 1.79
+	} \label{eq:answer-c2}
+\end{align}
+
+The uncertainty is greater when there are more states since there is a greater number of unique possible outcomes.
+
+\end{enumerate}
+
+\end{document}

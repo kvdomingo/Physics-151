@@ -51,7 +51,7 @@ Thus,
 
 \begin{equation}\label{eq:answer-a}
 	\boxed{
-		\mathcal{G}\qty[m] = -2\qty(\frac{m}{3})^{\frac{3}{2}}
+		\mathcal{G}\qty[x^3] = -2\qty(\frac{m}{3})^{\frac{3}{2}}
 	}
 \end{equation}
 
@@ -61,10 +61,31 @@ Thus,
 	\mathcal{G}\qty[m(x)] &= f(x) - xm \nonumber \\
 	&= x - x(1) \nonumber \\
 	\Aboxed{	
-		\mathcal{G}\qty[m(x)] &= 0 \label{eq:answer-b1} \\
+		\mathcal{G}\qty[x] &= 0 \label{eq:answer-b1}
 	}
 \end{align}
 
+Let $f(x) = \sin(x)$. Its Legendre transform is
+
+\begin{align}
+	\mathcal{G}[m(x)] &= \sin(x) - x\cos(x) \nonumber \\
+	x &= \cos^{-1}(m) \nonumber \\
+	\mathcal{G}[m(x)] &= \sin(\cos^{-1}(m)) - m\cos^{-1}(m) \label{eq:sincos}
+\end{align}
+
+We can simplify this using the property
+
+\begin{equation}
+	\sin(\cos^{-1}(m)) = \sqrt{1 - m^2} \label{eq:cosproperty}
+\end{equation}
+
+Using this, we rewrite \eqref{eq:sincos} as
+
+\begin{equation}\label{eq:answer-b2}
+	\boxed{	
+		\mathcal{G}[\sin(x)] = \sqrt{1-m^2} - m\cos^{-1}(m)
+	}
+\end{equation}
 
 \end{enumerate}
 

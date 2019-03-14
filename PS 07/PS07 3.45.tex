@@ -1,0 +1,126 @@
+\documentclass[12pt,a4paper,twocolumn]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{PS 34: Problem 3.45}
+\bigskip
+
+\begin{enumerate}[(a)]
+
+\item The uniform distribution is given by
+
+\begin{equation}\label{eq:uniform}
+	p(s) = \frac{1}{b-a}
+\end{equation}
+
+where $a$ and $b$ are the bounds of concern. For a variable $s_i$ uniformly distributed $\in [0,1]$, the mean can be obtained by calculating the first moment of \eqref{eq:uniform}:
+
+\begin{align}
+	\bar{s} = \ev{s^1} &= \int_0^1 s \dd{s} \\
+	&= \eval{\frac{1}{2}s^2}_0^1 \nonumber \\
+	\Aboxed{
+		\ev{s} &= \frac{1}{2} \label{eq:answer-a-mean}
+	}
+\end{align}
+
+The standard deviation can be obtained by calculating the square root of the difference of the second moment and the square of the first moment:
+
+\begin{align}
+	\sigma &= \sqrt{\ev{s^2} - \ev{s}^2} \label{eq:variance} \\
+	\ev{s^2} &= \int_0^1 s^2 \dd{s} \\
+	&= \eval{\frac{1}{3}s^2}_0^1 \nonumber \\
+	&= \frac{1}{3} \\
+	\sigma &= \sqrt{\frac{1}{3} - \qty(\frac{1}{2})^2} \nonumber \\
+	&= \sqrt{\frac{1}{12}} \nonumber \\
+	\Aboxed{
+		\sigma &= \frac{1}{\sqrt{12}} \approx 0.29
+	} \label{eq:answer-a-sd}
+\end{align}
+
+\item As the number of measurements $S$ is increased, the standard deviation $\sigma$ becomes smaller and the expectation value becomes more defined, i.e.
+
+\begin{equation}\label{eq:answer-b}
+	\boxed{
+		\lim_{S \rightarrow \infty} p(S) = \delta (S)
+	}
+\end{equation}
+
+\item For $N = 12$, running the program \texttt{CentralLimitTheorem} for 40,000 trials yields a variance $\sigma^2 = 0.007$. Its width can be obtained by doubling the standard deviation, given by $\sqrt{\sigma^2}$. Thus, the $\boxed{\mathrm{width} = 1.6}$.
+
+\item Consider the probability density
+
+\begin{equation}
+	f(s) = e^{-s} , \quad s \geq 0
+\end{equation}
+
+Its mean is calculated as 
+
+\begin{equation}
+	\ev{s} = \int_0^\infty se^{-s} \dd{s} \\
+\end{equation}
+
+which can be evaluated using integration by parts. Let $u \equiv s$ and $\dd{v} \equiv e^{-s} \dd{s}$. Consequently, $\dd{u} \equiv \dd{s}$ and $v \equiv -e^{-s}$. We have
+
+\begin{align}
+	\ev{s} &= \eval{-se^{-s}}_0^\infty + \int_0^\infty e^{-s} \dd{s} \\
+	&= \eval[-se^{-s} - e^{-s} |_0^\infty \nonumber
+\end{align}
+
+Since $\dv[2]{s}s < \dv[2]{s}e^{-s}$, the exponential term dominates. Thus,
+
+\begin{align}
+	\ev{s} &= 0\cdot e^0 + e^0 \nonumber \\
+	\Aboxed{
+		\ev{s} &= 1
+	} \label{eq:answer-d-mean}
+\end{align}
+
+Using $N = 12$, the distribution appears similar to a Poisson distribution. As the number of trials $S$ is increased, the distribution first approaches that of a Gaussian, then of a Dirac delta, similar to \eqref{eq:answer-b}.
+
+Running the program once again for $N=12$ and 40,000 trials, we have $\sigma^2 = 0.021$, which corresponds to a $\boxed{\mathrm{width} = 0.3}$.
+
+\item Consider the distribution
+
+\begin{equation}\label{eq:lorentz}
+	f(s) = \frac{1}{\pi} \frac{1}{s^2 + 1}, \quad -\infty \leq s \leq \infty
+\end{equation}
+
+Its mean value is
+
+\begin{equation}
+	\ev{s} = \frac{1}{\pi} \int_{-\infty}^{+\infty} \frac{s}{s^2 +1} \dd{s}
+\end{equation}
+
+Let $u \equiv s^2 + 1$, $\dd{u} \equiv 2s\dd{s}$,
+
+\begin{align}
+	\ev{s} &= \frac{1}{2\pi} \int_{-\infty}^{+\infty} \frac{\dd{u}}{u} \nonumber \\
+	&= \frac{1}{2\pi} \eval{\ln u}_{-\infty}^{+\infty} \nonumber \\
+	\Aboxed{
+		\ev{s} &= \mathrm{undefined}
+	} \label{eq:answer-e-mean}
+\end{align}
+
+From \eqref{eq:variance}, we know that the variance is dependent on the mean. Consequently, the variance of $s$ is undefined.
+
+\end{enumerate}
+
+\end{document}

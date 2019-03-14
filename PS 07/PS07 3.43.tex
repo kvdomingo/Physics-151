@@ -54,8 +54,52 @@ Let $u \equiv x^2 + 1$, $\dd{u} \equiv 2x\dd{x}$,
 \begin{align}
 	\ev{x^1} &= \frac{1}{2\pi} \int_{-\infty}^{+\infty} \frac{1}{u}\dd{u} \nonumber \\
 	&= \frac{1}{2\pi} \eval[\ln(u)|_{-\infty}^{+\infty} \nonumber \\
-	&= \frac{1}{2\pi} \eval[\ln(x^2 + 1)|_{-\infty}^{+\infty} \nonumber
+	&= \frac{1}{2\pi} \eval[\ln(x^2 + 1)|_{-\infty}^{+\infty} \nonumber \\
+	&= \infty - \infty \nonumber \\
+	\Aboxed{
+		\ev{x} &= \mathrm{undefined}
+	} \label{eq:answer-b}
 \end{align}
+
+\item The second moment is given by
+
+\begin{equation}\label{eq:2nd-moment}
+	\ev{x^2} = \frac{1}{2\pi} \int_{-\infty}^{+\infty} \frac{x^2}{x^2 +1}\dd{x}
+\end{equation}
+
+By long division of the integrand,
+
+\begin{center}
+	\begin{tabular}{c|ccc}
+		&&& 1 \\ \cline{2-4}
+		$x^2 + 1$ & $x^2$ & $+0x+$ & $0$ \\
+		& $x^2$ & $+0x+$ & $1$ \\ \cline{2-4}
+		&&& $-1$
+	\end{tabular}
+\end{center}
+
+From this, \eqref{eq:2nd-moment} can be rewritten as
+
+\begin{align*}
+	\ev{x^2} &= \frac{1}{2\pi} \int_{-\infty}^{+\infty} 1 - \frac{1}{x^2 + 1} \dd{x} \\
+	&= \frac{1}{2\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - \int_{-\infty}^{+\infty} \frac{\dd{x}}{x^2 + 1}]
+\end{align*}
+
+The second term is an even function about zero, and can be rewritten as
+
+\begin{align}
+	\ev{x^2} &= \frac{1}{2\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - 2\int_0^{+\infty} \frac{\dd{x}}{x^2 + 1}] \nonumber \\
+	&= \frac{1}{2\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - 2\eval{\arctan(x)}_0^\infty] \nonumber \\
+	&= \frac{1}{2\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - 2\qty(\arctan(\infty) - \arctan(0))] \nonumber \\
+	&= \frac{1}{2\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - 2\qty(\frac{\pi}{2} - 0)] \nonumber \\
+	&= \frac{1}{2\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - \pi] \nonumber \\
+	&= \frac{1}{2\pi} \qty[\infty - \pi] \nonumber \\
+	\Aboxed{
+		\ev{x^2} &= \infty
+	} \label{eq:answer-c}
+\end{align}
+
+The second moment of the Lorentz distribution exists and has a value of infinity.
 
 \end{enumerate}
 

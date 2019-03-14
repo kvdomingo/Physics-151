@@ -93,7 +93,7 @@ The second term is an even function about zero, and can be rewritten as
 	&= \frac{1}{2\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - 2\qty(\arctan(\infty) - \arctan(0))] \nonumber \\
 	&= \frac{1}{2\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - 2\qty(\frac{\pi}{2} - 0)] \nonumber \\
 	&= \frac{1}{2\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - \pi] \nonumber \\
-	&= \frac{1}{2\pi} \qty[\infty - \pi]
+	&= \frac{1}{2\pi} \qty[\infty - \pi] \nonumber \\
 	\Aboxed{
 		\ev{x^2} &= \infty
 	} \label{eq:answer-c}

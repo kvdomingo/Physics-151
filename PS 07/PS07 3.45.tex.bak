@@ -119,7 +119,7 @@ Let $u \equiv s^2 + 1$, $\dd{u} \equiv 2s\dd{s}$,
 	} \label{eq:answer-e-mean}
 \end{align}
 
-From \eqref{eq:variance}, we know that the variance is dependent on the mean. Consequently, the variance of the Lorentz distribution is undefined.
+From \eqref{eq:variance}, we know that the variance is dependent on the mean. Consequently, the variance of $s$ is undefined.
 
 \end{enumerate}
 

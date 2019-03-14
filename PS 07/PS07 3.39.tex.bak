@@ -123,8 +123,20 @@ Following the steps in part (b), the integral can be simplified as
 	&= \eval{-e^{-x}}_1^2 \nonumber \\
 	&= -e^{-2} + e^{-1} \nonumber \\
 	\Aboxed{
-		\Pr(1<x<2) &= 
+		\Pr(1<x<2) &= \frac{1}{e} - \frac{1}{e^2} \approx 0.23
 	} \label{eq:answer-d}
+\end{align}
+
+\item For $\lambda = 1$, the probability that a measurement of $x$ yields a value $< 0.3$ is
+
+\begin{align}
+	\Pr(x<0.3) &= \int_0^{0.3} p(x) \dd{x} \\
+	&= \int_0^{0.3} e^{-x} \dd{x} \nonumber \\
+	&= \eval{-e^{-x}}_0^{0.3} \nonumber \\
+	&= -e^{-0.3} + e^{-0} \nonumber \\
+	\Aboxed{
+		\Pr(x<0.3) &= 1 - \frac{1}{e^{0.3}} \approx 0.26
+	} \label{eq:answer-e}
 \end{align}
 
 \end{enumerate}

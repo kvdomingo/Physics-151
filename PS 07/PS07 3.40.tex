@@ -13,6 +13,8 @@
 \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 \usepackage[none]{hyphenat}
 \usepackage{physics}
+\usepackage{empheq}
+\newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
 %\renewcommand{\familydefault}{\sfdefault}
 
 
@@ -83,6 +85,20 @@ Therefore, $p(\vec{v})$ is already normalized.
 		&\qquad \qty(\int e^{-av_z^2}\dd{v_z})
 	\end{split} \label{eq:indefinite-split}
 \end{align}
+
+\begin{subequations}
+	\begin{empheq}[box=\widefbox]{align}
+		&\Pr(\vec{v} \leq \vec{v}' \leq \vec{v}+\dd{\vec{v}}) = \nonumber \\
+		& \qty(\frac{a}{\pi})^{\frac{3}{2}}\qty(\frac{\pi}{a})^{\frac{3}{2}} \erf(\sqrt{a}v_x)\cdot \\
+		&\qquad \erf(\sqrt{a}v_y)\cdot \erf(\sqrt{a}v_z) \nonumber
+	\end{empheq} \label{eq:answer-b}
+\end{subequations}
+
+where the error function $\erf(x)$ is defined as
+
+\begin{equation}\label{eq:errorfunc}
+	\erf(x) \equiv \frac{1}{\pi} \int_{-x}^{x} e^{-t^2} \dd{t}.
+\end{equation}
 
 \item To get the probability of all the components of $\vec{v}\geq 0$ simultaneously, we evaluate \eqref{eq:combined-integral} over the non-negative range:
 

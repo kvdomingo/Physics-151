@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  15 MAR 2019 01:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  15 MAR 2019 09:00
 entering extended mode
 **"./PS07 3.43.tex"
 ("PS07 3.43.tex"
@@ -912,7 +912,7 @@ Underfull \hbox (badness 6284) in paragraph at lines 43--44
 Underfull \vbox (badness 2653) has occurred while \output is active []
 
 
-Overfull \hbox (49.3028pt too wide) detected at line 100
+Overfull \hbox (43.42786pt too wide) detected at line 100
 []
  []
 
@@ -947,10 +947,6 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
 Package rerunfilecheck Info: File `"PS07 3.43".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
  ) 
 Here is how much of TeX's memory you used:
@@ -970,7 +966,7 @@ nts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1
 msfonts/cm/cmr8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.p
 fb>
-Output written on "PS07 3.43.pdf" (2 pages, 161535 bytes).
+Output written on "PS07 3.43.pdf" (2 pages, 161520 bytes).
 PDF statistics:
  70 PDF objects out of 1000 (max. 8388607)
  13 named destinations out of 1000 (max. 500000)

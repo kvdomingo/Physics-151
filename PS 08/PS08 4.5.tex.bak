@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper,twocolumn]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{PS 36: Problem 4.5}
+\bigskip
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c||c|c|c|}
+		\hline
+		$E_A$ & $\Omega_A(E_A)$ & $\Omega_B(6-E_A)$ & $\Omega_A\Omega_B$ & $P_A(E_A)$ \\ \hline
+		6 & 7 & 1 & 7 & 7/84 \\ \hline
+		5 & 6 & 2 & 12 & 12/84 \\ \hline
+		4 & 5 & 3 & 15 & 15/84 \\ \hline
+		3 & 4 & 4 & 16 & 16/84 \\ \hline
+		2 & 3 & 5 & 15 & 15/84 \\ \hline
+		1 & 2 & 6 & 12 & 12/84 \\ \hline
+		0 & 1 & 7 & 7 & 7/84 \\ \hline
+	\end{tabular}
+	\caption{The probability $P_A(E_A)$ that subsystem $A$ has energy $E_A$ given $N_A = N_B = 2$ and $E_{tot} = E_A + E_B = 6$.}
+	\label{tab:given}
+\end{table}
+
+The standard deviation of the energy of subsystem A is given by
+
+\begin{equation}
+	\sigma = \sqrt{\ev{E_A^2} - \ev{E_A}^2} \label{eq:sd}
+\end{equation}
+
+The first moment (mean) $\ev{E_A}$ is obtained by
+
+\begin{align}
+	\ev{E_A} &= \sum_{i=1}^N (E_A)_i (P_A)_i \label{eq:mean} \\
+	&= 6\qty(\frac{7}{84}) + 5\qty(\frac{12}{84}) + 4\qty(\frac{15}{84}) \nonumber \\
+	&+ 3\qty(\frac{16}{84}) + 2\qty(\frac{15}{84}) + 1\qty(\frac{12}{84}) + 0\qty(\frac{7}{84}) \nonumber \\
+	&= 12 \nonumber
+\end{align}
+
+The second moment (raw variance) $\ev{E_A^2}$ is obtained by
+
+\begin{align}
+	\ev{E_A^2} &= \sum_{i=1}^N (E_A)_i^2 (P_A)_i \label{eq:var} \\
+	&= 36\qty(\frac{7}{84}) + 25\qty(\frac{12}{84}) + 16\qty(\frac{15}{84}) \nonumber \\
+	&+ 9\qty(\frac{16}{84}) + 4\qty(\frac{15}{84}) + 1\qty(\frac{12}{84}) + 0\qty(\frac{7}{84}) \nonumber \\
+	&= 3 \nonumber
+\end{align}
+
+So the standard deviation is
+
+\begin{align}
+	\sigma &= \sqrt{12 - 3^2} \nonumber \\
+	&= \sqrt{3} \nonumber \\
+	\Aboxed{
+		\sigma &\approx 1.73
+	}
+\end{align}
+
+\end{document}

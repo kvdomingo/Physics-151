@@ -1,0 +1,56 @@
+\documentclass[12pt,a4paper]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{PS 39: Problem 4.15}
+\bigskip
+
+Given the following:
+
+\begin{eqnarray}
+	\Gamma(E,V,N) \approx \frac{1}{N!}\Gamma_1\qty(\frac{E}{N}, V)^N \label{eq:given1} \\
+	\Gamma_1(E) = \frac{4\pi V}{3h^3}\qty(2mE)^{3/2} \label{eq:given2}
+\end{eqnarray}
+
+We wish to find the form of $\Gamma(E,V,N)$ for $\Gamma_1$. \eqref{eq:given2} becomes
+
+\begin{equation}
+	\Gamma_1\qty(\frac{E}{N}) = \frac{4\pi V}{3h^3}\qty(\frac{2mE}{N})^{3/2}
+\end{equation}
+
+Plugging this into \eqref{eq:given1}, we have
+
+\begin{align}
+	\Gamma(E,V,N) &= \frac{1}{N!}\qty[\frac{4\pi V}{3h^3}\qty(\frac{2mE}{N})^{3/2}]^N \nonumber \\
+	\Aboxed{
+		\Gamma(E,V,N) &= \frac{1}{N!}\qty(\frac{4\pi V}{3h^3})^N \qty(\frac{2mE}{N})^{3N/2}
+	} \label{eq:answer}
+\end{align}
+
+From \eqref{eq:answer}, we see that $\Gamma \propto V^N$, $\Gamma \propto E^{3N/2}$, and $\Gamma \propto \qty(N!N^{3N/2})^{-1}$. In contrast, the form of $\Gamma(E,V,N)$ given in GT 4.49 is
+
+\begin{equation}
+	\Gamma(E,V,N) = \frac{1}{N!}\qty(\frac{V}{h^3})^N \frac{\qty(2\pi mE)^{3N/2}}{\qty(3N/2)!} \label{eq:semiclassical}
+\end{equation}
+
+where $\Gamma \propto V^N$, $\Gamma \propto E^{3N/2}$, and $\Gamma \propto \qty[N!\qty(3N/2)!]^{-3N/2}$.
+
+\end{document}

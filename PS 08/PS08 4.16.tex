@@ -1,0 +1,58 @@
+\documentclass[12pt,a4paper]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{PS 40: Problem 4.16}
+\bigskip
+
+Given the following:
+
+\begin{equation}
+	\ln \Gamma(E,V,N) = N \ln\frac{V}{N} + \frac{3}{2}N\ln\frac{mE}{3N\pi\hbar^2} + \frac{5}{2}N \label{eq:given}
+\end{equation}
+
+The density of states is given by
+
+\begin{equation}
+	g(E,V,N) \approx \dv{\Gamma(E)}{E} \label{eq:density-states}
+\end{equation}
+
+We take the exponential of both sides of \eqref{eq:given}:
+
+\begin{align}
+	\ln\Gamma(E,V,N) &= \ln(\frac{V}{N})^N + \ln(\frac{mE}{3N\pi\hbar^2})^{3N/2} + \frac{5}{2}N \nonumber \\
+	\ln\Gamma(E,V,N) &= \ln\qty[\qty(\frac{V}{N})^N \qty(\frac{mE}{3N\pi\hbar^2})^{3N/2}] + \frac{5}{2}N \nonumber \\
+	\Gamma(E,V,N) &= \qty(\frac{V}{N})^N \qty(\frac{mE}{3N\pi\hbar^2})^{3N/2} e^{5N/2} \label{eq:gamma}
+\end{align}
+
+Since $\Gamma \propto V^N$, $\Gamma \propto N^{-5N/2}e^{5N/2}$, and $\Gamma \propto E^{3N/2}$, $\Gamma$ is a rapidly increasing function of $E$ and $V$. Note that because $\dd[2]_N\qty(e^{5N/2}) > \dd[2]_N\qty(N^{-5N/2})$, the exponential term dominates and thus, $\Gamma$ is also a rapidly increasing function of $N$.
+
+From \eqref{eq:density-states}, we differentiate \eqref{eq:gamma} w.r.t. $E$:
+
+\begin{equation}
+	\boxed{
+		g(E,V,N) = \qty(\frac{V}{N})^N \qty(\frac{m}{3N\pi\hbar^2})^{3N/2} e^{5N/2} \frac{3N}{2} E^{N/2}
+	} \label{eq:answer}
+\end{equation}
+
+Now, $g \propto V^N$, $g \propto e^{5N/2}$, and $g \propto E^{N/2}$, so $g$ is also a rapidly increasing function of $E$, $V$, and $N$.
+
+\end{document}

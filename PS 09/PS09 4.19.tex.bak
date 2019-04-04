@@ -1,0 +1,53 @@
+\documentclass[12pt,a4paper]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{PS 41: Problem 4.19}
+\bigskip
+
+Given the following:
+
+\begin{align}
+	S(E,V,N) &= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{mE}{3N\pi\hbar^2}) + \frac{5}{2}] \label{eq:given-s} \\
+	E &= \frac{3}{2}NkT \label{eq:given-e}
+\end{align}
+
+Substitute \eqref{eq:given-e} in \eqref{eq:given-s}:
+
+\begin{align}
+	S &= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{m}{3N\pi\hbar^2} \frac{3}{2}NkT) + \frac{5}{2}] \\
+	&= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{mkT}{2\pi\hbar^2}) + \frac{5}{2}]
+\end{align}
+
+Rewrite in terms of $h \equiv 2\pi\hbar$:
+
+\begin{align}
+	S &= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{4\pi^2 mkT}{2\pi h^2}) + \frac{5}{2}] \\
+	&= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{2\pi mkT}{h^2}) + \frac{5}{2}] \\
+	&= Nk\qty[\ln\qty(\frac{V}{N}\qty(\frac{2\pi mkT}{h^2})^{3/2}) + \frac{5}{2}] \\
+	\Aboxed{
+		\frac{S}{Nk} &= \ln\qty[\frac{V}{N}\qty(\frac{2\pi mkT}{h^2})^{3/2}] + \frac{5}{2}
+	}
+\end{align}
+
+which is the Sackur-Tetrode relation.
+
+\end{document}

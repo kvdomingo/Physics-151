@@ -53,6 +53,6 @@ From \eqref{eq:density-states}, we differentiate \eqref{eq:gamma} w.r.t. $E$:
 	} \label{eq:answer}
 \end{equation}
 
-Now, $\Gamma \propto V^N$, $|
+Now, $g \propto V^N$, $g \propto e^{5N/2}$, and $g \propto E^{N/2}$, so $g$ is also a rapidly increasing function of $E$, $V$, and $N$.
 
 \end{document}

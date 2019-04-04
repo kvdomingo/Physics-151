@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{PS 42: Problem 4.20}
+\bigskip
+
+Given the following:
+
+\begin{align}
+	\frac{\mu}{T} &= -\qty(\pdv{S}{N})_{E,V} \label{eq:given-mu} \\
+	S(E,V,N) &= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{mE}{3N\pi\hbar^2}) + \frac{5}{2}] \label{eq:given-s} \\
+	E &= \frac{3}{2}NkT \label{eq:given-e}
+\end{align}
+
+Perform the necessary differentiation on \eqref{eq:given-s} according to \eqref{eq:given-mu} and simplify:
+
+\begin{align}
+	\frac{\mu}{T} &= -\pdv{N} \qty{Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{mE}{3N\pi\hbar^2}) + \frac{5}{2}]} \\
+	&= -\pdv{N} \qty[kN\ln\frac{V}{N} + \frac{3}{2}kN\ln\qty(\frac{mE}{3N\pi\hbar^2}) + \frac{5}{2}kN] \\
+	&= -\qty[-k + k\ln\qty(\frac{V}{N}) - \frac{3}{2}k + \frac{3}{2}k\ln\qty(\frac{mE}{3N\pi\hbar^2}) + \frac{5}{2}k] \\
+	&= -k\qty[-1 + \ln\qty(\frac{V}{N}) + \frac{3}{2}\ln\qty(\frac{mE}{3N\pi\hbar^2}) + 1] \\
+	&= -k\qty[\ln\qty(\frac{V}{N}) + \frac{3}{2}\ln\qty(\frac{mE}{3N\pi\hbar^2})] \\
+	&= -k\ln\qty[\frac{V}{N}\qty(\frac{mE}{3N\pi\hbar^2})^{3/2}] \\
+	\Aboxed{
+		\mu &= -kT\ln\qty[\frac{V}{N}\qty(\frac{mE}{3N\pi\hbar^2})^{3/2}]
+	} \label{eq:answer-1}
+\end{align}
+
+Plugging in \eqref{eq:given-e},
+
+\begin{align}
+	\mu(T,V,N) &= -kT\ln\qty[\frac{V}{N}\qty(\frac{m}{3N\pi\hbar^2}\frac{3}{2}NkT)^{3/2}] \\
+	&= -kT\ln\qty[\frac{V}{N}\qty(\frac{mkT}{2\pi\hbar^2})^{3/2}]
+\end{align}
+
+Using the relation $h = 2\pi\hbar$, rewrite as
+
+\begin{align}
+	\mu(T,V,N) &= -kT\ln\qty[\frac{V}{N}\qty(\frac{4\pi^2 mkT}{2\pi h^2})^{3/2}] \\
+	\Aboxed{
+		\mu(T,V,N) &= -kT\ln\qty[\frac{V}{N}\qty(\frac{2\pi mkT}{h^2})^{3/2}]
+	} \label{eq:answer-2}
+\end{align}
+
+\end{document}

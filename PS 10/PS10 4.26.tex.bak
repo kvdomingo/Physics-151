@@ -27,9 +27,24 @@
 The Boltzmann probability is given by
 
 \begin{equation}
-	P_S = \frac{1}{Z} e^{-\beta E_s} \label{eq:boltzmann}
+	P(E) = \frac{1}{Z} e^{-\beta E_s} \label{eq:boltzmann}
 \end{equation}
 
-where $Z \equiv \sum_s e^{-\beta E_s}$ is the partition function.
+where $Z \equiv \sum_s e^{-\beta E_s}$ is the partition function. Substituting this in \eqref{eq:boltzmann} gives
+
+\begin{equation}
+	P(E) = \frac{e^{-\beta E_s}}{\sum_s e^{-\beta E_s}} \label{eq:boltzmann-partition}
+\end{equation}
+
+The probability that a system has energy between $E$ and $E + \Delta E$ is
+
+\begin{align}
+	p(E)\Delta E &= P(E + \Delta E) - P(E) \\
+	&\approx \dv{P(E)}{E}\Delta E \label{eq:density-approx} \\
+	&\approx \dd{E} \frac{e^{-\beta E_s}}{\sum_s e^{-\beta E_s}} \Delta E \nonumber \\
+	\Aboxed{
+		p(E)\Delta E &\approx \frac{-\beta e^{-\beta E}}{\sum_s e^{-\beta E_s}}\Delta E 
+	} \label{eq:answer}
+\end{align}
 
 \end{document}

@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,twocolumn]{article}
+\documentclass[12pt,a4paper,twocolumn]{article}
 % The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
 \input{151.dat}
 \usepackage{gensymb}
@@ -98,17 +98,31 @@ The entropy per particle is given by
 
 \item From \eqref{eq:answer-e}, the mean energy of a system of $N$ harmonic oscillator in equilibrium with a heat bath at temperature $T$ is
 
+\begin{align}
+	\bar{e} &= N\hbar\omega\qty[\frac{1}{2} + \frac{1}{1 - e^{-\hbar\omega/kT}}] \nonumber \\
+	&= N\hbar\omega\qty[\frac{1}{2} + \frac{1}{1 - e^{-\hbar\omega/kT}} \cdot \frac{e^{\hbar\omega/kT}}{e^{\hbar\omega/kT}}] \nonumber \\
+	&= N\hbar\omega\qty[\frac{1}{2} + \frac{1}{1 - e^{-\hbar\omega/kT}}
+\end{align}
+
+\item The result for the energy of $N$ harmonic oscillators calculated in the microcanonical ensemble in Problem 4.22 is
+
 \begin{equation}
-	\boxed{
-		\bar{e} = N\hbar\omega\qty[\frac{1}{2} + \frac{1}{1 - e^{-\hbar\omega/kT}}]
-	} \label{eq:answer-b}
+	E(T) = \frac{N\hbar\omega}{2}\qty(\frac{e^{\hbar\omega/kT} + 1}{e^{\hbar\omega/kT} - 1}) \label{eq:problem422}
 \end{equation}
 
-\item The answer differs from the result for the energy of $N$ harmonic oscillators calculated in the microcanonical ensemble in Problem 4.22:
+Massaging the terms,
 
-\begin{equation}
-	E(T) = \frac{N\hbar\omega}{2}\qty(\frac{e^{\hbar\omega/kT} + 1}{e^{\hbar\omega/kT} - 1}) \label{eq:answer-c}
-\end{equation}
+\begin{align}
+	E(T) &= \frac{N\hbar\omega}{2} \qty(\frac{e^{\hbar\omega/kT}+1+1-1}{e^{\hbar\omega/kT}}) \nonumber \\
+	&= \frac{N\hbar\omega}{2}\qty(\frac{e^{\hbar\omega/kT}-1}{e^{\hbar\omega/kT}-1}+\frac{2}{e^{\hbar\omega/kT}-1}) \nonumber \\
+    &= \frac{N\hbar\omega}{2}\qty(1+\frac{2}{e^{\hbar\omega/kT}-1}) \nonumber \\
+    &= N\hbar\omega\qty(\frac{1}{2}+\frac{1}{e^{\hbar\omega/kT}-1}) \nonumber \\
+	\Aboxed{    
+	    E(T) &= N\hbar\omega\qty(\frac{1}{2}+\frac{1}{e^{\beta\hbar\omega}-1})
+	 } \label{eq:answer-c}
+\end{align}
+
+The two results are the same.
 
 \end{enumerate}
 

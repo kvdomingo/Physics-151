@@ -1,0 +1,115 @@
+\documentclass[11pt,a4paper,twocolumn]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{151.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\section*{PS 48: Problem 4.28}
+\bigskip
+
+\begin{enumerate}[(a)]
+
+\item The energy levels of a single 1D harmonic oscillator is given by
+
+\begin{equation}
+	\epsilon_n = \qty(n + \frac{1}{2})\hbar\omega \label{eq:energy-levels}
+\end{equation}
+
+and the corresponding partition function is
+
+\begin{align*}
+	Z_1 &= \sum_{n=0}^\infty e^{-\beta\hbar\omega\qty(n+\frac{1}{2})} \\
+	&= e^{-\frac{1}{2}\beta\hbar\omega} \sum_{n=0}^\infty e^{-n\beta\hbar\omega} \\
+	&= e^{-\frac{1}{2}\beta\hbar\omega} \sum_{n=0}^\infty \qty(e^{-\beta\hbar\omega})^n
+\end{align*}
+
+For $x < 1$, we can use the identity
+
+\begin{equation} \label{eq:geometric-identity}
+	\sum_{n=0}^\infty x^n = \frac{1}{1-x}
+\end{equation}
+
+so that
+
+\begin{equation}
+	Z_1 = \frac{e^{-\frac{1}{2}\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}} \label{eq:partition}
+\end{equation}
+
+The free energy per particle is given by
+
+\begin{align}
+	f &= -kT \ln{Z_1} \label{eq:free-energy} \\
+	&= -kT \ln\qty(\frac{e^{-\frac{1}{2}\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}}) \nonumber \\
+	&= -kT \qty[\ln\qty(e^{-\frac{1}{2}\beta\hbar\omega}) - \ln\qty(1 - e^{-\beta\hbar\omega})] \nonumber \\
+	&= \frac{1}{2}kT\beta\hbar\omega + kT\ln\qty(1 - e^{-\beta\hbar\omega})
+\end{align}
+
+We use the fact that $\beta = \ddfrac{1}{kT}$ so that
+
+\begin{equation}
+	\boxed{
+		f = \frac{1}{2}\hbar\omega + kT\ln\qty(1 - e^{-\beta\hbar\omega})
+	} \qed \label{eq:answer-f}
+\end{equation}
+
+The mean energy per particle is given by
+
+\begin{align}
+	\bar{e} &= -\pdv{\beta}\ln{Z_1} \label{eq:mean-energy} \\
+	&= -\pdv{\beta}\ln\qty(\frac{e^{-\frac{1}{2}\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}}) \nonumber \\
+	&= -\pdv{\beta}\qty[\ln\qty(e^{-\frac{1}{2}\beta\hbar\omega}) - \ln\qty(1 - e^{-\beta\hbar\omega})] \nonumber \\
+	&= \frac{1}{2}\hbar\omega + \frac{e^{-\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}}\hbar\omega \nonumber \\
+	\Aboxed{
+		\bar{e} &= \hbar\omega\qty[\frac{1}{2} + \frac{1}{1 - e^{-\beta\hbar\omega}}]
+	} \qed \label{eq:answer-e}
+\end{align}
+
+The entropy per particle is given by
+
+\begin{align}
+	s &= -\qty(\pdv{f}{T})_V \label{eq:entropy} \\
+	&= -\pdv{T}\qty[\frac{1}{2}\hbar\omega + kT\ln\qty(1 - e^{-\beta\hbar\omega})]_V \nonumber \\
+	&= -\pdv{T}\qty[\frac{1}{2}\hbar\omega + kT\ln\qty(1 - e^{-\hbar\omega/kT})]_V \nonumber \\
+	&= \frac{1}{T}\frac{\hbar\omega e^{-\hbar\omega/kT}}{1-e^{-\hbar\omega/kT}} - k\ln\qty(1 - e^{-\hbar\omega/kT}) \nonumber \\
+	&= k\frac{\beta\hbar\omega e^{-\beta\hbar\omega}}{1-e^{-\beta\hbar\omega}} - k\ln\qty(1 - e^{-\beta\hbar\omega}) \nonumber \\
+	&= k\frac{\beta\hbar\omega e^{-\beta\hbar\omega}}{1-e^{-\beta\hbar\omega}} \cdot \frac{e^{\beta\hbar\omega}}{e^{\beta\hbar\omega}} - k\ln\qty(1 - e^{-\beta\hbar\omega}) \nonumber \\
+	&= k\frac{\beta\hbar\omega}{e^{\beta\hbar\omega} - 1} - k\ln\qty(1 - e^{-\beta\hbar\omega}) \nonumber \\
+	\Aboxed{
+		s &= k\qty[\frac{\beta\hbar\omega}{e^{\beta\hbar\omega} - 1} - \ln\qty(1 - e^{-\beta\hbar\omega})]
+	} \qed \label{eq:answer-s}
+\end{align}
+
+\item From \eqref{eq:answer-e}, the mean energy of a system of $N$ harmonic oscillator in equilibrium with a heat bath at temperature $T$ is
+
+\begin{equation}
+	\boxed{
+		\bar{e} = N\hbar\omega\qty[\frac{1}{2} + \frac{1}{1 - e^{-\hbar\omega/kT}}]
+	} \label{eq:answer-b}
+\end{equation}
+
+\item The answer differs from the result for the energy of $N$ harmonic oscillators calculated in the microcanonical ensemble in Problem 4.22:
+
+\begin{equation}
+	E(T) = \frac{N\hbar\omega}{2}\qty(\frac{e^{\hbar\omega/kT} + 1}{e^{\hbar\omega/kT} - 1}) \label{eq:answer-c}
+\end{equation}
+
+\end{enumerate}
+
+\end{document}

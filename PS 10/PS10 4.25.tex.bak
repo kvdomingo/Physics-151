@@ -36,6 +36,14 @@ where $Z \equiv \sum_s e^{-\beta E_s}$ is the partition function. The probabilit
 	p(E) = \ddfrac{\Omega(E) e^{-\beta E}}{\sum_{\mathrm{levels}} \Omega(E) e^{-\beta E}} \label{eq:energy}
 \end{equation}
 
-In the limit $N$, $V \rightarrow \infty$, the gap between adjacent energy levels becomes infinitesimal, so $E$ can be considered a continuous variable. The probability that a system 
+In the limit $N$, $V \rightarrow \infty$, the gap between adjacent energy levels becomes infinitesimal, so $E$ can be considered a continuous variable. The probability that a system is in any microstate with energy between $E$ and $E + \dd{E}$ is $p(E)\dd{E}$. Let $g(E)\dd{E}$ be the number of microstates between $E$ and $E + \dd{E}$. The form of the probability distribution of the energy of a system in the canonical ensemble is
+
+\begin{equation}
+	\boxed{
+		p(E)\dd{E} = \ddfrac{g(E) e^{-\beta E} \dd{E}}{\int_0^\infty g(E) e^{-\beta E} \dd{E}}
+	} \label{eq:answer}
+\end{equation}
+
+where $\beta \equiv \ddfrac{1}{kT}$.
 
 \end{document}

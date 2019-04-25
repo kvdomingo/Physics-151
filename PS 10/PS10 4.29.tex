@@ -26,7 +26,32 @@
 
 \begin{enumerate}[(a)]
 
-\item A
+\item
+
+\item Letting the program run with parameters $d = 3$, $N = 40$, and $E = 40$ for a time $> 100,000$ mcs, we obtain the mean energy of the demon $\ev{E_d} = 0.65$, and the mean energy per particle $\ev{E}/N = 0.98$. For varying $N$, we have the following:
+
+\begin{table}[h!]
+	\centering
+	\caption{Energy values for $E = 40$.}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$N$ & $\ev{E_d}$ & $\ev{E}$ & $\ev{E}/N$ \\ \hline
+		40 & 0.65 & 39.35 & 0.984 \\
+		60 & 0.438 & 0.329 & 0.659 \\
+		80 & 0.329 & 39.671 & 0.496 \\
+		100 & 0.265 & 39.735 & 0.397 \\ \hline
+	\end{tabular}
+	\label{tab:E=40}
+\end{table}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\linewidth]{E=40.png}
+	\caption{Relationship between $\ev{E_d}$ and $\ev{E}/N$ for $N=40$.}
+	\label{fig:E=40}
+\end{figure}
+
+From linear regression, we observe a direct relationship between $\ev{E_d}$ and $\ev{E}/N$, with a proportionality constant $m = 1.52$ or $m = \frac{31}{20} \approx \frac{3}{2}$.
 
 \end{enumerate}
 

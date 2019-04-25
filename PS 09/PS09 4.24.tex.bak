@@ -20,16 +20,35 @@
 
 \setcounter{page}{1}
 
-\begin{equation}
-	\dd{E} = T\dd{S} - P\dd{V} + \mu\dd{N}
-\end{equation}
+\section*{PS 45: Problem 4.24}
+\bigskip
+
+The relative probability without normalization/partition function is given by
 
 \begin{equation}
-	\dd{S} = \frac{1}{T}\dd{E} + P\dd{V} - \mu\dd{N}
+	P_{rel} = e^{-\beta E_s} \label{eq:given-p}
 \end{equation}
 
+The energy difference between the two conformations is $\Delta E/k = 4180$ K, with the trans isomer lower than the cis isomer. The relative abundance is given by
+
 \begin{equation}
-	\pdv{S}{E} = T^{-1} \quad \pdv{S}{V} = P \quad \pdv{S}{N} = -\mu
+	P_{rel} = e^{-\Delta E/kT} \label{eq:given-prel}
+\end{equation}
+
+At $T = 300$ K, the relative abundance between the two isomers is
+
+\begin{equation}
+	\boxed{
+		\eval{P_{rel}}_{T=300} = e^{-4180/300} \approx  8.89 \times 10^{-7}
+	}
+\end{equation}
+
+At $T = 1000$ K,
+
+\begin{equation}
+	\boxed{
+		\eval{P_{rel}}_{T=1000} = e^{-4180/1000} \approx 1.53 \times 10^{-2}
+	}
 \end{equation}
 
 \end{document}

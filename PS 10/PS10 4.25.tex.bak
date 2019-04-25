@@ -13,6 +13,7 @@
 \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 \usepackage[none]{hyphenat}
 \usepackage{physics}
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
 %\renewcommand{\familydefault}{\sfdefault}
 
 
@@ -20,16 +21,21 @@
 
 \setcounter{page}{1}
 
-\begin{equation}
-	\dd{E} = T\dd{S} - P\dd{V} + \mu\dd{N}
-\end{equation}
+\section*{PS 46: Problem 4.25}
+\bigskip
+
+The Boltzmann distribution is given by
 
 \begin{equation}
-	\dd{S} = \frac{1}{T}\dd{E} + P\dd{V} - \mu\dd{N}
+	P_S = \frac{1}{Z} e^{-\beta E_s} \label{eq:boltzmann}
 \end{equation}
 
+where $Z \equiv \sum_s e^{-\beta E_s}$ is the partition function. The probability that a system is in any microstate with energy $E$ is
+
 \begin{equation}
-	\pdv{S}{E} = T^{-1} \quad \pdv{S}{V} = P \quad \pdv{S}{N} = -\mu
+	p(E) = \ddfrac{\Omega(E) e^{-\beta E}}{\sum_{\mathrm{levels}} \Omega(E) e^{-\beta E}} \label{eq:energy}
 \end{equation}
+
+In the limit $N$, $V \rightarrow \infty$, the gap between adjacent energy levels becomes infinitesimal, so $E$ can be considered a continuous variable. The probability that a system 
 
 \end{document}

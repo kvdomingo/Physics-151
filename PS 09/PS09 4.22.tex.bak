@@ -87,31 +87,32 @@ Applying \eqref{eq:given-t} to \eqref{eq:inter-s}
 \begin{align}
     \pdv{E}(\ln N!) &= 0 \\
     \pdv{E}\qty[\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)!] &= \qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)^{-1}\qty(\frac{1}{\hbar\omega})+ \qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)-\qty(\frac{1}{\hbar\omega}) \\
-    \pdv{E}\qty[\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)!] &=  \qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N) \\
-    \pdv{E}\qty[\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)!] &= \qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)^{-1}\qty(\frac{1}{\hbar\omega})+ \qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)-\qty(\frac{1}{\hbar\omega}) \\
-    \pdv{E}\qty[\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)!] &=  \qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)
+    &=  \qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N) \\
+    &= \qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)^{-1}\qty(\frac{1}{\hbar\omega})+ \qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)-\qty(\frac{1}{\hbar\omega}) \\
+    &=  \qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)
 \end{align}
 
-Then in totality, for the thermodynamic temperature, we have:
+We then have, for the thermodynamic temperature:
+
 \begin{align}
-    \frac{1}{T} &= \qty(\frac{\partial S}{\partial E})_{N}\\
-    &= k[\qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N) - \nonumber \\
-    &\qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)]\\
+    \frac{1}{T} &= \qty(\pdv{S}{E})_{N} \\
+    &= k\qty[\qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N) - \qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)] \\
     \Aboxed{
-    \frac{1}{T} &= \frac{k}{\hbar\omega}\ln\qty[\frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)}]
-    }
+    	\frac{1}{T} &= \frac{k}{\hbar\omega}\ln\qty[\frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)}]
+    } \label{eq:answer-1}
 \end{align}
 
-Now we solve for $E$ as a function of $T$. We resume from (23) by isolating E:
+Solving for $E$:
+
 \begin{align}
     \frac{1}{T} &= \frac{k}{\hbar\omega}\ln\qty[\frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)}] \nonumber\\
     \frac{\hbar\omega}{kT} &= \ln\qty[\frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)}]\\
-    e^{\frac{\hbar\omega}{kT}} &= \frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)}\\
-    \frac{E}{\hbar\omega}e^{\frac{\hbar\omega}{kT}} - \frac{1}{2}Ne^{\frac{\hbar\omega}{kT}} &= \frac{E}{\hbar\omega} - \frac{1}{2}N\\
-    \frac{E}{\hbar\omega}e^{\frac{\hbar\omega}{kT}} - \frac{E}{\hbar\omega} &= \frac{1}{2}Ne^{\frac{\hbar\omega}{kT}} + \frac{1}{2}N\\
-    \frac{E}{\hbar\omega}\qty(e^{\frac{\hbar\omega}{kT}}-1) &= \frac{N}{2}\qty(e^{\frac{\hbar\omega}{kT}}+1)\\
+    e^{\hbar\omega/kT} &= \frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)}\\
+    \frac{E}{\hbar\omega}e^{\hbar\omega/kT} - \frac{1}{2}Ne^{\hbar\omega/kT} &= \frac{E}{\hbar\omega} - \frac{1}{2}N\\
+    \frac{E}{\hbar\omega}e^{\hbar\omega/kT} - \frac{E}{\hbar\omega} &= \frac{1}{2}Ne^{\hbar\omega/kT} + \frac{1}{2}N\\
+    \frac{E}{\hbar\omega}\qty(e^{\hbar\omega/kT}-1) &= \frac{N}{2}\qty(e^{\hbar\omega/kT}+1)\\
     \Aboxed{
-    E(T) &= \frac{N\hbar\omega}{2}\qty(\frac{e^{\frac{\hbar\omega}{kT}}+1}{e^{\frac{\hbar\omega}{kT}}-1})
+	    E(T) &= \frac{N\hbar\omega}{2}\qty(\frac{e^{\hbar\omega/kT}+1}{e^{\hbar\omega/kT}-1})
     }
 \end{align}
 

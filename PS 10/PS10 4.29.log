@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  25 APR 2019 23:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  26 APR 2019 09:51
 entering extended mode
 **"./PS10 4.29.tex"
 ("PS10 4.29.tex"
@@ -901,27 +901,34 @@ cmr/m/n/12 ,
  []
 
 
-AED: lastpage setting LastPage
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+[]\OT1/cmr/m/n/12 The sim-u-la-tion re-sults ver-ify our
+ []
+
 [1{C:/Users/Kenneth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
- <./E=40.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
+ <./E=40.png>] 
+AED: lastpage setting LastPage
+[2
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
  ("PS10 4.29.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
 Package rerunfilecheck Info: File `"PS10 4.29".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
  ) 
 Here is how much of TeX's memory you used:
- 22671 strings out of 492973
- 408364 string characters out of 3135926
- 479383 words of memory out of 3000000
- 26325 multiletter control sequences out of 15000+200000
+ 22679 strings out of 492973
+ 408437 string characters out of 3135926
+ 481459 words of memory out of 3000000
+ 26326 multiletter control sequences out of 15000+200000
  545646 words of font info for 77 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,16n,63p,384b,715s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,17n,63p,441b,849s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MiKT
@@ -930,10 +937,10 @@ nts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmr12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmr8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb>
-Output written on "PS10 4.29.pdf" (1 page, 143528 bytes).
+fb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "PS10 4.29.pdf" (2 pages, 160961 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
+ 83 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

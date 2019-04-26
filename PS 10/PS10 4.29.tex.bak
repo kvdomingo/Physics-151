@@ -74,18 +74,38 @@ Setting units of $k = 1$, and rearranging terms,
 But \eqref{eq:answer-b} implies
 
 \begin{equation}
-	\frac{3}{2}\ev{E_d} = \frac{3}{2}T
+	\frac{3}{2}\ev{E_d} \approx \frac{3}{2}T
 \end{equation}
 
 or
 
 \begin{equation}
 	\boxed{
-		\ev{E_d} = T
+		\ev{E_d} \approx T
 	} \label{eq:answer-c}
 \end{equation}
 
-which means that the temperature of the gas is equal to the mean energy of the demon at any $N$.
+which means that the temperature of the gas approximates the mean energy of the demon at any $N$.
+
+\item The exponential form of $p(E_d)$ is verified using the Curve Fits section of the Data Tool in the simulator. Using the same initial parameters in (b), we fit it to an equation of the form $Ae^{-\beta x}$, where $x$ are the $E_d$ values, and $A$ and $\beta$ are the parameters. For the initial parameters above, the obtain the fit $A = 3.250 \times 10^6$ and $\beta = 1.514$. For varying N, we have
+
+\begin{table}[h!]
+	\centering
+	\caption{Comparison of $\beta$ and $T$ values for $E = 40$.}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$N$ & $\beta$ & $\beta^{-1}$ & $T$ \\ \hline
+		40 & 1.514 & 0.66 & 0.65 \\
+		60 & 2.266 & 0.44 & 0.438 \\
+		80 & 3.016 & 0.33 & 0.329 \\
+		100 & 3.779 & 0.264 & 0.265 \\ \hline
+	\end{tabular}
+	\label{tab:beta}
+\end{table}
+
+We see that the $\beta^{-1}$ values are very close to the $T$ values.
+
+\item
 
 
 \end{enumerate}

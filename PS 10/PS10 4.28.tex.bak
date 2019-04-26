@@ -76,8 +76,9 @@ The mean energy per particle is given by
 	&= -\pdv{\beta}\ln\qty(\frac{e^{-\frac{1}{2}\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}}) \nonumber \\
 	&= -\pdv{\beta}\qty[\ln\qty(e^{-\frac{1}{2}\beta\hbar\omega}) - \ln\qty(1 - e^{-\beta\hbar\omega})] \nonumber \\
 	&= \frac{1}{2}\hbar\omega + \frac{e^{-\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}}\hbar\omega \nonumber \\
+	&= \frac{1}{2}\hbar\omega + \frac{e^{-\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}} \cdot \frac{e^{\beta\hbar\omega}}{e^{\beta\hbar\omega}} \hbar\omega \nonumber \\
 	\Aboxed{
-		\bar{e} &= \hbar\omega\qty[\frac{1}{2} + \frac{1}{1 - e^{-\beta\hbar\omega}}]
+		\bar{e} &= \hbar\omega\qty[\frac{1}{2} + \frac{1}{e^{\beta\hbar\omega} - 1}]
 	} \qed \label{eq:answer-e}
 \end{align}
 
@@ -98,11 +99,11 @@ The entropy per particle is given by
 
 \item From \eqref{eq:answer-e}, the mean energy of a system of $N$ harmonic oscillator in equilibrium with a heat bath at temperature $T$ is
 
-\begin{align}
-	\bar{e} &= N\hbar\omega\qty[\frac{1}{2} + \frac{1}{1 - e^{-\hbar\omega/kT}}] \nonumber \\
-	&= N\hbar\omega\qty[\frac{1}{2} + \frac{1}{1 - e^{-\hbar\omega/kT}} \cdot \frac{e^{\hbar\omega/kT}}{e^{\hbar\omega/kT}}] \nonumber \\
-	&= N\hbar\omega\qty[\frac{1}{2} + \frac{1}{1 - e^{-\hbar\omega/kT}}
-\end{align}
+\begin{equation}
+	\boxed{
+	\bar{e} = N\hbar\omega\qty[\frac{1}{2} + \frac{1}{e^{\hbar\omega/kT} - 1}]
+	} \label{eq:answer-b}
+\end{equation}
 
 \item The result for the energy of $N$ harmonic oscillators calculated in the microcanonical ensemble in Problem 4.22 is
 

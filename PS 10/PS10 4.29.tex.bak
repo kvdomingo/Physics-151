@@ -105,8 +105,21 @@ which means that the temperature of the gas approximates the mean energy of the 
 
 We see that the $\beta^{-1}$ values are very close to the $T$ values.
 
-\item
+\item The simulation results verify our prediction in \eqref{eq:answer-c}.
 
+\item In 2 dimensions, $\ev{E_d}$ stabilizes at around 0.973 for $E, N = 40$, which implies a 1:1 relation between $\ev{E_d}$ and $\ev{E}/N$. The mean energy of an ideal gas in 2D is
+
+\begin{equation}
+	\ev{E} = \frac{2}{2}NkT
+\end{equation}
+
+Letting units of $k=1$ and isolating $T$, 
+
+\begin{equation}
+	T = \frac{\ev{E}}{N}
+\end{equation}
+
+which shows that the mean demon energy still approximates the temperature well in 2D.
 
 \end{enumerate}
 

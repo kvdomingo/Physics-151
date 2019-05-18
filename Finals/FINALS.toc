@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}P09 PS02 2.8 Work in a cyclic process}{1}{section.1}
+\contentsline {section}{\numberline {2}P10 PS02 2.13}{1}{section.2}
+\contentsline {section}{\numberline {3}P11 PS03 2.15}{2}{section.3}
+\contentsline {section}{\numberline {4}P12 PS03 2.17 Compression of air}{2}{section.4}
+\contentsline {section}{\numberline {5}P13 PS03 2.18 Work done in a quasistatic adiabatic process}{2}{section.5}

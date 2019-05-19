@@ -93,7 +93,7 @@ If we assume that the entropy of the black hole is of order $Nk$, where $N$ is t
 where $k_B$ is Boltzmann's constant. If the total energy of the black hole is given by \eqref{eq:totalenergy}, the number of photons is
 
 \begin{equation}
-	N = \frac{E}{E_\gamma} = \frac{GM^2}{hc}
+	N = \frac{E}{E_\gamma} = \frac{2GM^2}{hc}
 \end{equation}
 
 Plugging this into \eqref{eq:bhentropy},

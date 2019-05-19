@@ -2,4 +2,16 @@
 \contentsline {section}{\numberline {2}P10 PS02 2.13}{1}{section.2}
 \contentsline {section}{\numberline {3}P11 PS03 2.15}{2}{section.3}
 \contentsline {section}{\numberline {4}P12 PS03 2.17 Compression of air}{2}{section.4}
-\contentsline {section}{\numberline {5}P13 PS03 2.18 Work done in a quasistatic adiabatic process}{2}{section.5}
+\contentsline {section}{\numberline {5}P13 PS03 2.18 Work done in a quasistatic adiabatic process}{3}{section.5}
+\contentsline {section}{\numberline {6}P14 PS03 2.20 Heat pump}{3}{section.6}
+\contentsline {section}{\numberline {7}P15 PS03 2.21 Water in contact with two heat baths in succession}{3}{section.7}
+\contentsline {section}{\numberline {8}P16 PS04 2.23 More work}{4}{section.8}
+\contentsline {section}{\numberline {9}P17 PS04 2.24 Applications of (2.133)}{5}{section.9}
+\contentsline {section}{\numberline {10}P18 PS04 2.26 Maximum useful work and free energy changes}{6}{section.10}
+\contentsline {section}{\numberline {11}P19 PS04 2.25 The enthalpy}{6}{section.11}
+\contentsline {section}{\numberline {12}P20 PS04 2.27 More Maxwell relations}{7}{section.12}
+\contentsline {section}{\numberline {13}P21 PS05 2.29 Free expansion of a van der Waals gas}{8}{section.13}
+\contentsline {section}{\numberline {14}P22 PS05 2.32 Simple Legendre transforms}{8}{section.14}
+\contentsline {section}{\numberline {15}P23 PS05 2.33 Simple Legendre transforms}{9}{section.15}
+\contentsline {section}{\numberline {16}P24 PS05 2.54 Black hole thermodynamics}{9}{section.16}
+\contentsline {section}{\numberline {17}P25 PS05 2.57 More work}{11}{section.17}

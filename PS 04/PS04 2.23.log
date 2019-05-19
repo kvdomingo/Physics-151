@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  26 MAR 2019 11:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  19 MAY 2019 14:56
 entering extended mode
 **"./PS04 2.23.tex"
 ("PS04 2.23.tex"
@@ -895,20 +895,6 @@ Underfull \hbox (badness 1248) in paragraph at lines 52--53
  []
 
 
-LaTeX Warning: Reference `eq:workengine' on page 1 undefined on input line 58.
-
-
-LaTeX Warning: Reference `eq:giventemp' on page 1 undefined on input line 86.
-
-
-LaTeX Warning: Reference `eq:answer-b-engine' on page 1 undefined on input line
- 103.
-
-
-LaTeX Warning: Reference `eq:answer-b-contact' on page 1 undefined on input lin
-e 109.
-
-
 Underfull \hbox (badness 4819) in paragraph at lines 115--116
 \OT1/cmr/m/n/12 is higher be-cause en-ergy from both
  []
@@ -934,19 +920,12 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `"PS04 2.23".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 119.
  ) 
 Here is how much of TeX's memory you used:
  22653 strings out of 492973
  408138 string characters out of 3135926
- 481048 words of memory out of 3000000
+ 481462 words of memory out of 3000000
  26306 multiletter control sequences out of 15000+200000
  542492 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -959,9 +938,9 @@ ts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmr6.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb>
-Output written on "PS04 2.23.pdf" (1 page, 84351 bytes).
+Output written on "PS04 2.23.pdf" (1 page, 84850 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  19 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper,twocolumn]{article}
+\documentclass[9pt,a4paper,twocolumn]{article}
 % The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
 \input{151.dat}
 \usepackage{gensymb}
@@ -15,6 +15,7 @@
 \usepackage{physics}
 \usepackage{chngcntr}
 \counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
 \newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
 %\renewcommand{\familydefault}{\sfdefault}
 
@@ -46,7 +47,7 @@ Crib Sheet \\
 
 \setcounter{page}{1}
 
-\section[P09 PS02 2.8 Work in a cyclic process]{P09 PS02 2.8}
+\section{P09 PS02 2.8 Work in a cyclic process}
 Consider the cyclic process as described in Example 2.1.
 
 \begin{figure}[htb]
@@ -223,7 +224,7 @@ Raising both sides to $1/\gamma$,
 \boxed{	TP^{(1 - \gamma)/\gamma} = \textrm{constant}} \label{eq:answer2}
 \end{eqnarray}
 
-\section[P12 PS03 2.17 Compression of air]{P12 PS03 2.17}
+\section{P12 PS03 2.17 Compression of air}
 \begin{enumerate}[(a)]
 
 \item Air initially at $20^\circ$C is compressed by a factor of 15. Assuming adiabatic conditions, $V_i/15 = V_f$, $T_i = 293$K, and $\gamma = 1.4$,
@@ -257,7 +258,7 @@ Assuming air behaves like an ideal gas,
 
 \end{enumerate}
 
-\section[P13 PS03 2.18 Work done in a quasistatic adiabatic process]{P13 PS03 2.18}
+\section{P13 PS03 2.18 Work done in a quasistatic adiabatic process}
 
 \begin{enumerate}[(a)]
 
@@ -318,7 +319,7 @@ Therefore,
 
 \end{enumerate}
 
-\section[P14 PS03 2.20 Heat pump]{P14 PS03 2.20}
+\section{P14 PS03 2.20 Heat pump}
 A heat pump works on the same principle as a refrigerator, but the goal is to heat a room by cooling its cooler surroundings. For example, we could heat a building by cooling a nearby body of water. If we extract energy $Q_{cold}$ from the surroundings at $T_{cold}$, do work $W$, and deliver $Q_{hot}$ to the room at $T_{hot}$, the coefficient of performance is given by
 
 \begin{equation}
@@ -344,7 +345,7 @@ Plugging the given conditions $T_{hot} = 296$K and $T_{cold} = 273$K into \eqref
 
 The denominator is larger for large temperature differences. The heater is more efficient in regions with mild winters.
 
-\section[P15 PS03 2.21 Water in contact with two heat baths in succession]{P15 PS03 2.21}
+\section{P15 PS03 2.21 Water in contact with two heat baths in succession}
 The temperature of 1 kg of water at 0$^\circ$C is increased to 50$^\circ$C by first bringing it into contact
 with a heat bath at 25$^\circ$C and then with a heat bath at 50$^\circ$C. What is the change in entropy of the entire system? How does this change in entropy compare with the change that was found in Example 2.15?
 
@@ -361,7 +362,7 @@ The energy transfer is
 \begin{align}
 	Q &= C \left( T_b - T_a \right) \\
 	&= 4184(25) \nonumber \\
-	&= 104 600 \textrm{ J}
+	&= 104,600 \textrm{ J}
 \end{align}
 
 So the entropy of the first bath is
@@ -401,7 +402,7 @@ The total entropy change for both processes is then
 
 The value obtained is less than that of the water directly placed in contact with the $50^\circ$ bath.
 
-\section[P16 PS04 2.23 More work]{P16 PS04 2.23}
+\section{P16 PS04 2.23 More work}
 \begin{enumerate}[(a)]
 
 \item Show that the work performed by the heat engine in Example 2.19 is given by
@@ -503,9 +504,82 @@ The final temperature for thermal contact is higher because energy from both sys
 
 \item Suppose that the heat capacities of both bodies depend linearly on the temperature $T$ rather than being constant; that is, $C_A = AT$ and $C_B = BT$, where $A$ and $B$ are constants. What is the final temperature assuming that the two bodies are placed in thermal contact? What is the final temperature for the case when the maximum work is extracted? What is the maximum work done?
 
+\begin{align}
+	T &= \frac{ATT_A + BTT_B}{AT + BT} \\
+	&= \frac{T(AT_A + BT_B)}{T(A+B)} \\
+	\Aboxed{
+		T &= \frac{AT_A + AT_B}{A+B}
+	}
+\end{align}
+
+Since the heat capacities of both bodies are dependent on $T$, we have to solve for the individual change in entropies of the two bodies:
+
+\begin{align}
+	\Delta S &= \int_{T_i}^{T_f} \frac{C(T)}{T}\dd{T} \\
+	\Delta S_A &= \int_{T_i}^{T_f} C_A(T)\frac{\dd{T}}{T} \\
+	&= \int_{T_A}^{T} AT\frac{\dd{T}}{T} \\
+	&= \int_{T_A}^{T} A\dd{T} \\
+	&= A(T - T_A) \\
+	\Delta S_B &= \int_{T_i}^{T_f} C_B(T)\frac{\dd{T}}{T} \\
+	&= \int_{T_B}^{T} BT\frac{\dd{T}}{T} \\
+	&= \int_{T_B}^{T} B\dd{T} \\
+	&= B(T - T_B)
+\end{align}
+
+The overall change in entropy of a system doing maximum work is 0 because the process is reversible
+
+\begin{equation}
+	\Delta S = \Delta S_A + \Delta S_B = 0
+\end{equation}
+
+Substituting the individual change in entropies,
+
+\begin{align}
+	A(T - T_A) + B(T - T_B) &= 0 \\
+	AT - AT_A + BT - BT_B &= 0 \\
+	T(A+B) &= AT_A + BT_B \\
+	\Aboxed{
+		T &= \frac{AT_A + BT_B}{A+B}
+	}
+\end{align}
+
+which is the final temperature at maximum work done. To calculate the maximum work done,
+
+\begin{align}
+	\dd{Q} &= C\dd{T} \\
+	\dd{Q_{high}} &= C_A\dd{T} = AT\dd{T} \\
+	\dd{Q_{low}} &= C_B\dd{T} = BT\dd{T}
+\end{align}
+
+Integrating,
+
+\begin{align}
+	Q_{high} &= \int_{T_{high,1}}^{T_{high,2}} AT\dd{T} \\
+	&= \int_T^{T_A} AT\dd{T} \\
+	&= \frac{A}{2}\qty(T_A^2 - T^2) \\
+	Q_{low} &= \int_{T_{low,1}}^{T_{low,2}} AT\dd{T} \\
+	&= \int_{T_B}^T BT\dd{T} \\
+	&= \frac{B}{2}\qty(T_B^2 - T^2)
+\end{align}
+
+The work done by the engine is
+
+\begin{equation}
+	W = Q_{high} - Q_{low}
+\end{equation}
+
+So,
+
+\begin{align}
+	W &= \frac{A}{2}\qty(T_A^2 - T^2) - \frac{B}{2}\qty(T^2 - T_B^2) \\
+	\Aboxed{
+		W &= \frac{A}{2}\qty(T_A^2 - T^2) + \frac{B}{2}\qty(T_B^2 - T^2)
+	}
+\end{align}
+
 \end{enumerate}
 
-\section[P17 PS04 2.24 Applications of (2.133)]{P17 PS04 2.24}
+\section{P17 PS04 2.24 Applications of (2.133)}
 
 \begin{enumerate}[(a)]
 
@@ -592,7 +666,7 @@ Plugging this into \eqref{eq:lnrelation},
 
 \end{enumerate}
 
-\section[P18 PS04 2.26 Maximum useful work and free energy changes]{P18 PS04 2.26}
+\section{P18 PS04 2.26 Maximum useful work and free energy changes}
 
 \begin{enumerate}[(a)]
 
@@ -660,7 +734,7 @@ Substituting \eqref{eq:zero-tp} into \eqref{eq:usefulwork},
 
 \end{enumerate}
 
-\section[P19 PS04 2.25 The enthalpy]{P19 PS04 2.25}
+\section{P19 PS04 2.25 The enthalpy}
 
 \begin{enumerate}[(a)]
 
@@ -770,7 +844,7 @@ An equilibrium system spontaneously minimizes the enthalpy.
 
 \end{enumerate}
 
-\section[P20 PS04 2.27 More Maxwell relations]{P20 PS04 2.27}
+\section{P20 PS04 2.27 More Maxwell relations}
 
 From the differentials of the thermodynamic potentials
 
@@ -888,7 +962,7 @@ By Euler's reciprocity relation,
 	} \label{eq:proof-muvn}
 \end{align}
 
-\section[P21 PS05 2.29 Free expansion of a van der Waals gas]{P21 PS05 2.29}
+\section{P21 PS05 2.29 Free expansion of a van der Waals gas}
 
 Calculate $\qty(\pdv{T}{V})_E$ for the van der Waals energy equation of state (2.24) and show that a free expansion results in cooling.
 
@@ -915,7 +989,7 @@ Performing the necessary derivatives indicated in \eqref{eq:joule} on \eqref{eq:
 
 The change in temperature w.r.t. volume is negative, which indicates cooling.
 
-\section[P22 PS05 2.32 Simple Legendre transforms]{P22 PS05 2.32}
+\section{P22 PS05 2.32 Simple Legendre transforms}
 
 \begin{enumerate}[(a)]
 
@@ -958,16 +1032,43 @@ Let $f(x) = x$. Its Legendre transform is
 \begin{align}
 	\mathcal{G}\qty[m(x)] &= f(x) - xm \nonumber \\
 	&= x - x(1) \nonumber \\
-	\Aboxed{	
-		\mathcal{G}\qty[x] &= 0 \label{eq:answer-b1}
-	}
+	\mathcal{G}\qty[x] &= 0 \label{eq:answer-b1}
 \end{align}
 
-The Legendre transform for $\sin{x}$ does not exist (there is no one-to-one correspondence between $x$ and $m$).
+We see here that $f(x) = x$ has no Legendre transform since the relationship between $m$ and $x$ has vanished.
+
+Let $f(x) = \sin(x)$. Its Legendre transform is
+
+\begin{align}
+	\mathcal{G}\qty[m(x)] &= f(x) - xm \nonumber \\
+	&= \sin(x) - x\cos(x) \\
+\end{align}
+
+Expressing $x$ in terms of $m$,
+
+\begin{align}
+	x &= \arccos(m) \\
+	\mathcal{G}[m(x)] &= \sin(\arccos(m)) - \arccos(m)\cos(\arccos(m)) \nonumber \\
+	&= \sqrt{1-m^2} - \arccos(m)m
+\end{align}
+
+To check if the Legendre transform is valid,
+
+\begin{align}
+	f(x) &= \mathcal{G}[m(x)] + xm \\
+	&= \sqrt{1-m^2} - \arccos(m)m + xm \\
+	&= \sqrt{1-\cos^2(x)} - \arccos(\cos(x))\cos(x) + x\cos(x) \nonumber \\
+	&= \sqrt{\sin^2(x)} - (x \pm 2\pi)\cos(x) + x\cos(x) \\
+	&= \sin(x) \pm 2\pi\cos(x)
+\end{align}
+
+We see that the original function has not been recovered. Thus, $\sin(x)$ has no valid Legendre transform.
+
+Aside from the mathematical proof presented, we can also deduce the non-validity of their Legendre transform by visual inspection. A function only has a valid Legendre transform if (a) it is monotonic, i.e. it is either continuous increasing or decreasing, or (b) it is always concave up or concave down. Both of the above functions fail to satisfy either of the criteria and therefore, have no valid Legendre transforms.
 
 \end{enumerate}
 
-\section[P23 PS05 2.33 Simple Legendre transforms]{P23 PS05 2.33}
+\section{P23 PS05 2.33 Helmholtz free energy as a Legendre transform}
 
 Start from the function $E(S, V,N)$ and use the Legendre transform to find the function $F(T, V,N)$.
 
@@ -1003,7 +1104,7 @@ Therefore,
 	} \qed
 \end{equation}
 
-\section[P24 PS05 2.54 Black hole thermodynamics]{P24 PS05 2.54}
+\section{P24 PS05 2.54 Black hole thermodynamics}
 A black hole is created from the collapse of a massive object into one so dense that nothing can escape beyond a certain radius, including light. The measurable properties of a black hole depend only on its mass, charge, and angular momentum. In this problem we estimate the entropy and temperature of a charge neutral nonrotating black hole.
 
 \begin{enumerate}[(a)]
@@ -1169,8 +1270,7 @@ Expressing \eqref{eq:answer-d1} in terms of $R$ in \eqref{eq:answer-a},
 
 \end{enumerate}
 
-\section[P25 PS05 2.57 More work]{P25 PS05 2.57}
-
+\section{P25 PS05 2.57 More work}
 Consider a system described by the van der Waals equation of state which expands at constant temperature from volume $V_1$ to volume $V_2$. Assume that the density $\rho = N/V \ll 1$ over the range of volumes of interest.
 
 \begin{enumerate}[(a)]
@@ -1180,44 +1280,2015 @@ Consider a system described by the van der Waals equation of state which expands
 The Van der Waals equation of state is given by
 
 \begin{equation}\label{eq:vanderwaals}
-	\qty(P + \frac{N^2}{V^2})\qty(V-Nb) = NkT
-\end{equation}
-
-Since the density $\rho = \frac{N}{V} \ll 1$, \eqref{eq:vanderwaals} can be approximated as
-
-\begin{equation}\label{eq:vdwapprox}
-	P\qty(V-Nb) = NkT
+	\qty(P + a\frac{N^2}{V^2})\qty(V-Nb) = NkT
 \end{equation}
 
 Rearranging terms to isolate $P$,
 
 \begin{equation}\label{eq:pressure}
-	P = \frac{NkT}{V-Nb}
+	P = \frac{NkT}{V-Nb} - a\frac{N^2}{V^2}
 \end{equation}
 
 The work done on the gas is
 
 \begin{equation}\label{eq:work}
-	W = -\int_{V_1}^{V_2} P \dd{V}
+	W_{vdw} = -\int_{V_1}^{V_2} P \dd{V}
 \end{equation}
 
 Plugging in \eqref{eq:pressure} into \eqref{eq:work},
 
 \begin{align}
-	W_{VDW} &= -\int_{V_1}^{V_2} \frac{NkT}{V-Nb} \dd{V} \nonumber \\
-	&= -NkT \int_{V_1}^{V_2} \frac{\dd{V}}{V-Nb}
-\end{align}
+	W_{vdw} &= -\int_{V_1}^{V_2} \frac{NkT}{V-Nb} - a\frac{N^2}{V^2} \dd{V} \nonumber \\
+	&= -NkT \int_{V_1}^{V_2} \frac{\dd{V}}{V-Nb} + N^2 a \int_{V_1}^{V_2} \frac{\dd{V}}{V} \nonumber \\
+	&= -NkT\eval{\ln[V - Nb]}_{V_1}^{V_2} + N^2 a \eval{-\frac{1}{V}}_{V_1}^{V_2} \nonumber \\
+	&= -NkT\ln\qty[\frac{V_2 - Nb}{V_1 - Nb}] - N^2 a\qty(\frac{1}{V_2	} - \frac{1}{V_1}) \nonumber
+\end{align}	
 
-Let $u \equiv V - Nb$, $\dd{u} \equiv \dd{V}$.
+Because $\rho = N/V \ll 1$, $V \gg N$ and $V \gg Nb$ since $b$ is also a very small value. Thus,
+
+\begin{equation}
+	\boxed{
+		W_{vdw} = -NkT\ln\qty[\frac{V_2}{V_1}] - N^2a\qty(\frac{1}{V_2} - \frac{1}{V_1})
+	}
+\end{equation}
+
+\item Calculate the work $W_{ideal}$ done on the gas under the same conditions assuming that the gas is ideal.
+
+From the ideal gas law,
+
+\begin{equation}
+	PV = NkT
+\end{equation}
+
+Isolating $P$ and solving for $W$,
 
 \begin{align}
-	W_{VDW} &= -NkT \int_{V_1-Nb}^{V_2-Nb} \frac{\dd{u}}{u} \nonumber \\
-	&= -NkT \eval{\ln(u)}_{V_1-Nb}^{V_2-Nb} \nonumber \\
-	&= -NkT \qty[\ln(V_2-Nb) - \ln(V_1-Nb)] \nonumber \\
+	P &= \frac{NkT}{V} \\
+	W_{id} &= -\int_{V_1}^{V_2} P \dd{V} \\
+	&= -\int_{V_1}^{V_2} \frac{NkT}{V} \dd{V} \\
+	&= -NkT \int_{V_1}^{V_2} \frac{\dd{V}}{V} \\
+	&= -NkT\eval{\ln[V]}_{V_1}^{V_2} \\
 	\Aboxed{
-		W_{VDW} &= NkT \ln\qty[\frac{V_1-Nb}{V_2-Nb}] \label{eq:answer-a}
+		W_{id} &= -NkT\ln\qty[\frac{V_2}{V_1}]
 	}
 \end{align}
+
+\item Find the difference $W_{vdw} - W_{id}$ and discuss the reason why this difference is positive or negative as a function of the temperature.
+
+Solving for the difference of the two $W$,
+
+\begin{align}
+	\Delta W &= NkT\ln\qty[\frac{V_1}{V_2}] - N^2a\qty(\frac{1}{V_2} - \frac{1}{V_1}) + NkT\ln\qty[\frac{V_2}{V_1}] \nonumber \\
+	\Delta W &= -N^2a\qty(\frac{1}{V_2} - \frac{1}{V_1}) \\
+	\Aboxed{
+		\Delta W &= N^2 a \frac{V_2 - V_1}{V_1V_2}
+	}
+\end{align}
+
+The difference is positive since it was stated that the gas expanded from $V_1$ to $V_2$. Thus, the work done on a van der Waals gas is greater than the work done on an ideal gas. This is due to the contribution of the molecular attraction in the former.
+
+\end{enumerate}
+
+\section{P26 PS06 3.20 Uncertainty}
+
+\begin{enumerate}[(a)]
+
+\item Consider the toss of a coin for which $P_1 = P_2 = 1/2$ for the two outcomes. What is the uncertainty in this case?
+
+\begin{align}
+	S &= \ln \Omega \label{eq:equalprob} \\
+	\Aboxed{
+		S &= \ln 2 \approx 0.69
+	} \label{eq:answer-a}
+\end{align}
+
+\item What is the uncertainty for $P_1 = 1/5$ and $P_2 = 4/5$? How does the uncertainty in this case compare to that in part (a)?
+
+\begin{align}
+	S &= -\sum_i P_i \ln P_i \label{eq:unequalprob} \\
+	&= -\qty(\frac{1}{5} \ln \frac{1}{5} + \frac{4}{5} \ln \frac{4}{5}) \nonumber \\
+	\Aboxed{	
+		S &= \frac{1}{5}\ln 5 + \frac{4}{5}\ln 4 \approx 0.67 \label{eq:answer-b}
+	}
+\end{align}
+
+The uncertainty is lower since one of the outcomes is now more likely to occur.
+
+\item On page 118 we discussed four experiments with various outcomes. Compare the uncertainty $S$ of the third and fourth experiments.
+
+For third and fourth experiments, all $\qty{P_i}_{i=1}^4 = 1/4$ and $\qty{P_i}_{i=1}^6 = 1/6$, respectively. Their uncertainties are
+
+\begin{align}
+	\Aboxed{	
+		S_3 &= \ln 4 \approx 1.39
+	} \label{eq:answer-c1} \\
+	\Aboxed{
+		S_4 &= \ln 6 \approx 1.79
+	} \label{eq:answer-c2}
+\end{align}
+
+The uncertainty is greater when there are more states since there is a greater number of unique possible outcomes.
+
+\end{enumerate}
+
+\section{P27 PS06 3.25 Testing accuracy}
+Suppose that a person tests positive for a disease that occurs in 1 in 100, 1 in 1000, 1 in 10,000, or 1 in 100,000 people. Determine in each case how accurate the test must be for the test to give a probability equal to at least 50\% of actually having the disease.
+
+\paragraph{Case 1} 1:100
+
+Let $P$(D) represent the probability of having the disease given no other information, and $P$(ND) represent the probability of not having the disease. Since having the disease and not having the disease are mutually exclusive, we have
+
+\begin{eqnarray}
+	P(\mathrm{D}) = \frac{1}{100} \label{eq:probd}\\
+	P(\mathrm{ND}) = 1 - P(\mathrm{D}) = 1 - \frac{1}{100} = \frac{99}{100}	\label{eq:probnd}
+\end{eqnarray}
+
+If the goal is for the test to have an accuracy of 50\%, then we set the probability of having the disease given that you tested positive to $P\qty(\mathrm{D}|+) = 0.50$. The quantity of interest is the probability of testing positive given that you have the disease $P\qty(+|\mathrm{D})$. From Bayes' theorem,
+
+\begin{equation}\label{eq:bayes}
+	P(\mathrm{D}|+) = \frac{P(+|\mathrm{D}) P(\mathrm{D})}{P(+|\mathrm{D}) P(\mathrm{D}) + P(+|\mathrm{ND}) P(\mathrm{ND})}
+\end{equation}
+
+Plugging in \eqref{eq:probd} and \eqref{eq:probnd},
+
+\begin{equation}
+	\frac{50}{100} = \frac{P(+|\mathrm{D}) \frac{1}{100}}{P(+|\mathrm{D}) \frac{1}{100} + P(+|\mathrm{ND}) \frac{99}{100}}
+\end{equation}
+
+The probability of testing positive given that you don't have the disease and the probability of testing positive given that you have the disease are also mutually exclusive. Therefore, we can write
+
+\begin{equation}
+	\frac{50}{100} = \frac{P(+|\mathrm{D}) \frac{1}{100}}{P(+|\mathrm{D}) \frac{1}{100} + [1 - P(+|\mathrm{D})] \frac{99}{100}}
+\end{equation}
+
+Multiply both sides by 100 and solve for $P(+|$D$)$.
+
+\begin{gather*}
+	\frac{50}{100} = \frac{P(+|\mathrm{D})}{P(+|\mathrm{D}) + 99 [1 - P(+|\mathrm{D})]} \\
+	\frac{50}{100}\qty[P(+|\mathrm{D}) + 99 - 99P(+|\mathrm{D})] = P(+|\mathrm{D}) \\
+	P(+|\mathrm{D})\qty[\frac{50}{100} - \frac{50\cdot 99}{100} - 1] = -\frac{50\cdot 99}{100}
+\end{gather*}
+
+\begin{align}
+	P(+|\mathrm{D}) &= \frac{-\frac{50}{100}\cdot 99}{\frac{50}{100} - \frac{50}{100}\cdot 99 - 1} \nonumber \\
+	&= \frac{-49.5}{-50} \nonumber \\
+	\Aboxed{
+		P(+|\mathrm{D}) &= 0.99 \label{eq:answer-100}
+	}
+\end{align}
+
+\paragraph{Case 2} 1:1000
+
+With the same treatment as before we have the probabilities $P($D$) = \frac{1}{1000}$ and $P($ND$) = \frac{999}{1000}$. Following the same steps as in Case 1, we end up with the equation
+
+\begin{align}
+	P(+|\mathrm{D}) &= \frac{-\frac{50}{100}\cdot 999}{\frac{50}{100} - \frac{50}{100}\cdot 999 - 1} \nonumber \\
+	&= \frac{-499.5}{-500} \nonumber \\
+	\Aboxed{
+		P(+|\mathrm{D}) &= 0.999 \label{eq:answer-1000}
+	}
+\end{align}
+
+\paragraph{Case 3} 1:10,000
+
+Following the same arguments as before, the final equation is
+
+\begin{align}
+	P(+|\mathrm{D}) &= \frac{-\frac{50}{100}\cdot 9999}{\frac{50}{100} - \frac{50}{100}\cdot 9999 - 1} \nonumber \\
+	&= \frac{-4999.5}{-5000} \nonumber \\
+	\Aboxed{
+		P(+|\mathrm{D}) &= 0.9999 \label{eq:answer-10000}
+	}
+\end{align}
+
+\paragraph{Case 3} 1:100,000
+
+Following the same arguments as before, the final equation is
+
+\begin{align}
+	P(+|\mathrm{D}) &= \frac{-\frac{50}{100}\cdot 99,999}{\frac{50}{100} - \frac{50}{100}\cdot 99,999 - 1} \nonumber \\
+	&= \frac{-49,999.5}{-50,000} \nonumber \\
+	\Aboxed{
+		P(+|\mathrm{D}) &= 0.99999 \label{eq:answer-100000}
+	}
+\end{align}
+
+This shows that the more rare the occurrence is, the more unreasonably accurate the test has to be to achieve even just 50\% true positive detection rate.
+
+\section{P28 PS06 3.34 Density fluctuations}
+A container of volume $V$ contains $N$ molecules of a gas. We assume that the gas is dilute so that the position of any one molecule is independent of all other molecules. Although the density is uniform on the average, there are fluctuations in the density. Divide the volume $V$ into two parts $V_1$ and $V_2$ with $V = V_1 + V_2$.
+
+\begin{enumerate}[(a)]
+
+\item What is the probability $p$ that a particular molecule is in the volume $V_1$?
+
+\begin{equation}
+	\boxed{
+		p_1 = \frac{V_1}{V} \label{eq:3.34-v1}
+	}
+\end{equation}
+
+This means that the probability that a particular molecule is in volume $V_2$ is
+
+\begin{equation}
+	p_2 = \frac{V_2}{V} \label{eq:3.34-v2}
+\end{equation}
+
+\item What is the probability that $N_1$ molecules are in $V_1$ and $N_2$ molecules are in $V_2$, where $N = N_1 + N_2$?
+
+Using the binomial distribution,
+
+\begin{equation}
+	P_N(n) = \frac{N!}{n!(N-n)!} p^n q^{N-n} \label{eq:3.34-binom}
+\end{equation}
+
+Letting $p \equiv p_1$ and $q \equiv p_2$,
+
+\begin{align}
+	n &\equiv N_1 \\
+	N - n &\equiv N - N_1 = (N_1 + N_2 - N_1) = N_2
+\end{align}
+
+Substituting these into \eqref{eq:3.34-binom},
+
+\begin{equation}
+	\boxed{
+		P_N(N_1) = \frac{N!}{N_1!N_2!}\qty(\frac{V_1}{V})^{N_1} \qty(\frac{V_2}{V})^{N_2}
+	} \label{eq:3.34-PN1}
+\end{equation}
+
+Letting $p \equiv p_2$ and $q \equiv p_1$,
+
+\begin{equation}
+	\boxed{
+		P_N(N_2) = \frac{N!}{N_2!N_1!}\qty(\frac{V_2}{V})^{N_2}\qty(\frac{V_1}{V})^{N_1}
+	} \label{eq:3.34-PN2}
+\end{equation}
+
+similar to that of \eqref{eq:3.34-PN1}.
+
+\item What is the average number of molecules in each part?
+
+We use
+
+\begin{equation}
+	\ev{n} = Np
+\end{equation}
+
+So the average number of molecules in each part is
+
+\begin{align}
+	\Aboxed{
+		\ev{N_1} &= N\frac{V_1}{V}
+	} \label{eq:3.34-avg-N1} \\
+	\Aboxed{
+		\ev{N_2} &= N\frac{V_2}{V}
+	} \label{eq:3.34-avg-N2}
+\end{align}
+
+\item What are the relative fluctuations of the number of molecules in each part?
+
+Relative fluctuation in the binomial distribution is given by
+
+\begin{equation}
+	\sigma_n = \sqrt{Npq} 
+\end{equation}
+
+We have
+
+\begin{align}
+	\Aboxed{
+		\sigma_{N_1} &= \sqrt{N\frac{V_1 V_2}{V^2}}
+	} \label{eq:3.34-sigmaN1} \\
+	\Aboxed{
+		\sigma_{N_2} &= \sqrt{N\frac{V_2 V_1}{V^2}}
+	} \label{eq:3.34-sigmaN2}
+\end{align}
+
+\end{enumerate}
+
+\section{P29 PS06 3.35 Random walk}
+Suppose that a random walker takes $n$ steps to the right and $n'$ steps to the left for a total of $N$ steps. Each step is of equal length $a$ and the probability of a step to the right is $p$. Denote $x$ as the net displacement of a walker after $N$ steps. What is the mean value $\ev{x}$ for an $N$-step random walk? What is the $N$ dependence of the variance $\ev{\Delta x^2}$?
+
+Considering right to be the positive direction, the net displacement is given by
+
+\begin{equation}
+	\boxed{
+		x = a(n - n') 
+	}
+\end{equation}
+
+The mean displacement is
+
+\begin{align}
+	\bar{x} &= a\overline{(n - n')} \\
+	&= a\bar{n} - a\bar{n'} \nonumber \\
+	&= a\bar{n} - a\overline{N - n} \nonumber \\
+	&= a\bar{n} - a\bar{N} + a\bar{n} \nonumber \\
+	&= 2a\bar{n} - a\bar{N} \nonumber \\
+	\Aboxed{
+		\bar{x} &= a\qty(2\bar{n} - N) \nonumber
+	}
+\end{align}
+
+The variance is given by
+
+\begin{equation}
+	\sigma_N^2 = \ev{\Delta x_n}^2 = \ev{x_n^2} - \ev{x_n}^2
+\end{equation}
+
+Solving for $\ev{x_n}^2$,
+
+\begin{align}
+	\ev{x_n}^2 &= \sum_{i=-Na}^{Na} P_i(x_i)x_i^2 \\
+	&= p^2(Na)^2 + q^2(-Na)^2 \\
+	&= (p^2 + q^2)(Na)^2
+\end{align}
+
+Solving for $\ev{x_n^2}$,
+
+\begin{align}
+	\ev{x_n^2} &= (p-q)^2(Na)^2 \\
+	&= (p^2 - 2pq + q^2)(Na)^2
+\end{align}
+
+The variance is then
+
+\begin{align}
+	\sigma_n^2 &= (p^2 + q^2)(Na)^2 - (p^2 - 2pq + q^2)(Na)^2 \\
+	\Aboxed{
+		\sigma_n^2 &= 2pq(Na)^2
+	}
+\end{align}
+
+The variance depends on $N^2$.
+
+\section{P30 PS06 3.37 Calculation of the normalization constant}
+
+With the given
+
+\begin{gather}
+	\ln A = \ln P_n(n = \bar{n}) \label{givenln} \\
+	P_N(n) = Ae^{-\frac{1}{2\sigma^2}(n - \bar{n})^2} \label{eq:givenfunc} \\
+	P_N(n) = \frac{N!}{n!(N-n)!}p^N(1-p)^{N-n} \label{eq:binom} \\
+	\ln N! = N\ln N - N + \frac{1}{2}\ln\qty(2\pi N) \label{eq:stirling}
+\end{gather}
+
+Take the $\ln$ of both sides of \eqref{eq:binom}
+
+\begin{align}
+	\ln P_N(n) &= \ln\qty[\frac{N!}{n!(N-n)!}p^N(1-p)^{N-n}] \nonumber \\
+	\ln P_N(n) &= \ln N! - \ln n! - \ln\qty(N-n)! \nonumber \\
+	& \quad + N\ln p + (N-n)\ln q
+\end{align}
+
+Since $n$ is constant, we can write it interchangeably with $\bar{n}$:
+
+\begin{align}
+	\ln P_N(n) &= \ln N! - \ln \bar{n}! - \ln\qty(N-\bar{n})! \nonumber \\
+	& \quad + N\ln p + (N-\bar{n})\ln q
+\end{align}
+
+Recall that $\bar{n} = Np$. We can write
+
+\begin{align}
+	\ln P_N(n) &= \ln N! - \ln\qty(Np)! - \ln\qty(N - Np)! \nonumber \\
+	& \quad + N \ln p + (N - Np)\ln q \nonumber \\
+	\ln P_N(n) &= \ln N! - \ln\qty(Np)! - \ln\qty(N - Np)! \nonumber \\
+	& \quad + N \ln p + [N(1-p)]\ln q
+\end{align}
+
+Using Stirling's approximation in \eqref{eq:stirling},
+
+\begin{align}
+	\ln P_N(n) &= N \ln N - N + \frac{1}{2}\ln\qty(2\pi N) \nonumber \\
+	&- Np\ln\qty(Np) + Np - \frac{1}{2}\qty(2\pi Np) \nonumber \\
+	&- N(1-p)\ln\qty[N(1-p)] + N(1-p) \nonumber \\
+	&- \frac{1}{2}\ln\qty[2\pi N(1-p)] \nonumber \\
+	&+ Np\ln p + N(1-p)\ln q \\
+	\ln P_N(n) &= N \ln N - N + \frac{1}{2}\ln\qty(2\pi N) \nonumber \\
+	&- Np\ln\qty(Np) + Np - \frac{1}{2}\qty(2\pi Np) \nonumber \\
+	&- Nq\ln\qty(Nq) + Nq \nonumber \\
+	&- \frac{1}{2}\ln\qty[2\pi Nq] \nonumber \\
+	&+ Np\ln p + Nq\ln q \\
+	\ln P_N(n) &= N\ln N - N\frac{1}{2}\ln\qty(2\pi N) \nonumber \\
+	&- Np\ln N - Np \ln p - \frac{1}{2}\ln p \nonumber \\
+	&- \frac{1}{2}\ln\qty(2\pi N) - Nq\ln N - Nq\ln q \nonumber \\
+	&+ Nq -\frac{1}{2}\ln\qty(2\pi Nq) + Np\ln p + Nq\ln q \\
+	\ln P_N(n) &= -\frac{1}{2}\ln\qty(2\pi Npq)
+\end{align}
+
+But $\ln P_N(n) = \ln A$
+
+\begin{align}
+	\ln A &= -\frac{1}{2}\ln\qty(2\pi Npq) \\
+	A &= \frac{1}{\sqrt{2\pi Npq}}
+\end{align}
+
+But $Npq = \sigma^2$, so
+
+\begin{equation}
+	\boxed{
+		A = \frac{1}{\sqrt{2\pi\sigma^2}}
+	}
+\end{equation}
+
+\section{P31 PS07 3.39 Exponential probability density}
+
+The random variable $x$ has the probability density
+
+\begin{equation}\label{eq:3.39-given}
+	p(x) =
+	\begin{cases}
+		Ae^{-\lambda x} & 0 \leq x \leq \infty \\
+		0 & x < 0
+	\end{cases}
+\end{equation}
+
+\begin{enumerate}[(a)]
+
+\item Determine the normalization constant $A$ in terms of $\lambda$.
+
+To get the normalization constant $A$ of \eqref{eq:given}, we take its integral over all space. Since the function is zero if $x < 0$, we consider only the area where it is non-zero and equate it to unity:
+
+\begin{align}
+	1 &= \int_0^\infty Ae^{-\lambda x} \dd{x} \\
+	1 &= A\int_0^\infty e^{-\lambda x}\dd{x} \nonumber \\
+	1 &= A\eval{\frac{e^{-\lambda x}}{-\lambda}}_0^\infty \nonumber \\
+	1 &= \frac{A}{-\lambda}\qty[e^{-\lambda\infty} - e^0] \nonumber \\
+	1 &= \frac{A}{-\lambda}\qty[-1] \nonumber \\
+	\Aboxed{
+		A &= \lambda
+	} \label{eq:answer-a}
+\end{align}
+
+\eqref{eq:3.39-given} now becomes
+
+\begin{equation}\label{eq:given-normed}
+	p(x) =
+	\begin{cases}
+		\lambda e^{-\lambda x} & 0 \leq x \leq \infty \\
+		0 & x < 0
+	\end{cases}
+\end{equation}
+
+\item What is the mean value of $x$? What is the most probable value of $x$?
+
+The mean value of $x$ is
+
+\begin{align}
+	\ev{x} &= \int_0^\infty x p(x) \dd{x} \\
+	&= \int_0^\infty x\lambda e^{-\lambda x} \dd{x} \nonumber \\
+	&= \lambda \int_0^\infty xe^{-\lambda x} \dd{x}
+\end{align}
+
+Using integration by parts, let $u \equiv x$ and $\dd{v} \equiv e^{-\lambda x}\dd{x}$. Consequently, $\dd{u} \equiv \dd{x}$ and $v \equiv -e^{-\lambda x}/a$. We have
+
+\begin{equation}\label{eq:ibp}
+	\ev{x} = \lambda\qty[\eval{-\frac{xe^{-\lambda x}}{\lambda}}_0^\infty + \frac{1}{\lambda}\int_0^\infty e^{-\lambda x}\dd{x}]
+\end{equation}
+
+The integral in \eqref{eq:ibp} follows the same solution as in part (a), and we end up with
+
+\begin{align}
+	\ev{x} &= \lambda \eval[-\frac{xe^{-\lambda x}}{\lambda} - \frac{e^{-\lambda x}}{\lambda^2}|_0^\infty \nonumber \\
+	&= -\eval[\frac{\lambda xe^{-\lambda x} + e^{-\lambda x}}{\lambda}|_0^\infty
+\end{align}
+
+Substituting $\infty$ directly into the first term causes it to blow up. However, upon examining the terms involved we see that $\dv[2]{x}x < \dv[2]{x}e^{-\lambda x}$. Thus, we can say that the exponential term approaches zero faster than $x$ approaches infinity, so the exponential term dominates. Therefore,
+
+\begin{align}
+	\ev{x} &= -\qty[\frac{e^{-\lambda\infty} - e^0}{\lambda}] \nonumber \\
+	&= -\frac{0 - 1}{\lambda} \nonumber \\
+	\Aboxed{
+		\ev{x} &= \frac{1}{\lambda}
+	} \label{eq:answer-b}
+\end{align}
+
+The most probable value of $\boxed{x = 0}$.
+
+\item What is the mean value of $x^2$?
+
+The mean value of $x^2$ is
+
+\begin{equation}
+	\ev{x^2} = \lambda\int_0^\infty x^2 e^{-\lambda x}\dd{x}
+\end{equation}
+
+Once again, integrate by parts, letting $u \equiv x^2$ and $\dd{v} \equiv e^{\lambda x}\dd{x}$. So $\dd{u} \equiv 2x\dd{x}$ and $v \equiv -e^{-\lambda x}/a$. We have
+
+\begin{equation}
+	\ev{x^2} = \lambda\qty[\eval{-\frac{x^2 e^{-\lambda x}}{\lambda}}_0^\infty + \frac{2}{\lambda}\int_0^\infty xe^{-\lambda x}\dd{x}]
+\end{equation}
+
+Following the steps in part (b), the integral can be simplified as
+
+\begin{align}
+	\ev{x^2} &= \lambda \qty[\eval{-\frac{2xe^{-\lambda x}}{\lambda^2} - \frac{x^2 e^{-\lambda x}}{\lambda}}_0^\infty + \frac{2}{\lambda}\int_0^\infty e^{-\lambda x}\dd{x}] \nonumber \\
+	&= \lambda \eval[-\frac{2e^{-\lambda x}}{\lambda^3} - \frac{2xe^{-\lambda x}}{\lambda^2} - \frac{x^2 e^{-\lambda x}}{\lambda}|_0^\infty \nonumber \\
+	&= \lambda\qty[\frac{2}{\lambda^3} + 0 + 0] \nonumber \\
+	\Aboxed{
+		\ev{x^2} &= \frac{2}{\lambda^2}
+	} \label{eq:answer-c}
+\end{align}
+
+\item Determine the probability for $\lambda = 1$ that a measurement of $x$ yields a value between 1 and 2.
+
+For $\lambda = 1$, the probability that a measurement of $x$ yields a value $\in \qty(1,2)$ is
+
+\begin{align}
+	\Pr(1 < x < 2) &= \int_1^2 p(x) \dd{x} \\
+	&= \int_1^2 e^{-x} \dd{x} \nonumber \\
+	&= \eval{-e^{-x}}_1^2 \nonumber \\
+	&= -e^{-2} + e^{-1} \nonumber \\
+	\Aboxed{
+		\Pr(1<x<2) &= \frac{1}{e} - \frac{1}{e^2} \approx 0.23
+	} \label{eq:answer-d}
+\end{align}
+
+\item Determine the probability for $\lambda = 1$ that a measurement of $x$ yields a value less than 0.3.
+
+For $\lambda = 1$, the probability that a measurement of $x$ yields a value $< 0.3$ is
+
+\begin{align}
+	\Pr(x<0.3) &= \int_0^{0.3} p(x) \dd{x} \\
+	&= \int_0^{0.3} e^{-x} \dd{x} \nonumber \\
+	&= \eval{-e^{-x}}_0^{0.3} \nonumber \\
+	&= -e^{-0.3} + e^{-0} \nonumber \\
+	\Aboxed{
+		\Pr(x<0.3) &= 1 - \frac{1}{e^{0.3}} \approx 0.26
+	} \label{eq:answer-e}
+\end{align}
+
+\end{enumerate}
+
+\section{P32 PS07 3.40 Probability density for velocity}
+Consider the probability density function $p(v_x) = (a/\pi)^{3/2} e^{-av_x^2}$ for the velocity of a particle in the $x$-direction. The probability densities for $v_y$ and $v_z$ have the same form. Each of the three velocity components can range from $-\infty$ to $+\infty$ and $a$ is a constant. This form of the probability density for the velocity will be derived in Section 6.2.2 for a classical system of particles at temperature $T$.
+
+\begin{enumerate}[(a)]
+
+\item Show that $p(\vec{v})$ is normalized. Use the fact that [see (A.15)]
+
+\begin{equation}
+	\int_0^\infty e^{-au^2} \dd{u} = \frac{1}{2}\sqrt{\frac{\pi}{a}}
+\end{equation}
+
+Note that this calculation involves doing three similar integrals that can be evaluated separately.
+
+
+The velocity vector probability density is given by
+
+\begin{align}
+	p(\vec{v}) &= p(v_x + v_y + v_z) \\
+	&= \iiint_{-\infty}^{+\infty} \qty(\frac{a}{\pi})^{\frac{3}{2}} e^{-a(v_x^2 + v_y^2 + v_z^2)} \dd{\vec{v}} \label{eq:combined-integral} \\
+	\begin{split}
+		1 &= \qty(\frac{a}{\pi})^{\frac{3}{2}}\qty(\int_{-\infty}^{+\infty} e^{-av_x^2} \dd{v_x}) \cdot \\
+		& \quad \qty(\int_{-\infty}^{+\infty} e^{-av_y^2} \dd{v_y}) \cdot \\
+		& \quad \qty(\int_{-\infty}^{+\infty} e^{-av_z^2} \dd{v_z}) \label{eq:normcondition}
+	\end{split}
+\end{align}
+
+where \eqref{eq:normcondition} follows from the normalization condition. From (GT 3.123),
+
+\begin{equation}\label{eq:given-integral}
+	\int_0^\infty e^{-au^2}\dd{u} = \frac{1}{2}\sqrt{\frac{\pi}{a}}
+\end{equation}
+
+The multiple integrals defined in \eqref{eq:normcondition} can be expressed in a form similar to \eqref{eq:given-integral} by noting that they are symmetric about zero, so that they can be recast in the form
+
+\begin{equation}\label{eq:symmetric-integral}
+	\int_{-\infty}^{+\infty} e^{-av_x^2}\dd{v_x} = 2\int_0^\infty e^{-av_x^2} \dd{v_x}
+\end{equation}
+
+\eqref{eq:normcondition} now becomes
+
+\begin{align}
+	1 &= \qty(\frac{a}{\pi})^{\frac{3}{2}} \qty[\qty(\sqrt{\frac{\pi}{a}}) \qty(\sqrt{\frac{\pi}{a}}) \qty(\sqrt{\frac{\pi}{a}})] \nonumber \\
+	1 &= \qty(\frac{a}{\pi})^{\frac{3}{2}} \qty(\sqrt{\frac{\pi}{a}})^3 \nonumber \\
+	1 &= \qty(\frac{a}{\pi})^{\frac{3}{2}} \qty(\frac{\pi}{a})^{\frac{3}{2}} \nonumber \\
+	\Aboxed{
+		1 &= 1
+	} \label{eq:answer-a}
+\end{align}
+
+Therefore, $p(\vec{v})$ is already normalized.
+
+\item What is the probability that a particle has a velocity between $v_x$ and $v_x+\dd{v_x}$, $v_y$ and $v_y+\dd{v_y}$,
+and $v_z$ and $v_z + \dd{v_z}$?
+
+We invoke the property
+
+\begin{equation}
+	\Pr(\vec{v} < v < \dd{\vec{v}}) = p(\vec{v})\dd{\vec{v}}
+\end{equation}
+
+In terms of Cartesian components,
+
+\begin{equation}
+	\boxed{
+		\qty(\frac{a}{\pi})^{\frac{3}{2}}e^{-a(v_x^2 + v_y^2 + v_z^2)} \dd{v_x} \dd{v_y} \dd{v_z}
+	}
+\end{equation}
+
+\item What is the probability that $v_x \geq 0$, $v_y \geq 0$, $v_z \geq 0$ simultaneously?
+
+We evaluate \eqref{eq:combined-integral} over the non-negative range:
+
+\begin{align}
+	\Pr(\vec{v} \geq 0) &= \iiint_0^\infty \qty(\frac{a}{\pi})^{\frac{3}{2}} e^{-a\cdot\vec{v}}\dd{\vec{v}} \\
+	\begin{split}
+		&= \qty(\frac{a}{\pi})^{\frac{3}{2}}\qty(\int_0^{+\infty} e^{-av_x^2} \dd{v_x}) \cdot \\
+		& \quad \qty(\int_0^{+\infty} e^{-av_y^2} \dd{v_y}) \cdot \\
+		& \quad \qty(\int_0^{+\infty} e^{-av_z^2} \dd{v_z})
+	\end{split} \nonumber \\
+	&= \qty(\frac{a}{\pi})^{\frac{3}{2}}\qty[\frac{1}{2}\qty(\sqrt{\frac{\pi}{a}})]^3 \nonumber \\
+	\Aboxed{
+		\Pr(\vec{v} \geq 0) &= \frac{1}{8}
+	} \label{eq:answer-c}
+\end{align}
+
+\end{enumerate}
+
+\section{P33 PS07 3.43 Other probability distributions}
+Not all probability densities have a finite variance as you will find in the following.
+
+\begin{enumerate}[(a)]
+
+\item Sketch the Lorentz or Cauchy distribution given by
+
+\begin{equation}\label{eq:lorentz}
+	p(x) = \frac{1}{\pi}\frac{\gamma}{(x-a)^2 + \gamma^2}
+\end{equation}
+
+Choose $a = 0$ and $\gamma = 1$ and compare the form of $p(x)$ in (3.127) to the Gaussian distribution given by (3.124).
+
+Comparing it with the Gaussian distribution:
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.75\linewidth]{lorentz.png}
+	\caption{Comparison of Lorentzian and Gaussian distributions.}
+	\label{fig:compare}
+\end{figure}
+
+This shows that for the same set of parameters, the Gaussian has a higher peak, and quickly falls off and approaches zero as one moves away from the mean/central value.
+
+\item Calculate the first moment of the Lorentz distribution assuming that $a = 0$ and $\gamma = 1$.
+
+The first moment of the Lorentzian is given by
+
+\begin{align}
+	\ev{x^1} &= \int_{-\infty}^{+\infty} xp(x) \dd{x} \\
+	&= \frac{1}{\pi} \int_{-\infty}^{+\infty} \frac{x}{x^2 + 1} \dd{x} \nonumber
+\end{align}
+
+Let $u \equiv x^2 + 1$, $\dd{u} \equiv 2x\dd{x}$,
+
+\begin{align}
+	\ev{x^1} &= \frac{1}{2\pi} \int_{-\infty}^{+\infty} \frac{1}{u}\dd{u} \nonumber \\
+	&= \frac{1}{2\pi} \eval[\ln(u)|_{-\infty}^{+\infty} \nonumber \\
+	&= \frac{1}{2\pi} \eval[\ln(x^2 + 1)|_{-\infty}^{+\infty} \nonumber \\
+	&= \infty - \infty \nonumber \\
+	\Aboxed{
+		\ev{x} &= \mathrm{undefined}
+	} \label{eq:answer-b}
+\end{align}
+
+\item Does the second moment exist?
+
+\begin{equation}\label{eq:2nd-moment}
+	\ev{x^2} = \frac{1}{\pi} \int_{-\infty}^{+\infty} \frac{x^2}{x^2 +1}\dd{x}
+\end{equation}
+
+By long division of the integrand,
+
+\begin{center}
+	\begin{tabular}{c|ccc}
+		&&& 1 \\ \cline{2-4}
+		$x^2 + 1$ & $x^2$ & $+0x+$ & $0$ \\
+		& $x^2$ & $+0x+$ & $1$ \\ \cline{2-4}
+		&&& $-1$
+	\end{tabular}
+\end{center}
+
+From this, \eqref{eq:2nd-moment} can be rewritten as
+
+\begin{align*}
+	\ev{x^2} &= \frac{1}{\pi} \int_{-\infty}^{+\infty} 1 - \frac{1}{x^2 + 1} \dd{x} \\
+	&= \frac{1}{\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - \int_{-\infty}^{+\infty} \frac{\dd{x}}{x^2 + 1}]
+\end{align*}
+
+The second term is an even function about zero, and can be rewritten as
+
+\begin{align}
+	\ev{x^2} &= \frac{1}{\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - 2\int_0^{+\infty} \frac{\dd{x}}{x^2 + 1}] \nonumber \\
+	&= \frac{1}{\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - 2\eval{\arctan(x)}_0^\infty] \nonumber \\
+	&= \frac{1}{\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - 2\qty(\arctan(\infty) - \arctan(0))] \nonumber \\
+	&= \frac{1}{\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - 2\qty(\frac{\pi}{2} - 0)] \nonumber \\
+	&= \frac{1}{\pi}\qty[\int_{-\infty}^{+\infty} \dd{x} - \pi] \nonumber \\
+	&= \frac{1}{\pi} \qty[\infty - \pi] \nonumber \\
+	\Aboxed{
+		\ev{x^2} &= \infty
+	} \label{eq:answer-c}
+\end{align}
+
+The second moment of the Lorentz distribution exists and has a value of infinity.
+
+\end{enumerate}
+
+\section{P34 PS07 3.45 Central limit theorem}
+Use Program \texttt{CentralLimitTheorem} to test the applicability of the central limit theorem.
+
+\begin{enumerate}[(a)]
+
+\item Assume that the variable $s_i$ is uniformly distributed between 0 and 1. Calculate analytically the mean and standard deviation of $s$ and compare your numerical results with your analytical calculation.
+
+The uniform distribution is given by
+
+\begin{equation}\label{eq:uniform}
+	p(s) = \frac{1}{b-a}
+\end{equation}
+
+where $a$ and $b$ are the bounds of concern. For a variable $s_i$ uniformly distributed $\in [0,1]$, the mean can be obtained by calculating the first moment of \eqref{eq:uniform}:
+
+\begin{align}
+	\bar{s} = \ev{s^1} &= \int_0^1 s \dd{s} \\
+	&= \eval{\frac{1}{2}s^2}_0^1 \nonumber \\
+	\Aboxed{
+		\ev{s} &= \frac{1}{2} \label{eq:answer-a-mean}
+	}
+\end{align}
+
+The standard deviation can be obtained by calculating the square root of the difference of the second moment and the square of the first moment:
+
+\begin{align}
+	\sigma &= \sqrt{\ev{s^2} - \ev{s}^2} \label{eq:variance} \\
+	\ev{s^2} &= \int_0^1 s^2 \dd{s} \\
+	&= \eval{\frac{1}{3}s^2}_0^1 \nonumber \\
+	&= \frac{1}{3} \\
+	\sigma &= \sqrt{\frac{1}{3} - \qty(\frac{1}{2})^2} \nonumber \\
+	&= \sqrt{\frac{1}{12}} \nonumber \\
+	\Aboxed{
+		\sigma &= \frac{1}{\sqrt{12}} \approx 0.29
+	} \label{eq:answer-a-sd}
+\end{align}
+
+\item Use the default value of $N = 12$, the number of terms in the sum, and describe the qualitative form of $p(S)$, where $p(S)\Delta S$ is the probability that the sum $S$ is between $S$ and $S +\Delta S$. Does the qualitative form of $p(S)$ change as the number of measurements (trials) of $S$ is increased for a given value of $N$?
+
+As the number of measurements $S$ is increased, the standard deviation $\sigma$ becomes smaller and the expectation value becomes more defined, i.e.
+
+\begin{equation}\label{eq:answer-b}
+	\boxed{
+		\lim_{S \rightarrow \infty} p(S) = \delta (S)
+	}
+\end{equation}
+
+\item What is the approximate width of $p(S)$ for $N = 12$? Describe the changes, if any, of the width of $p(S)$ as $N$ is increased. Increase $N$ by at least a factor of 4. Do your results depend strongly
+on the number of measurements?
+
+For $N = 12$, running the program \texttt{CentralLimitTheorem} for 40,000 trials yields a variance $\sigma^2 = 0.007$. Its width can be obtained by doubling the standard deviation, given by $\sqrt{\sigma^2}$. Thus, the $\boxed{\mathrm{width} = 1.6}$.
+
+\item To determine the generality of your results, consider the probability density $f(s) = e^{-s}$ for $s \geq 0$ and answer the same questions as in parts (a)-(c).
+
+Its mean is calculated as 
+
+\begin{equation}
+	\ev{s} = \int_0^\infty se^{-s} \dd{s} \\
+\end{equation}
+
+which can be evaluated using integration by parts. Let $u \equiv s$ and $\dd{v} \equiv e^{-s} \dd{s}$. Consequently, $\dd{u} \equiv \dd{s}$ and $v \equiv -e^{-s}$. We have
+
+\begin{align}
+	\ev{s} &= \eval{-se^{-s}}_0^\infty + \int_0^\infty e^{-s} \dd{s} \\
+	&= \eval[-se^{-s} - e^{-s} |_0^\infty \nonumber
+\end{align}
+
+Since $\dv[2]{s}s < \dv[2]{s}e^{-s}$, the exponential term dominates. Thus,
+
+\begin{align}
+	\ev{s} &= 0\cdot e^0 + e^0 \nonumber \\
+	\Aboxed{
+		\ev{s} &= 1
+	} \label{eq:answer-d-mean}
+\end{align}
+
+Using $N = 12$, the distribution appears similar to a Poisson distribution. As the number of trials $S$ is increased, the distribution first approaches that of a Gaussian, then of a Dirac delta, similar to \eqref{eq:answer-b}.
+
+Running the program once again for $N=12$ and 40,000 trials, we have $\sigma^2 = 0.021$, which corresponds to a $\boxed{\mathrm{width} = 0.3}$.
+
+\item Consider the Lorentz distribution $f(s) = (1/\pi)(1/(s^2 + 1)$, where $-\infty \leq s \leq \infty$. What is the mean value and variance of $s$? Is the form of $p(S)$ consistent with the results that you found in parts (b)–(d)?
+
+Its mean value is
+
+\begin{equation}
+	\ev{s} = \frac{1}{\pi} \int_{-\infty}^{+\infty} \frac{s}{s^2 +1} \dd{s}
+\end{equation}
+
+Let $u \equiv s^2 + 1$, $\dd{u} \equiv 2s\dd{s}$,
+
+\begin{align}
+	\ev{s} &= \frac{1}{2\pi} \int_{-\infty}^{+\infty} \frac{\dd{u}}{u} \nonumber \\
+	&= \frac{1}{2\pi} \eval{\ln u}_{-\infty}^{+\infty} \nonumber \\
+	\Aboxed{
+		\ev{s} &= \mathrm{undefined}
+	} \label{eq:answer-e-mean}
+\end{align}
+
+From \eqref{eq:variance}, we know that the variance is dependent on the mean. Consequently, the variance of $s$ is undefined.
+
+\item Each value of $S$ can be considered to be a measurement. The sample variance $\tilde{\sigma}_S^2$ is a measure of the square of the differences of the result of each measurement and is given by
+
+\begin{equation}
+	\tilde{\sigma}_S^2 = \frac{1}{N-1}\sum_{i=1}^N (S_i - \bar{S})^2
+\end{equation}
+
+The reason for the factor of $N-1$ rather than $N$ in the definition of $\tilde{\sigma}_S^2$ is that to compute it, we need to use the $N$ values of $s$ to compute the mean of $S$, and thus, loosely speaking, we have only $N-1$ independent values of $s$ remaining to calculate $\tilde{\sigma}_S^2$. Show that if $N \gg 1$, then
+$\tilde{\sigma}_S^2 \approx \sigma_S$, where the standard deviation $\sigma_S$ is given by $\sigma_S^2 = \overline{S^2} - \overline{S}^2$.
+
+With $N \gg 1$, we can drop the $-1$ term in the denominator since its contribution becomes negligible:
+
+\begin{equation}
+	\tilde{\sigma}_S^2 = \frac{1}{N}\sum_{i=1}^N (S_i - \bar{S})^2
+\end{equation}
+
+Expanding the summation and simplifying,'
+
+\begin{align}
+	\tilde{\sigma}_S^2 &\approx \frac{1}{N}\qty[(S_1 - \bar{S})^2 + (S_2 - \bar{S})^2 + \hdots + (S_N - \bar{S})^2] \nonumber \\
+	&\approx \frac{1}{N}\qty[S_1^2 - 2S_1\bar{S}^2 + S_2^2 - 2S_2\bar{S}^2 + \hdots + S_N^2 - 2S_N\bar{S} + \bar{S}^2] \nonumber \\
+	&\approx \frac{1}{N} [(S_1^2 + S_2^2 + \hdots + S_N^2) \nonumber \\
+	&\quad - 2\bar{S}(S_1 + S_2 + \hdots + S_N) + N\bar{S}^2] \nonumber \\
+	&\approx \frac{S_1^2 + S_2^2 + \hdots + S_N^2}{N} - 2\bar{S}\frac{S_1 + S_2 + \hdots + S_N}{N} + \bar{S}^2 \nonumber \\
+	&\approx \bar{S^2} - 2\bar{SS} + \bar{S}^2 = \bar{S^2} - 2\bar{S}^2 + \bar{S}^2 \\
+	&\approx \bar{S^2} - \bar{S}^2 = \sigma_S^2
+\end{align}
+
+Take the square root of both sides,
+
+\begin{equation}
+	\boxed{
+		\tilde{\sigma}_S \approx \sigma_S
+	}
+\end{equation}
+
+\item The quantity $\tilde{\sigma}_S$ is known as the standard deviation of the means. That is, $\tilde{\sigma}_S$ is a measure of how much variation we expect to find if we make repeated measurements of $S$. How does the value of $\tilde{\sigma}_S$ compare to your estimated width of the probability density $p(S)$?
+
+\begin{align}
+	\tilde{\sigma}_S^2 &= \frac{1}{N-1}\sum_{i=1}^N (S_i - \bar{S})^2 \cdot \frac{N}{N} \\
+	&= \frac{N}{N - 1}\sigma_S^2
+\end{align}
+
+Using the variance $\sigma_S^2 = 1/12$ for a uniform distribution, solve for $\sigma_S^2$ given varying values of $N$. For $N=12$, 
+
+\begin{align}
+	\tilde{\sigma}_S^2(N=12) &= \frac{12}{12-1}\frac{1}{12} \\
+	&= \frac{1}{11} \\
+	&\approx 0.1
+\end{align}
+
+Then the value of $\tilde{\sigma}_S$ is
+
+\begin{equation}
+	\tilde{\sigma}_S(N=12) = \sqrt{\frac{1}{11}} \approx 0.3
+\end{equation}
+
+The approximated width is lower than that of $\tilde{\sigma}_S$ for $N=12$.
+
+\end{enumerate}
+
+\section{P35 PS07 3.72 Alternative derivation of the Gaussian distribution}
+On page 138 we evaluated the binomial probability $P_N(n)$ using Stirling’s approximation to determine the parameters $A$, $B$, and $\tilde{n}$ in (3.109). Another way to determine these parameters is to
+approximate the binomial distribution by a Gaussian and require that the zeroth, first, and second moments of the Gaussian and binomial distribution be equal. We write
+
+\begin{equation}
+	P(n) = Ae^{-B(n - \tilde{n})^2/2}
+\end{equation}
+
+where $A$, $B$, and $\tilde{n}$ are the parameters to be determined. We first require that
+
+\begin{equation}
+	\int_0^N P(n) \dd{n} = 1
+\end{equation}
+
+Because $P(n)$ depends on the difference $n-\tilde{n}$, it is convenient to change the variable of integration in (3.196) to $x = n - \tilde{n}$ and write
+
+\begin{equation}
+	\int_{-Np}^{N(1-p)} P(x)\dd{x} = 1
+\end{equation}
+
+where
+
+\begin{equation}
+	P(x) = Ae^{-Bx^2/2} \label{eq:3.72-changevar}
+\end{equation}
+
+Because we are interested in the limit $N \rightarrow \infty$, we can extend the limits in (3.197) to $\pm \infty$:
+
+\begin{equation}
+	\int_{-\infty}^{\infty} P(x)\dd{x} = 1 \label{eq:3.72-normcondition}
+\end{equation}
+
+\begin{enumerate}[(a)]
+
+\item The first moment of the Gaussian distribution is
+
+\begin{equation}
+	\bar{n} = \int_{-\infty}^\infty nP(n) \dd{n}
+\end{equation}
+
+where $P(n)$ is given by (3.195). Make a change of variables and show that
+
+\begin{equation}
+	\bar{n} = \int_{-\infty}^\infty (x+\tilde{n})P(x)\dd{x} = \tilde{n} \label{eq:3.72-given}
+\end{equation}
+
+Using \eqref{eq:3.72-normcondition} to solve $A$ in terms of $B$,
+
+\begin{align}
+	1 &= \int_{-\infty}^\infty Ae^{-Bx^2/2} \dd{x} \\
+	&= A\int_{-\infty}^\infty e^{-Bx^2/2} \dd{x} \\
+	&= A\sqrt{\frac{2\pi}{B}}
+\end{align}
+
+such that
+
+\begin{equation}
+	A = \sqrt{\frac{B}{2\pi}}
+\end{equation}
+
+\eqref{eq:3.72-changevar} can now be rewritten as
+
+\begin{equation}
+	P(x) = \sqrt{\frac{B}{2\pi}} e^{-Bx^2/2} \label{eq:3.72-recast}
+\end{equation}
+
+Substituting the above into \eqref{eq:3.72-given},
+
+\begin{align}
+	\bar{n} &= \int_{-\infty}^\infty (x+\tilde{n})\sqrt{\frac{B}{2\pi}} e^{-Bx^2/2} \dd{x} \\
+	&= \sqrt{\frac{B}{2\pi}}\qty(\int_{-\infty}^\infty xe^{-Bx^2/2}\dd{x} + \tilde{n} \int_{-\infty}^\infty e^{-Bx^2/2}\dd{x}) \nonumber
+\end{align}
+
+According to A.16,
+
+\begin{equation}
+	\int_{-\infty}^\infty ue^{-au^2} \dd{u} = 0
+\end{equation}
+
+which means the first integral is zero. The second integral is similar to an earlier one. Simplifying,
+
+\begin{align}
+	\bar{n} &= \sqrt{\frac{B}{2\pi}}\qty(0 + \tilde{n}\frac{2\pi}{B}) \\
+	&= \sqrt{\frac{B}{2\pi}}\tilde{n}\sqrt{\frac{2\pi}{B}} \\
+	\Aboxed{
+		\bar{n} &= \tilde{n}
+	} \qed
+\end{align}
+
+\item The first moment of the binomial distribution is given by $pN$ according to (3.96). Require the first moments of the binomial and Gaussian distributions to be equal, and determine $\tilde{n}$.
+
+The first moment of the binomial distribution is
+
+\begin{equation}
+	\bar{n}_{binom} = pN
+\end{equation}
+
+The first moment of the Gaussian distribution is
+
+\begin{equation}
+	\bar{n}_{gauss} = \tilde{n}
+\end{equation}
+
+Requiring the two to be equal gives
+
+\begin{equation}
+	\boxed{
+		\tilde{n} = pN
+	}
+\end{equation}
+
+\item The variance of the binomial distribution is given in (3.99) and is equal to $\overline{(n - \bar{n})^2} = Npq$. The corresponding variance of the Gaussian distribution is given by
+
+\begin{equation}
+	\overline{(n - \bar{n})^2} = \int_{-\infty}^\infty (n - \bar{n})^2 P(n) \dd{n}
+\end{equation}
+
+Make the necessary change of variables in (3.202) and do the integrals in (3.199) and (3.202) [see (A.23) and (A.17)] to confirm that the values of $B$ and $A$ are given by (3.115) and (3.117), respectively.
+
+Let $x \equiv n - \tilde{n}$, $n \equiv x+\tilde{n}$, $\bar{n} = \tilde{n}$. Substituting in,
+
+\begin{align}
+	\overline{(n - \bar{n})^2} &= \int_{-\infty}^\infty (x+\tilde{n}-\tilde{n})^2 P(x)\dd{x} \\
+	&= \int_{-\infty}^\infty x^2 P(x)\dd{x} \\
+	&= \int_{-\infty}^\infty x^2 \sqrt{\frac{B}{2\pi}}e^{-Bx^2/2\dd{x}} \\
+	&= \sqrt{\frac{B}{2\pi}} \int_{-\infty}^\infty x^2 e^{-Bx^2/2}\dd{x}
+\end{align}
+
+From A.17,
+
+\begin{equation}
+	\int_{-\infty}^\infty x^2 e^{-ax^2}\dd{x} = \frac{1}{2}\qty(\frac{\pi}{a^3})^{\frac{1}{2}}
+\end{equation}
+
+We have
+
+\begin{align}
+	\overline{(n - \bar{n})^2} &= \sqrt{\frac{B}{2\pi}} \frac{1}{2} \qty(\frac{8\pi}{B^3})^{\frac{1}{2}} \\
+	&= \sqrt{\frac{1}{B}}\sqrt{\frac{2\pi}{B}} \\
+	&= \frac{1}{B}
+\end{align}
+
+The variance of the binomial distribution is given by
+
+\begin{equation}
+	\overline{(n - \bar{n})^2}_{binom} = Npq
+\end{equation}
+
+Since it was stated that the first and second moments of the Gaussian and binomial distributions are equal, then their variances must also be equal. Then,
+
+\begin{align}
+	\Aboxed{
+		B &= \frac{1}{Npq}
+	} \\
+	\Aboxed{
+		A &= \sqrt{\frac{1}{2\pi Npq}} 
+	}
+\end{align}
+
+\item Explain why the third moments of the binomial and Gaussian distribution are not equal.
+
+The third moment is a measure of the asymmetricity of a probability distribution about its mean value. This means that a symmetric probability distribution has a zero third moment. The Gaussian is always symmetric about its mean, while the binomial distribution is not always so. Hence, their third moments are not equal.
+
+\end{enumerate}
+
+\section{P36 PS08 4.5 Standard deviation of the energy of subsystem $A$}
+Use the results of Table \ref{tab:4.5-given} to find the standard deviation of the energy of subsystem $A$.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c||c|c|c|}
+		\hline
+		$E_A$ & $\Omega_A(E_A)$ & $\Omega_B(6-E_A)$ & $\Omega_A\Omega_B$ & $P_A(E_A)$ \\ \hline
+		6 & 7 & 1 & 7 & 7/84 \\ \hline
+		5 & 6 & 2 & 12 & 12/84 \\ \hline
+		4 & 5 & 3 & 15 & 15/84 \\ \hline
+		3 & 4 & 4 & 16 & 16/84 \\ \hline
+		2 & 3 & 5 & 15 & 15/84 \\ \hline
+		1 & 2 & 6 & 12 & 12/84 \\ \hline
+		0 & 1 & 7 & 7 & 7/84 \\ \hline
+	\end{tabular}
+	\caption{The probability $P_A(E_A)$ that subsystem $A$ has energy $E_A$ given $N_A = N_B = 2$ and $E_{tot} = E_A + E_B = 6$.}
+	\label{tab:4.5-given}
+\end{table}
+
+The standard deviation of the energy of subsystem $A$ is given by
+
+\begin{equation}
+	\sigma = \sqrt{\ev{E_A^2} - \ev{E_A}^2} \label{eq:sd}
+\end{equation}
+
+The first moment (mean) $\ev{E_A}$ is obtained by
+
+\begin{align}
+	\ev{E_A} &= \sum_{i=1}^N (E_A)_i (P_A)_i \label{eq:mean} \\
+	&= 6\qty(\frac{7}{84}) + 5\qty(\frac{12}{84}) + 4\qty(\frac{15}{84}) \nonumber \\
+	&+ 3\qty(\frac{16}{84}) + 2\qty(\frac{15}{84}) + 1\qty(\frac{12}{84}) + 0\qty(\frac{7}{84}) \nonumber \\
+	&= 12 \nonumber
+\end{align}
+
+The second moment (raw variance) $\ev{E_A^2}$ is obtained by
+
+\begin{align}
+	\ev{E_A^2} &= \sum_{i=1}^N (E_A)_i^2 (P_A)_i \label{eq:var} \\
+	&= 36\qty(\frac{7}{84}) + 25\qty(\frac{12}{84}) + 16\qty(\frac{15}{84}) \nonumber \\
+	&+ 9\qty(\frac{16}{84}) + 4\qty(\frac{15}{84}) + 1\qty(\frac{12}{84}) + 0\qty(\frac{7}{84}) \nonumber \\
+	&= 3 \nonumber
+\end{align}
+
+So the standard deviation is
+
+\begin{align}
+	\sigma &= \sqrt{12 - 3^2} \nonumber \\
+	&= \sqrt{3} \nonumber \\
+	\Aboxed{
+		\sigma &\approx 1.73
+	}
+\end{align}
+
+\section{P37 PS08 4.10 Rapid increase in the number of states}
+
+\begin{enumerate}[(a)]
+
+\item Consider an Einstein solid of $N = 20$ distinguishable particles. What is the total number of accessible microstates $\Omega (E)$ for $E = 10, 102, 103, \hdots$? Is $\Omega (E)$ a rapidly increasing function of $E$ for fixed $N$?
+
+For an Einstein solid of $N=20$ distinguishable particles, the total number of accessible microstates $\Omega(E)$ is given by
+
+\begin{equation}
+	\Omega(E) = \frac{\qty(E + N - 1)!}{E!\qty(N-1)!} \label{eq:accessible}
+\end{equation}
+
+For various $E$, we have
+
+\begin{align}
+	\Omega(E = 10) &= \frac{\qty(10 + 20 - 1)!}{10!\qty(20-1)!} \nonumber \\
+	\Aboxed{
+		\Omega(E = 10) &= 20,030,010
+	} \\
+	\Omega(E=100) &= \frac{\qty(100 + 20 - 1)!}{100!\qty(20-1)!} \nonumber \\
+	\Aboxed{
+		\Omega(E = 100) &\approx 4.91 \times 10^{21}
+	} \\
+	\Omega(E=1000) &= \frac{\qty(1000 + 20 - 1)!}{1000!\qty(20-1)!} \nonumber \\
+	\Aboxed{
+		\Omega(E = 1000) &\approx 9.93 \times 10^{39}
+	} 
+\end{align}
+
+Continuing this process for larger $E$ for fixed $N$, we obtain the graph in Figure \ref{fig:microstates}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.75\linewidth]{microstates.png}
+	\caption{$\Omega(E) \forall E \in \qty[10^1, 10^3]$}
+	\label{fig:microstates}
+\end{figure}
+
+Thus, $\Omega(E)$ is an exponentially increasing function of $E$ for fixed $N$.
+
+\item Is $\Omega$ rapidly increasing function of $N$ for fixed $E$?
+
+For fixed $E = 10$ and varying $N$, we obtain the graph in Figure \ref{fig:fixed-N}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.75\linewidth]{fixedN.png}
+	\caption{$\Omega(E) \forall N \in \qty[20, 100]$}
+	\label{fig:fixed-N}
+\end{figure}
+
+Thus, $\Omega(E)$ is also an exponentially increasing function of $N$ for fixed $E$.
+
+\end{enumerate}
+
+\section{P38 PS08 4.14 Estimation of number of states}
+Estimate the number of microstates accessible to a gas molecule in a one liter box at room temperature. The mean energy $E$ of a gas molecule such as nitrogen at room temperature can be found from the relation $E = 3kT/2$. Consider an energy interval $\Delta E = 10^{-27}$ J that is much smaller than $E$, and calculate the number of microstates $g(E)\Delta E$ accessible to the molecule in the interval between $E$ and $E + \Delta E$. Refer to (4.42) and (4.17).
+
+From GT 4.42, the number of microstates accessible to a gas molecule in a 1-liter box is
+
+\begin{equation}
+	\Gamma(E) = \frac{4\pi}{3}\frac{V}{h^3}\qty(2mE)^{3/2} \label{eq:given-states}
+\end{equation}
+
+and from GT 4.17, the number of microstates in the energy interval $\qty[E, E+\Delta E]$ is
+
+\begin{equation}
+	g(E)\Delta E = \Gamma(E+\Delta E) - \Gamma(E) \approx \dv{\Gamma(E)}{E}\Delta E \label{eq:given-interval}
+\end{equation}
+
+The mean energy of a gas molecule is given by
+
+\begin{equation}
+	E = \frac{3}{2}kT \label{eq:mean-energy}
+\end{equation}
+
+If we consider room temperature to be $T = 25^\circ C = 298 K$, then \eqref{eq:mean-energy} becomes
+
+\begin{align}
+	E &= \frac{3}{2}\qty(1.38\times 10^{-23} \mathrm{m^2\cdot kg\cdot s^{-2}\cdot K^{-1}})\qty(298 \mathrm{K}) \nonumber \\
+	&\approx 6.17\times 10^{-21} \mathrm{J} \label{eq:answer-energy}
+\end{align}
+
+We consider diatomic nitrogen since it comprises around 3/4 of the atmosphere. Its molar mass is 28.02 g$\cdot$mol$^{-1}$. The mass for a nitrogen molecule is then given by
+
+\begin{align}
+	m &= \frac{\nu}{N_A} \nonumber \\
+	&= \frac{28.02\mathrm{g}}{6.022\times 10^{23}} \nonumber \\
+	&= 4.65\times 10^{-26} \mathrm{kg} \label{eq:answer-mass}
+\end{align}
+
+From \eqref{eq:given-interval}, we differentiate \eqref{eq:given-states} w.r.t. $E$:
+
+\begin{align}
+	\dv{\Gamma(E)}{E}\Delta E &= \frac{4\pi V}{3h^3}\qty(2m)^{3/2} \frac{3}{2}E^{1/2} \Delta E \nonumber \\
+	&= \frac{2\pi V}{h^3}\qty(2m)^{3/2}\sqrt{E}\Delta E \nonumber
+\end{align}
+
+If we consider an energy interval $\Delta E = 10^{-27}$ J, this becomes
+
+\begin{equation}
+	g(E)\Delta E = \frac{2\pi\qty(1\mathrm{ L})\qty[2\qty(4.65\times 10^{-26}\mathrm{ kg})]^{3/2}\sqrt{6.17\times 10^{-21}\mathrm{ J}}}{\qty(6.63\times 10^{-34}\mathrm{ m^2\cdot kg\cdot s^{-1}})^3}\qty(10^{-27}\mathrm{ J}) \nonumber
+\end{equation}
+
+\begin{equation}
+	\boxed{
+		g(E)\Delta E \approx 4.80\times 10^{22}
+	} \label{eq:answer}
+\end{equation}
+
+\section{P39 PS08 4.15 Approximate expression for $\Gamma(E,V,N)$}
+We can obtain an approximate expression for $\Gamma(E, V,N)$ using simpler physical considerations. We write
+
+\begin{align}
+	\Gamma(E,V,N) &\approx \frac{1}{N!}\Gamma_1\qty(\frac{E}{N},V)\Gamma_1\qty(\frac{E}{N},V) \hdots \Gamma_1\qty(\frac{E}{N},V) \nonumber \\
+	&\approx \frac{1}{N!}\Gamma_1\qty(\frac{E}{N},V)^N
+\end{align}
+
+where $\Gamma_1(E, V)$ is the number of states of a single particle with energy less than $E$ in a three-dimensional box of volume $V$. We have assumed that on the average each particle has an energy $E/N$. Find the form of $\Gamma(E, V,N)$ using the relation (4.42) for $\Gamma_1$. How does the dependence on $V$ and $E$ of $\Gamma(E, V,N)$ obtained from this simple argument compare to the $V$ and $E$ dependence of $\Gamma$ in (4.49). What about the $N$ dependence?
+
+Given the following:
+
+\begin{eqnarray}
+	\Gamma(E,V,N) \approx \frac{1}{N!}\Gamma_1\qty(\frac{E}{N}, V)^N \label{eq:4.15-given1} \\
+	\Gamma_1(E) = \frac{4\pi V}{3h^3}\qty(2mE)^{3/2} \label{eq:4.15-given2}
+\end{eqnarray}
+
+We wish to find the form of $\Gamma(E,V,N)$ for $\Gamma_1$. \eqref{eq:4.15-given2} becomes
+
+\begin{equation}
+	\Gamma_1\qty(\frac{E}{N}) = \frac{4\pi V}{3h^3}\qty(\frac{2mE}{N})^{3/2}
+\end{equation}
+
+Plugging this into \eqref{eq:4.15-given1}, we have
+
+\begin{align}
+	\Gamma(E,V,N) &= \frac{1}{N!}\qty[\frac{4\pi V}{3h^3}\qty(\frac{2mE}{N})^{3/2}]^N \nonumber \\
+	\Aboxed{
+		\Gamma(E,V,N) &= \frac{1}{N!}\qty(\frac{4\pi V}{3h^3})^N \qty(\frac{2mE}{N})^{3N/2}
+	} \label{eq:4.15-answer}
+\end{align}
+
+From \eqref{eq:4.15-answer}, we see that $\Gamma \propto V^N$, $\Gamma \propto E^{3N/2}$, and $\Gamma \propto \qty(N!N^{3N/2})^{-1}$. In contrast, the form of $\Gamma(E,V,N)$ given in GT 4.49 is
+
+\begin{equation}
+	\Gamma(E,V,N) = \frac{1}{N!}\qty(\frac{V}{h^3})^N \frac{\qty(2\pi mE)^{3N/2}}{\qty(3N/2)!} \label{eq:4.15-semiclassical}
+\end{equation}
+
+where $\Gamma \propto V^N$, $\Gamma \propto E^{3N/2}$, and $\Gamma \propto \qty[N!\qty(3N/2)!]^{-3N/2}$.
+
+\section{P40 PS08 4.16 Density of states of ideal gas}
+Use (4.51) to calculate the density of states $g(E, V,N)$ and verify that $\Gamma(E, V,N)$ and $g(E, V,N)$ are rapidly increasing functions of $E$, $V$ , and $N$.
+
+Given the following:
+
+\begin{equation}
+	\ln \Gamma(E,V,N) = N \ln\frac{V}{N} + \frac{3}{2}N\ln\frac{mE}{3N\pi\hbar^2} + \frac{5}{2}N \label{eq:4.16-given}
+\end{equation}
+
+The density of states is given by
+
+\begin{equation}
+	g(E,V,N) \approx \dv{\Gamma(E)}{E} \label{eq:4.16-density-states}
+\end{equation}
+
+We take the exponential of both sides of \eqref{eq:4.16-given}:
+
+\begin{align}
+	\ln\Gamma(E,V,N) &= \ln(\frac{V}{N})^N + \ln(\frac{mE}{3N\pi\hbar^2})^{3N/2} + \frac{5}{2}N \nonumber \\
+	\ln\Gamma(E,V,N) &= \ln\qty[\qty(\frac{V}{N})^N \qty(\frac{mE}{3N\pi\hbar^2})^{3N/2}] + \frac{5}{2}N \nonumber \\
+	\Gamma(E,V,N) &= \qty(\frac{V}{N})^N \qty(\frac{mE}{3N\pi\hbar^2})^{3N/2} e^{5N/2} \label{eq:4.16-gamma}
+\end{align}
+
+Since $\Gamma \propto V^N$, $\Gamma \propto N^{-5N/2}e^{5N/2}$, and $\Gamma \propto E^{3N/2}$, $\Gamma$ is a rapidly increasing function of $E$ and $V$. Note that because $\dd[2]_N\qty(e^{5N/2}) > \dd[2]_N\qty(N^{-5N/2})$, the exponential term dominates and thus, $\Gamma$ is also a rapidly increasing function of $N$.
+
+From \eqref{eq:density-states}, we differentiate \eqref{eq:4.16-gamma} w.r.t. $E$:
+
+\begin{equation}
+	\boxed{
+		g(E,V,N) = \qty(\frac{V}{N})^N \qty(\frac{m}{3N\pi\hbar^2})^{3N/2} e^{5N/2} \frac{3N}{2} E^{N/2}
+	} \label{eq:4.16-answer}
+\end{equation}
+
+Now, $g \propto V^N$, $g \propto e^{5N/2}$, and $g \propto E^{N/2}$, so $g$ is also a rapidly increasing function of $E$, $V$, and $N$.
+
+\section{P41 PS08 4.19 The Sackur-Tetrode expression for the entropy}
+Use the relations (4.63) and (4.65) to obtain $S$ as a function of $T$, $V$, and $N$ instead of $E$, $V$, and $N$. This relation is known as the Sackur-Tetrode equation.
+
+Given the following:
+
+\begin{align}
+	S(E,V,N) &= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{mE}{3N\pi\hbar^2}) + \frac{5}{2}] \label{eq:4.19-given-s} \\
+	E &= \frac{3}{2}NkT \label{eq:4.19-given-e}
+\end{align}
+
+Substitute \eqref{eq:4.19-given-e} in \eqref{eq:4.19-given-s}:
+
+\begin{align}
+	S &= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{m}{3N\pi\hbar^2} \frac{3}{2}NkT) + \frac{5}{2}] \\
+	&= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{mkT}{2\pi\hbar^2}) + \frac{5}{2}]
+\end{align}
+
+Rewrite in terms of $h \equiv 2\pi\hbar$:
+
+\begin{align}
+	S &= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{4\pi^2 mkT}{2\pi h^2}) + \frac{5}{2}] \\
+	&= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{2\pi mkT}{h^2}) + \frac{5}{2}] \\
+	&= Nk\qty[\ln\qty(\frac{V}{N}\qty(\frac{2\pi mkT}{h^2})^{3/2}) + \frac{5}{2}] \\
+	\Aboxed{
+		\frac{S}{Nk} &= \ln\qty[\frac{V}{N}\qty(\frac{2\pi mkT}{h^2})^{3/2}] + \frac{5}{2}
+	}
+\end{align}
+
+which is the Sackur-Tetrode relation.
+
+\section{P42 PS08 4.20 Chemical potential of an ideal gas}
+Use (4.61) and (4.63) to derive the dependence of the chemical potential $\mu$ on $E$, $V$, and $N$ for an ideal classical gas. Then use (4.65) to determine $\mu(T, V,N)$. We will derive $\mu(T, V,N)$ for the ideal classical gas more simply in Section 6.6.
+
+Given the following:
+
+\begin{align}
+	\frac{\mu}{T} &= -\qty(\pdv{S}{N})_{E,V} \label{eq:4.20-given-mu} \\
+	S(E,V,N) &= Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{mE}{3N\pi\hbar^2}) + \frac{5}{2}] \label{eq:4.20-given-s} \\
+	E &= \frac{3}{2}NkT \label{eq:4.20-given-e}
+\end{align}
+
+Perform the necessary differentiation on \eqref{eq:4.20-given-s} according to \eqref{eq:4.20-given-mu} and simplify:
+
+\begin{align}
+	\frac{\mu}{T} &= -\pdv{N} \qty{Nk\qty[\ln\frac{V}{N} + \frac{3}{2}\ln\qty(\frac{mE}{3N\pi\hbar^2}) + \frac{5}{2}]} \\
+	&= -\pdv{N} \qty[kN\ln\frac{V}{N} + \frac{3}{2}kN\ln\qty(\frac{mE}{3N\pi\hbar^2}) + \frac{5}{2}kN] \\
+	&= -\qty[-k + k\ln\qty(\frac{V}{N}) - \frac{3}{2}k + \frac{3}{2}k\ln\qty(\frac{mE}{3N\pi\hbar^2}) + \frac{5}{2}k] \\
+	&= -k\qty[-1 + \ln\qty(\frac{V}{N}) + \frac{3}{2}\ln\qty(\frac{mE}{3N\pi\hbar^2}) + 1] \\
+	&= -k\qty[\ln\qty(\frac{V}{N}) + \frac{3}{2}\ln\qty(\frac{mE}{3N\pi\hbar^2})] \\
+	&= -k\ln\qty[\frac{V}{N}\qty(\frac{mE}{3N\pi\hbar^2})^{3/2}] \\
+	\Aboxed{
+		\mu &= -kT\ln\qty[\frac{V}{N}\qty(\frac{mE}{3N\pi\hbar^2})^{3/2}]
+	} \label{eq:4.20-answer-1}
+\end{align}
+
+Plugging in \eqref{eq:4.20-given-e},
+
+\begin{align}
+	\mu(T,V,N) &= -kT\ln\qty[\frac{V}{N}\qty(\frac{m}{3N\pi\hbar^2}\frac{3}{2}NkT)^{3/2}] \\
+	&= -kT\ln\qty[\frac{V}{N}\qty(\frac{mkT}{2\pi\hbar^2})^{3/2}]
+\end{align}
+
+Using the relation $h = 2\pi\hbar$, rewrite as
+
+\begin{align}
+	\mu(T,V,N) &= -kT\ln\qty[\frac{V}{N}\qty(\frac{4\pi^2 mkT}{2\pi h^2})^{3/2}] \\
+	\Aboxed{
+		\mu(T,V,N) &= -kT\ln\qty[\frac{V}{N}\qty(\frac{2\pi mkT}{h^2})^{3/2}]
+	} \label{eq:4.20-answer-2}
+\end{align}
+
+\section{P43 PS08 4.21 The energy as a function of the temperature}
+Solve (4.72) for $n/N$ and verify (4.74). Then use (4.14) to solve for $E$ as a function of $T$ and verify (4.73) for a system of $N$ noninteracting spins.
+
+Given the following:
+
+\begin{align}
+	\frac{1}{T} &= -k\frac{1}{2\mu B}\ln\qty(\frac{N-n}{n}) \label{eq:4.21-given-t} \\
+	E &= -(2n - N)\mu B \label{eq:4.21-given-e}
+\end{align}
+
+Solving for $n/N$ in \eqref{eq:4.21-given-t}:
+
+\begin{align}
+	-\frac{2\mu B}{kT} &= \ln\qty(\frac{N - n}{n}) \\
+	e^{-2\mu B/kT} &= \frac{N-n}{n} \\
+	e^{-2\mu B/kT} &= \frac{N}{n} - 1 \\
+	1 + e^{-2\mu B/kT} &= \frac{N}{n} \\
+	\Aboxed{
+		\frac{n}{N} &= \frac{1}{1 + e^{-2\mu B/kT}}
+	} \label{eq:4.21-answer-1}
+\end{align}
+
+Let $\beta \equiv 1/kT$. With some further manipulation:
+
+\begin{align}
+	\frac{n}{N} &= \frac{1}{1 + e^{-2\beta\mu B}} \cdot \frac{e^{\beta\mu B}}{e^{\beta\mu B}} \\
+	\Aboxed{
+	\frac{n}{N} &= \frac{e^{\beta\mu B}}{e^{\beta\mu B} + e^{-\beta\mu B}}
+	} \label{eq:4.21-answer-2}
+\end{align}
+
+which is the same form obtained in GT (4.74b). Solving for $n/N$ in \eqref{eq:4.21-given-e}:
+
+\begin{align}
+	E &= -(2n - N)\mu B \cdot \frac{N}{N} \\
+	&= -\frac{2n - N}{N}N\mu B \\
+	&= -\qty(\frac{2n}{N} - 1)N\mu B
+\end{align}
+
+Substitute \eqref{eq:4.21-answer-1} into this:
+
+\begin{align}
+	E &= -\qty(2\frac{e^{\beta\mu B}}{e^{\beta\mu B} + e^{-\beta\mu B}} - 1)N\mu B \\
+	&= -\qty(\frac{2e^{\beta\mu B} - e^{\beta\mu B} - e^{-\beta\mu B} }{e^{\beta\mu B} + e^{-\beta\mu B}})N\mu B \\
+	&= -\qty(\frac{e^{\beta\mu B} - e^{-\beta\mu B} }{e^{\beta\mu B} + e^{-\beta\mu B}})N\mu B
+\end{align}
+
+which can be simplified using the relation $\tanh(x) \equiv \frac{e^{x} - e^{-x} }{e^{x} + e^{-x}}$:
+
+\begin{align}
+	E &= -\tanh(\beta\mu B)N\mu B \\
+	\Aboxed{
+		E &= -N\mu B\tanh(\frac{\mu B}{kT})
+	} \label{eq:4.21-answer-3}
+\end{align}
+
+which is the same form as that in GT (4.73).
+
+\section{P44 PS08 4.22 The Einstein solid in the microcanonical ensemble}
+Consider a collection of $N$ distinguishable harmonic oscillators with total energy $E$. The oscillators are distinguishable because they are localized on different lattice sites. In one dimension the energy of each particle is given by $\epsilon_n = (n + \frac{1}{2})\hbar\omega$, where $\omega$ is the angular frequency. Hence, the total energy can be written as $E = (Q + \frac{1}{2}N)\hbar\omega$, where $Q$ is the number of quanta. Calculate the dependence of the temperature $T$ on the total energy $E$ in the microcanonical ensemble using the result that the number of accessible microstates in which $N$ distinguishable oscillators can share $Q$ indistinguishable quanta is given by $\Omega = (Q + N - 1)!/Q!(N - 1)!$ [see (4.3)]. Then use this relation to find $E(T)$. This relation is calculated much more simply in the canonical ensemble as shown in Example 4.3.
+
+Given the following:
+
+\begin{equation}
+	E = \qty(Q + \frac{1}{2}N)\hbar\omega \label{eq:given-e}
+\end{equation}
+
+Solving for $Q$:
+
+\begin{align}
+	\frac{E}{\hbar\omega} &= Q + \frac{1}{2}N \\
+	Q &= \frac{E}{\hbar\omega} - \frac{1}{2}N \label{eq:inter-q}
+\end{align}
+
+The number of accessible microstates in which $N$ distinguishable oscillators can share $Q$ indistinguishable quanta is given by
+
+\begin{equation}
+	\Omega = \frac{\qty(Q+N-1)!}{Q!\qty(N-1!)} \label{eq:microstates}
+\end{equation}
+
+Substituting \eqref{eq:inter-q} into \eqref{eq:microstates}:
+
+\begin{align}
+	\Omega &= \frac{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N + N - 1)!}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)! \qty(N-1)!} \\
+	&= \frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N -1)!}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)!(N-1)!} \label{eq:inter-omega}
+\end{align}
+
+The thermodynamic entropy $S$ is given by
+
+\begin{equation}
+	S = k\ln\Omega \label{eq:entropy}
+\end{equation}
+
+Substituting \eqref{eq:inter-omega} into \eqref{eq:entropy}:
+
+\begin{align}
+	S &= k\ln\qty[\frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N -1)!}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)!(N-1)!}]\\
+    S &= k\qty[\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N -1)!-\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)! - \ln(N-1)!] \label{eq:inter-s}
+\end{align}
+
+Consider a collection of $N$ distinguishable harmonic oscillators. If we let $N \gg 1$, then \eqref{eq:inter-s} becomes:
+
+\begin{align}
+	S &= k\qty[\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)!-\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)! - \ln N!]
+\end{align}
+
+By Stirling's (weak) approximation,
+
+\begin{align}
+    \ln N! &= N\ln N - N\\
+    \ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)! &= \qty(\frac{E}{\hbar\omega} + \frac{1}{2}N) \cdot \nonumber \\
+    &\quad \ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N) - \qty(\frac{E}{\hbar\omega} + \frac{1}{2}N) \\
+    \ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)! &= \qty(\frac{E}{\hbar\omega} - \frac{1}{2}N) \cdot \nonumber \\
+    &\quad \ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N) - \qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)
+\end{align}
+
+The thermodynamic temperature $T$ is given by:
+
+\begin{equation}
+    \frac{1}{T} = \qty(\pdv{S}{E})_{N} \label{eq:given-t}
+\end{equation}
+
+Applying \eqref{eq:given-t} to \eqref{eq:inter-s}
+
+\begin{align}
+    \pdv{E}(\ln N!) &= 0 \\
+    \pdv{E}\qty[\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)!] &= \qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)^{-1} \cdot \nonumber \\
+    &\quad \qty(\frac{1}{\hbar\omega})+ \qty(\frac{1}{\hbar\omega}) \cdot \nonumber \\
+    &\quad \ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)-\qty(\frac{1}{\hbar\omega}) \\
+    &=  \qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N) \\
+    &= \qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)^{-1} \cdot \nonumber \\
+    &\quad \qty(\frac{1}{\hbar\omega})+ \qty(\frac{1}{\hbar\omega}) \cdot \nonumber \\
+    &\quad \ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)-\qty(\frac{1}{\hbar\omega}) \\
+    &=  \qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)
+\end{align}
+
+We then have, for the thermodynamic temperature:
+
+\begin{align}
+    \frac{1}{T} &= \qty(\pdv{S}{E})_{N} \\
+    &= k\Bigg[\qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N) \nonumber \\
+    &\quad - \qty(\frac{1}{\hbar\omega})\ln\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)\Bigg] \\
+    \Aboxed{
+    	\frac{1}{T} &= \frac{k}{\hbar\omega}\ln\qty[\frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)}]
+    } \label{eq:answer-1}
+\end{align}
+
+Solving for $E$:
+
+\begin{align}
+    \frac{1}{T} &= \frac{k}{\hbar\omega}\ln\qty[\frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)}] \nonumber\\
+    \frac{\hbar\omega}{kT} &= \ln\qty[\frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)}]\\
+    e^{\hbar\omega/kT} &= \frac{\qty(\frac{E}{\hbar\omega} + \frac{1}{2}N)}{\qty(\frac{E}{\hbar\omega} - \frac{1}{2}N)}\\
+    \frac{E}{\hbar\omega}e^{\hbar\omega/kT} - \frac{1}{2}Ne^{\hbar\omega/kT} &= \frac{E}{\hbar\omega} - \frac{1}{2}N\\
+    \frac{E}{\hbar\omega}e^{\hbar\omega/kT} - \frac{E}{\hbar\omega} &= \frac{1}{2}Ne^{\hbar\omega/kT} + \frac{1}{2}N\\
+    \frac{E}{\hbar\omega}\qty(e^{\hbar\omega/kT}-1) &= \frac{N}{2}\qty(e^{\hbar\omega/kT}+1)\\
+    \Aboxed{
+	    E(T) &= \frac{N\hbar\omega}{2}\qty(\frac{e^{\hbar\omega/kT}+1}{e^{\hbar\omega/kT}-1})
+    }
+\end{align}
+
+\section{P45 PS08 4.24 Relative abundance of two isomers}
+The hydrocarbon 2-butene, CH$_3-$CH$=$CH$-$CH$_3$, occurs in two isomers (geometrical structures) called cis and trans. The cis (on this side) isomer of 2-butene has both CH$_3$ groups on the same side of the C=C double bond. In the trans (across) isomer the CH$_3$ groups are on opposite sides of the double bond (see Figure 4.7). The energy difference $\Delta E$ between the two conformations is approximately $\Delta E/k = 4180$ K, with the trans isomer lower than the cis isomer. Determine the relative abundance of the two conformations at $T = 300$ K and $T = 1000$ K.
+
+The probability of two isomers occurring follows the Boltzmann distribution,
+
+\begin{align}
+	P_{cis} &= \frac{1}{Z}e^{-\beta E_{cis}} \\
+	P_{trans} &= \frac{1}{Z}e^{-\beta E_{trans}}
+\end{align}
+
+The relative probability without normalization/partition function is given by
+
+\begin{equation}
+	P_{rel} = \frac{P_{cis}}{P_{trans}} = e^{-\beta E_s} \label{eq:given-p}
+\end{equation}
+
+The energy difference between the two conformations is $\Delta E/k = 4180$ K, with the trans isomer lower than the cis isomer. The relative abundance is given by
+
+\begin{equation}
+	P_{rel} = e^{-\beta\Delta E} \label{eq:given-prel}
+\end{equation}
+
+At $T = 300$ K, the relative abundance between the two isomers is
+
+\begin{equation}
+	\boxed{
+		\eval{P_{rel}}_{T=300} = e^{-4180/300} \approx  8.89 \times 10^{-7}
+	}
+\end{equation}
+
+At $T = 1000$ K,
+
+\begin{equation}
+	\boxed{
+		\eval{P_{rel}}_{T=1000} = e^{-4180/1000} \approx 1.53 \times 10^{-2}
+	}
+\end{equation}
+
+This indicates that at low temperatures, the relative abundance between the cis and trans conformations is negligible. At higher temperatures, the cis isomer is more abundant.
+
+\section{P46 PS08 4.25 Distribution of energy in the canonical ensemble}
+Given what you have learned so far about the $N$ dependence of the relative energy fluctuations, what is your best guess for the form of the probability that a system in equilibrium with a heat bath at temperature $T$ has energy between $E$ and $E + \Delta E$? The form of the probability distribution of the energy of a system in the canonical ensemble is derived in Section 4.14.2.
+
+Because of the central limit theorem, we can assume that the probability distribution has a Gaussian form for large $N$. We know the variance of $E$ to be
+
+\begin{equation}
+	\sigma_E = \sqrt{\overline{E^2} - \overline{E}^2} = \sqrt{kT^2 c_V}
+\end{equation}
+
+Recall that the probability distribution in Gaussian form has the form
+
+\begin{align}
+	p(E) &= \frac{1}{\sqrt{2\pi}}\frac{1}{\sigma} e^{-(E-a)/2\sigma} \\
+	&= \frac{1}{\sqrt{2\pi}}\frac{1}{\sqrt{kT^2 c_V}} e^{-(E - \overline{E})/2kT^2c_V}
+\end{align}
+
+where we have let $a = \bar{E}$ since the mean is the most probable value. We know that the $N$-dependence of energy fluctuation has the form
+
+\begin{equation}
+	\frac{\sqrt{\overline{E^2} - \overline{E}^2}}{\overline{E}} \approx \frac{1}{\sqrt{N}}
+\end{equation}
+
+\section{P47 PS08 4.26}
+The Boltzmann probability given by (4.79) is the probability that the system is in a particular microstate with energy $E_s$. On the basis of what you have learned so far, what do you think is the form of the probability $p(E)\Delta E$ that the system has energy between $E$ and
+$E + \Delta E$?
+
+The Boltzmann probability is given by
+
+\begin{equation}
+	P(E) = \frac{1}{Z} e^{-\beta E_s} \label{eq:boltzmann}
+\end{equation}
+
+where $Z \equiv \sum_s e^{-\beta E_s}$ is the partition function. Substituting this in \eqref{eq:boltzmann} gives
+
+\begin{equation}
+	P(E) = \frac{e^{-\beta E_s}}{\sum_s e^{-\beta E_s}} \label{eq:boltzmann-partition}
+\end{equation}
+
+The probability that a system has energy between $E$ and $E + \Delta E$ is
+
+\begin{align}
+	p(E)\Delta E &= P(E + \Delta E) - P(E) \\
+	&\approx \dv{P(E)}{E}\Delta E \label{eq:density-approx} \\
+	&\approx \dd{E} \frac{e^{-\beta E_s}}{\sum_s e^{-\beta E_s}} \Delta E \nonumber \\
+	\Aboxed{
+		p(E)\Delta E &\approx \frac{-\beta e^{-\beta E}}{\sum_s e^{-\beta E_s}}\Delta E 
+	} \label{eq:answer}
+\end{align}
+
+\section{P48 PS08 4.28 Thermodynamic properties of a system of harmonic oscillators}
+\begin{enumerate}[(a)]
+
+\item Show that for one oscillator
+
+\begin{align}
+	f &= \frac{1}{2}\hbar\omega + kT\ln(1 - e^{-\beta\hbar\omega}) \\
+	s &= k\qty[\frac{\beta\hbar\omega}{e^{\beta\hbar\omega} - 1} - \ln(1 - e^{-\beta\hbar\omega})] \\
+	\bar{e} &= \hbar\omega\qty[\frac{1}{2} + \frac{1}{e^{\beta\hbar\omega} - 1}]
+\end{align}
+
+Equation (4.132) is Planck’s formula for the mean energy of an oscillator at temperature $T$. The heat capacity is discussed in Problem 4.50.
+
+The energy levels of a single 1D harmonic oscillator is given by
+
+\begin{equation}
+	\epsilon_n = \qty(n + \frac{1}{2})\hbar\omega \label{eq:energy-levels}
+\end{equation}
+
+and the corresponding partition function is
+
+\begin{align*}
+	Z_1 &= \sum_{n=0}^\infty e^{-\beta\hbar\omega\qty(n+\frac{1}{2})} \\
+	&= e^{-\frac{1}{2}\beta\hbar\omega} \sum_{n=0}^\infty e^{-n\beta\hbar\omega} \\
+	&= e^{-\frac{1}{2}\beta\hbar\omega} \sum_{n=0}^\infty \qty(e^{-\beta\hbar\omega})^n
+\end{align*}
+
+For $x < 1$, we can use the identity
+
+\begin{equation} \label{eq:geometric-identity}
+	\sum_{n=0}^\infty x^n = \frac{1}{1-x}
+\end{equation}
+
+so that
+
+\begin{equation}
+	Z_1 = \frac{e^{-\frac{1}{2}\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}} \label{eq:partition}
+\end{equation}
+
+The free energy per particle is given by
+
+\begin{align}
+	f &= -kT \ln{Z_1} \label{eq:free-energy} \\
+	&= -kT \ln\qty(\frac{e^{-\frac{1}{2}\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}}) \nonumber \\
+	&= -kT \qty[\ln\qty(e^{-\frac{1}{2}\beta\hbar\omega}) - \ln\qty(1 - e^{-\beta\hbar\omega})] \nonumber \\
+	&= \frac{1}{2}kT\beta\hbar\omega + kT\ln\qty(1 - e^{-\beta\hbar\omega})
+\end{align}
+
+We use the fact that $\beta = \ddfrac{1}{kT}$ so that
+
+\begin{equation}
+	\boxed{
+		f = \frac{1}{2}\hbar\omega + kT\ln\qty(1 - e^{-\beta\hbar\omega})
+	} \qed \label{eq:answer-f}
+\end{equation}
+
+The mean energy per particle is given by
+
+\begin{align}
+	\bar{e} &= -\pdv{\beta}\ln{Z_1} \label{eq:mean-energy} \\
+	&= -\pdv{\beta}\ln\qty(\frac{e^{-\frac{1}{2}\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}}) \nonumber \\
+	&= -\pdv{\beta}\qty[\ln\qty(e^{-\frac{1}{2}\beta\hbar\omega}) - \ln\qty(1 - e^{-\beta\hbar\omega})] \nonumber \\
+	&= \frac{1}{2}\hbar\omega + \frac{e^{-\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}}\hbar\omega \nonumber \\
+	&= \frac{1}{2}\hbar\omega + \frac{e^{-\beta\hbar\omega}}{1 - e^{-\beta\hbar\omega}} \cdot \frac{e^{\beta\hbar\omega}}{e^{\beta\hbar\omega}} \hbar\omega \nonumber \\
+	\Aboxed{
+		\bar{e} &= \hbar\omega\qty[\frac{1}{2} + \frac{1}{e^{\beta\hbar\omega} - 1}]
+	} \qed \label{eq:answer-e}
+\end{align}
+
+The entropy per particle is given by
+
+\begin{align}
+	s &= -\qty(\pdv{f}{T})_V \label{eq:entropy} \\
+	&= -\pdv{T}\qty[\frac{1}{2}\hbar\omega + kT\ln\qty(1 - e^{-\beta\hbar\omega})]_V \nonumber \\
+	&= -\pdv{T}\qty[\frac{1}{2}\hbar\omega + kT\ln\qty(1 - e^{-\hbar\omega/kT})]_V \nonumber \\
+	&= \frac{1}{T}\frac{\hbar\omega e^{-\hbar\omega/kT}}{1-e^{-\hbar\omega/kT}} - k\ln\qty(1 - e^{-\hbar\omega/kT}) \nonumber \\
+	&= k\frac{\beta\hbar\omega e^{-\beta\hbar\omega}}{1-e^{-\beta\hbar\omega}} - k\ln\qty(1 - e^{-\beta\hbar\omega}) \nonumber \\
+	&= k\frac{\beta\hbar\omega e^{-\beta\hbar\omega}}{1-e^{-\beta\hbar\omega}} \cdot \frac{e^{\beta\hbar\omega}}{e^{\beta\hbar\omega}} - k\ln\qty(1 - e^{-\beta\hbar\omega}) \nonumber \\
+	&= k\frac{\beta\hbar\omega}{e^{\beta\hbar\omega} - 1} - k\ln\qty(1 - e^{-\beta\hbar\omega}) \nonumber \\
+	\Aboxed{
+		s &= k\qty[\frac{\beta\hbar\omega}{e^{\beta\hbar\omega} - 1} - \ln\qty(1 - e^{-\beta\hbar\omega})]
+	} \qed \label{eq:answer-s}
+\end{align}
+
+\item Given the result (4.132), what is the mean energy of a system of $N$ harmonic oscillators in equilibrium with a heat bath at temperature $T$?
+
+From \eqref{eq:answer-e}, the mean energy of a system of $N$ harmonic oscillator in equilibrium with a heat bath at temperature $T$ is
+
+\begin{equation}
+	\boxed{
+	\bar{e} = N\hbar\omega\qty[\frac{1}{2} + \frac{1}{e^{\hbar\omega/kT} - 1}]
+	} \label{eq:answer-b}
+\end{equation}
+
+\item Compare your answer with the result for the energy of $N$ harmonic oscillators calculated in the microcanonical ensemble in Problem 4.22. Do the two ensembles give identical results?
+
+\begin{equation}
+	E(T) = \frac{N\hbar\omega}{2}\qty(\frac{e^{\hbar\omega/kT} + 1}{e^{\hbar\omega/kT} - 1}) \label{eq:problem422}
+\end{equation}
+
+Massaging the terms,
+
+\begin{align}
+	E(T) &= \frac{N\hbar\omega}{2} \qty(\frac{e^{\hbar\omega/kT}+1+1-1}{e^{\hbar\omega/kT}}) \nonumber \\
+	&= \frac{N\hbar\omega}{2}\qty(\frac{e^{\hbar\omega/kT}-1}{e^{\hbar\omega/kT}-1}+\frac{2}{e^{\hbar\omega/kT}-1}) \nonumber \\
+    &= \frac{N\hbar\omega}{2}\qty(1+\frac{2}{e^{\hbar\omega/kT}-1}) \nonumber \\
+    &= N\hbar\omega\qty(\frac{1}{2}+\frac{1}{e^{\hbar\omega/kT}-1}) \nonumber \\
+	\Aboxed{    
+	    E(T) &= N\hbar\omega\qty(\frac{1}{2}+\frac{1}{e^{\beta\hbar\omega}-1})
+	 } \label{eq:answer-c}
+\end{align}
+
+The two results are the same.
+
+\end{enumerate}
+
+\section{Midterms Samplexes}
+
+\subsection{2017.11.03 Midterms}
+\begin{enumerate}[1.]
+
+	\item
+	\begin{enumerate}[(a)]
+
+		\item Write the first law of thermodynamics and account for each term briefly.
+		
+		\begin{align}
+			E &= Q+W \\
+			\dd{E} &= \dd{Q} + \dd{W}
+		\end{align}
+		
+		$E$ is the internal energy, $Q$ is the energy transfer from heating, and $W$ is the work done on the system.
+		
+		\item Write the fundamental thermodynamic relation (differential form), including the term with number of particles.
+		
+		\begin{equation}
+			\dd{E} = T\dd{S} - P\dd{V} + \mu\dd{N}
+		\end{equation}
+		
+		\item Write the energy $E$ as a function of its natural variables.
+		
+		\begin{align}
+			\dd{E} &= \pdv{E}{S}\dd{S} + \pdv{E}{V}\dd{V} + \pdv{E}{N}\dd{N} \\
+			E &= E(S,V,N)
+		\end{align}
+
+	\end{enumerate}
+
+	\item
+	\begin{enumerate}[(a)]
+	
+		\item Write the enthalpy in terms of $E$, $P$, and $V$.
+		
+		\begin{align}
+			H &= E + PV
+			\dd{H} &= \dd{E} + P\dd{V} + V\dd{P}
+		\end{align}
+		
+		\item What are the natural variables for the enthalpy.
+		
+		\begin{equation}
+			\dd{H} = \pdv{H}{S}\dd{S} + \pdv{H}{P}\dd{P} + \pdv{H}{N}\dd{N}
+		\end{equation}
+		
+		\item Show that the enthalpy of a monatomic ideal gas depends only on temperature $T$.
+		
+		\begin{align}
+			E &= \frac{3}{2}NkT \\
+			PV &= kT \\
+			H &= \frac{3}{2}kT + kT \\
+			H &= \frac{5}{2}kT \\
+			H(T) &= \frac{5}{2}kT
+		\end{align}
+	
+	\end{enumerate}
+	
+	\item Consider a system described by the van der Waals equation of state which expands at constant temperature from volume $V_1$ to volume $V_2$. Assume that the density $\rho = N/V \ll 1$ over the range of volume of interest.
+	\begin{enumerate}[(a)]
+	
+		\item Calculate the work done on the gas to the lowest relevant order in $\rho$.
+		
+		REFER TO P25 PS05 2.57 More work
+		
+		\item Calculate the work done on the gas under the same conditions assuming that the gas is ideal.
+		
+		\item Find the difference $W_{vdw} - W_{ideal}$ and discuss the reason why this difference is positive or negative as a function of temperature.	
+	
+	\end{enumerate}
+	
+	\item Consider $N=4$ noninteracting spins with magnetic moment $\mu$ that can point either parallel or antiparallel to the magnetic field $B$. If the total energy $E = -2\mu B$,
+	\begin{enumerate}[(a)]
+	
+		\item What are the accessible microstates?
+		
+		\begin{equation}
+			\Omega = \binom{4}{3} = \frac{4!}{3!(4-3)!} = 4
+		\end{equation}
+		
+		\item What is the probability that a particular spin is up or down?
+		
+		\begin{align}
+			\Pr(\uparrow) &= \frac{3}{4} \\
+			\Pr(\downarrow) &= \frac{1}{4}
+		\end{align}
+	
+	\end{enumerate}
+	
+	\item Consider $N=9$ noninteracting spins with total energy $E = -\mu B$.
+	\begin{enumerate}[(a)]
+	
+		\item What is the number of up spins?
+		
+		There should always be 5 spins up.
+		
+		\item What is the number of accessible microstates?
+		
+		\begin{equation}
+			\Omega = \binom{9}{5} = \frac{9!}{5!(9-5)!}
+		\end{equation}
+		
+		\item What is the probability that a particular spin is up or down?
+		
+		\begin{align}
+			\Pr(\uparrow) &= \frac{5}{9} \\
+			\Pr(\downarrow) &= \frac{4}{9}
+		\end{align}
+	
+	\end{enumerate}
+
+\end{enumerate}
+
+\subsection{2018.03.23 Midterms}
+\begin{enumerate}[1.]
+
+	\item Determine the natural variables of the following thermodynamic potentials by direct differentiation, and the thermodynamic variables obtained directly from them.
+	\begin{enumerate}[(a)]
+	
+		\item $H = E + PV$
+		
+		Kaya mo na 'to, jusko.
+		
+		\item $F = E - TS$
+		
+		\item $G = F + PV$
+	
+	\end{enumerate}
+	
+	\item
+	\begin{enumerate}[(a)]
+	
+		\item Which thermodynamic potentials are equal at $T=0$?
+		
+		\begin{align}
+			F &= E \\
+			H &= F + PV = G \\
+			H &= G \\
+			E &= - PV \\
+			H &= -PV + PV = 0 = G
+		\end{align}
+		
+		\item Explain each item of equality that you encountered in part (a).
+		
+		The Helmholtz free energy is equal to the internal energy at $T=0$. Since for this state, $E$ is only a function of the work done on the system, we only find that Gibbs free energy and enthalpy approaches 0 at $T=0$.
+		
+		\item What can you say about the heat capacity at $T = 0$? The internal energy $E$?
+		
+		At $T=0$, we find that $\lim_{T\rightarrow 0} S = 0$ as per the third law of thermodynamics and from the relation $\dd{S} = \dd{Q}/T = C\dd{T}/T$. Then $C$ must also approach zero. The change in internal energy of the system would only be a function of the work done on the system.
+	
+	\end{enumerate}
+	
+	\item
+	\begin{enumerate}[(a)]
+	
+		\item Find an expression that will enable you to calculate $\qty(\pdv{E}{V})_T$ for a gas, given its pressure equation of state.
+		
+		Using thermodynamic relation
+		
+		\begin{align}
+			F &= E - TS \\
+			\dd{F} &= \dd{E} - T\dd{S} - S\dd{T} \\
+			\dd{F} &= -S\dd{T} - P\dd{V} \\
+			F &= F(T,V) \\
+			\qty(\pdv{F}{V})_T &= -S\qty(\pdv{T}{P})_V - P \\
+			\pdv{V}(E-TS) &= -S\qty(\pdv{T}{P})_V - P \\
+			\qty(\pdv{E}{V})_T &= -S\qty(\pdv{T}{P})_V - P
+		\end{align}
+		
+		\item Evaluate for an ideal gas.
+		
+		\begin{align}
+			PV &= NkT \\
+			\qty(\pdv{E}{V})_T &= T\qty(\pdv{T} \qty(\frac{NkT}{V})) - \frac{NkT}{V} \\
+			&= T\qty(\frac{Nk}{V}) - \frac{NkT}{V} \\
+			\qty(\pdv{E}{V})_T &= 0
+		\end{align}
+	
+	\end{enumerate}
+	
+	\item
+	\begin{enumerate}[(a)]
+	
+		\item If the Legendre transform of $f(x)$ is $g(m)$, write the expression for $g(m)$.
+		
+		\begin{equation}
+			g(m) = f(x) - xf'(x)
+		\end{equation}
+		
+		\item Obtain the Helmholtz free energy from the enthalpy by application of the Legendre transformations.
+		
+		REFER TO P23 PS05 2.33 Helmholtz free energy as a Legendre transform
+		
+		\item Are there other ways of calculating Helmholtz free energy $F$ from enthalpy $H$? Calculate/explain.
+		
+		Yes, using Legendre transform changing dependence $H(S,P,N) \rightarrow F(T,V,N)$
+		
+		\begin{align}
+			H &= E + PV \\
+			G &= F + PV \\
+			H &= E+G-F \\
+			F &= E+G-H \\
+			\dd{F} &= T\dd{S}-P\dd{V}+\mu\dd{N} \nonumber \\
+			&\quad + (-S\dd{T} - V\dd{P} + \mu\dd{N}) \nonumber \\
+			&\quad - (T\dd{S} - P\dd{V} + \mu\dd{N}) \\
+			F &= F(T,V,N)
+		\end{align}
+	
+	\end{enumerate}
+
+\end{enumerate}
+
+\section{Finals Samplex}
+
+\subsection{2017.12.14 Final exam}
+
+\begin{enumerate}[1.]
+
+	\item
+	\begin{enumerate}[(a)]
+	
+		\item How is the uncertainty function related to the thermodynamic entropy?
+		
+		\item To the statistical entropy?
+		
+		\item What is the relationship of the thermodynamic entropy to the ``arrow of time''? Explain each part briefly.
+	
+	\end{enumerate}
+	
+	\item
+	\begin{enumerate}[(a)]
+	
+		\item Show that $F = -kT\ln{Z}$ is equivalent to $F = E-TS$.
+		
+		\begin{align}
+			\beta F &\equiv -\ln{Z} \\
+			\dd(\beta F) &= -\frac{1}{Z}\dv{Z}{\beta}\dd{\beta} - \frac{1}{Z}\dv{Z}{V} \dd{V} \\
+			&= \bar{E}\dd{\beta} - \beta\bar{P}\dd{V} \\
+			&= \dd(\beta\bar{E}) - \beta(\dd{\bar{E}} + \bar{P}\dd{V}) \\
+			\dd(\beta F - \beta\bar{E}) &= -\beta(\dd{\bar{E}} + \bar{P}\dd{V}) \\
+			\dd{E} &= T\dd{S} - P\dd{V} \\
+			\dd(\beta F - \beta\bar{E}) &= -\beta T\dd{S} \\
+			&= \frac{\dd{S}}{k} \\
+			\beta(F - \bar{E}) &= -\frac{S}{k} \\
+			F - \bar{E} &= -ST \\
+			F &= \bar{E} - TS
+		\end{align}
+		
+		\item What are the natural variables for $F$? Show by using the FTR.
+		
+		Kaya na 'to.
+		
+		\item What is the appropriate ensemble? Explain briefly.
+		
+		Canonical ensemble because the macrostates specified for a canonical ensemble are $T$, $V$, and $N$ which are the natural variables of $F$.
+	
+	\end{enumerate}
+	
+	\item
+	\begin{enumerate}[(a)]
+	
+		\item Show that for one harmonic oscillator: $f = \frac{1}{2}\hbar\omega + kT\ln(1 - e^{-\beta\hbar\omega})$.
+		
+		\item Calculate the corresponding entropy.
+		
+		\item What is the corresponding mean energy? What is the mean energy if there are $N$ harmonic oscillators in equilibrium with a heat bath at temperature $T$?
+	
+	\end{enumerate}
+	
+	\item Consider an Ising chain of $N$ spins with interaction constant $J$ and free boundary conditions.
+	\begin{enumerate}[(a)]
+	
+		\item If all these spins are parallel, what is the energy of the system?
+		
+		\item What is the energy change if an inner spin is flipped?
+		
+		\item Is there a relationship between domain size and the energy of the chain? Explain briefly.
+	
+	\end{enumerate}
+	
+	\item Find the form of the density of states in $k$-space for standing waves
+	\begin{enumerate}[(a)]
+	
+		\item In a two-dimensional box?
+		
+		\item In a one-dimensional box?
+		
+		\item How do they compare with the three-dimensional case? Explain briefly.
+		
+	\end{enumerate}
 
 \end{enumerate}
 

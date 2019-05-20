@@ -6,12 +6,44 @@
 \contentsline {section}{\numberline {6}P14 PS03 2.20 Heat pump}{3}{section.6}
 \contentsline {section}{\numberline {7}P15 PS03 2.21 Water in contact with two heat baths in succession}{3}{section.7}
 \contentsline {section}{\numberline {8}P16 PS04 2.23 More work}{4}{section.8}
-\contentsline {section}{\numberline {9}P17 PS04 2.24 Applications of (2.133)}{5}{section.9}
-\contentsline {section}{\numberline {10}P18 PS04 2.26 Maximum useful work and free energy changes}{6}{section.10}
-\contentsline {section}{\numberline {11}P19 PS04 2.25 The enthalpy}{6}{section.11}
-\contentsline {section}{\numberline {12}P20 PS04 2.27 More Maxwell relations}{7}{section.12}
-\contentsline {section}{\numberline {13}P21 PS05 2.29 Free expansion of a van der Waals gas}{8}{section.13}
-\contentsline {section}{\numberline {14}P22 PS05 2.32 Simple Legendre transforms}{8}{section.14}
-\contentsline {section}{\numberline {15}P23 PS05 2.33 Simple Legendre transforms}{9}{section.15}
-\contentsline {section}{\numberline {16}P24 PS05 2.54 Black hole thermodynamics}{9}{section.16}
-\contentsline {section}{\numberline {17}P25 PS05 2.57 More work}{11}{section.17}
+\contentsline {section}{\numberline {9}P17 PS04 2.24 Applications of (2.133)}{6}{section.9}
+\contentsline {section}{\numberline {10}P18 PS04 2.26 Maximum useful work and free energy changes}{7}{section.10}
+\contentsline {section}{\numberline {11}P19 PS04 2.25 The enthalpy}{7}{section.11}
+\contentsline {section}{\numberline {12}P20 PS04 2.27 More Maxwell relations}{8}{section.12}
+\contentsline {section}{\numberline {13}P21 PS05 2.29 Free expansion of a van der Waals gas}{9}{section.13}
+\contentsline {section}{\numberline {14}P22 PS05 2.32 Simple Legendre transforms}{9}{section.14}
+\contentsline {section}{\numberline {15}P23 PS05 2.33 Helmholtz free energy as a Legendre transform}{10}{section.15}
+\contentsline {section}{\numberline {16}P24 PS05 2.54 Black hole thermodynamics}{10}{section.16}
+\contentsline {section}{\numberline {17}P25 PS05 2.57 More work}{12}{section.17}
+\contentsline {section}{\numberline {18}P26 PS06 3.20 Uncertainty}{12}{section.18}
+\contentsline {section}{\numberline {19}P27 PS06 3.25 Testing accuracy}{13}{section.19}
+\contentsline {paragraph}{Case 1}{13}{section*.3}
+\contentsline {paragraph}{Case 2}{13}{section*.4}
+\contentsline {paragraph}{Case 3}{13}{section*.5}
+\contentsline {paragraph}{Case 3}{14}{section*.6}
+\contentsline {section}{\numberline {20}P28 PS06 3.34 Density fluctuations}{14}{section.20}
+\contentsline {section}{\numberline {21}P29 PS06 3.35 Random walk}{14}{section.21}
+\contentsline {section}{\numberline {22}P30 PS06 3.37 Calculation of the normalization constant}{15}{section.22}
+\contentsline {section}{\numberline {23}P31 PS07 3.39 Exponential probability density}{15}{section.23}
+\contentsline {section}{\numberline {24}P32 PS07 3.40 Probability density for velocity}{17}{section.24}
+\contentsline {section}{\numberline {25}P33 PS07 3.43 Other probability distributions}{18}{section.25}
+\contentsline {section}{\numberline {26}P34 PS07 3.45 Central limit theorem}{19}{section.26}
+\contentsline {section}{\numberline {27}P35 PS07 3.72 Alternative derivation of the Gaussian distribution}{20}{section.27}
+\contentsline {section}{\numberline {28}P36 PS08 4.5 Standard deviation of the energy of subsystem $A$}{22}{section.28}
+\contentsline {section}{\numberline {29}P37 PS08 4.10 Rapid increase in the number of states}{22}{section.29}
+\contentsline {section}{\numberline {30}P38 PS08 4.14 Estimation of number of states}{23}{section.30}
+\contentsline {section}{\numberline {31}P39 PS08 4.15 Approximate expression for $\Gamma (E,V,N)$}{24}{section.31}
+\contentsline {section}{\numberline {32}P40 PS08 4.16 Density of states of ideal gas}{24}{section.32}
+\contentsline {section}{\numberline {33}P41 PS08 4.19 The Sackur-Tetrode expression for the entropy}{24}{section.33}
+\contentsline {section}{\numberline {34}P42 PS08 4.20 Chemical potential of an ideal gas}{25}{section.34}
+\contentsline {section}{\numberline {35}P43 PS08 4.21 The energy as a function of the temperature}{25}{section.35}
+\contentsline {section}{\numberline {36}P44 PS08 4.22 The Einstein solid in the microcanonical ensemble}{26}{section.36}
+\contentsline {section}{\numberline {37}P45 PS08 4.24 Relative abundance of two isomers}{27}{section.37}
+\contentsline {section}{\numberline {38}P46 PS08 4.25 Distribution of energy in the canonical ensemble}{28}{section.38}
+\contentsline {section}{\numberline {39}P47 PS08 4.26}{28}{section.39}
+\contentsline {section}{\numberline {40}P48 PS08 4.28 Thermodynamic properties of a system of harmonic oscillators}{28}{section.40}
+\contentsline {section}{\numberline {41}Midterms Samplexes}{30}{section.41}
+\contentsline {subsection}{\numberline {41.1}2017.11.03 Midterms}{30}{subsection.41.1}
+\contentsline {subsection}{\numberline {41.2}2018.03.23 Midterms}{30}{subsection.41.2}
+\contentsline {section}{\numberline {42}Finals Samplex}{31}{section.42}
+\contentsline {subsection}{\numberline {42.1}2017.12.14 Final exam}{31}{subsection.42.1}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  19 MAY 2019 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2019.1.18)  20 MAY 2019 21:18
 entering extended mode
 **./FINALS.tex
 (FINALS.tex
@@ -668,7 +668,12 @@ Package: physics
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
-) (FINALS.aux
+)
+
+LaTeX Warning: Unused global option(s):
+    [9pt].
+
+(FINALS.aux
 
 LaTeX Warning: Label `eq:answer1' multiply defined.
 
@@ -738,23 +743,71 @@ LaTeX Warning: Label `eq:vanderwaals' multiply defined.
 
 LaTeX Warning: Label `eq:answer-a' multiply defined.
 
+
+LaTeX Warning: Label `eq:answer-b' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer-a' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer-b' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer-c' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer-a' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer-c' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer-b' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer-c' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer-b' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer' multiply defined.
+
+
+LaTeX Warning: Label `eq:mean-energy' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer-e' multiply defined.
+
+
+LaTeX Warning: Label `eq:entropy' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer-b' multiply defined.
+
+
+LaTeX Warning: Label `eq:answer-c' multiply defined.
+
 )
 \openout1 = `FINALS.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 \AtBeginShipoutBox=\box56
  ("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
@@ -764,7 +817,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 22.
+Package hyperref Info: Link coloring ON on input line 23.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -774,9 +827,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count316
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
 
 (FINALS.out) (FINALS.out)
 \@outlinefile=\write3
@@ -850,15 +903,15 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 22.
-LaTeX Info: Redefining \celsius on input line 22.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 22.
+(lastpage)             ! on input line 23.
+LaTeX Info: Redefining \celsius on input line 23.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 23.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 22.
-Package gensymb Info: Using \Omega for \ohm on input line 22.
+LaTeX Info: Redefining \ohm on input line 23.
+Package gensymb Info: Using \Omega for \ohm on input line 23.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -945,21 +998,21 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
 \c@lstlisting=\count323
-LaTeX Font Info:    Try loading font information for U+lasy on input line 22.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 23.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 22.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 22.
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -973,13 +1026,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--14
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
- [] [][][]\OT1/cmr/bx/n/10 P23 PS05 2.33 Sim-ple Leg-en-dre 
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+ [] [][][]\OT1/cmr/bx/n/10 P24 PS05 2.54 Black hole 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
- [] [][][]\OT1/cmr/bx/n/10 P24 PS05 2.54 Black hole 
+Underfull \hbox (badness 6758) in paragraph at lines 26--26
+ [] [][][]\OT1/cmr/bx/n/10 P30 PS06 3.37 Cal-cu-la-tion of the 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+ [] [][][]\OT1/cmr/bx/n/10 P33 PS07 3.43 Other prob-a-bil-ity 
+ []
+
+
+Underfull \hbox (badness 5260) in paragraph at lines 37--37
+ [] [][][]\OT1/cmr/bx/n/10 P41 PS08 4.19 The Sackur-Tetrode 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+ [] [][][]\OT1/cmr/bx/n/10 P48 PS08 4.28 Ther-mo-dy-namic 
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 44--44
+ \OT1/cmr/bx/n/10 prop-er-ties of a sys-tem of har-monic 
  []
 
 )
@@ -990,23 +1063,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.45 \clearpage
+l.46 \clearpage
                 [1
 
-
 ]
-<work.png, id=110, 444.4605pt x 280.04625pt>
+Underfull \hbox (badness 2012) in paragraph at lines 50--50
+[]\OT1/cmr/bx/n/12 P09 PS02 2.8 Work in a cyclic
+ []
+
+<work.png, id=269, 444.4605pt x 280.04625pt>
 File: work.png Graphic file (type png)
 <use work.png>
-Package pdftex.def Info: work.png  used on input line 54.
+Package pdftex.def Info: work.png  used on input line 55.
 (pdftex.def)             Requested size: 177.63632pt x 111.92677pt.
 
-Overfull \hbox (21.46732pt too wide) detected at line 71
+Overfull \hbox (21.46732pt too wide) detected at line 72
 []
  []
 
 
-Underfull \hbox (badness 4168) in paragraph at lines 120--121
+Underfull \hbox (badness 4168) in paragraph at lines 121--122
 []\OT1/cmr/m/n/10 Simplifying equa-tions [] through [] and
  []
 
@@ -1014,110 +1090,587 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.138 \end{eqnarray}
+l.139 \end{eqnarray}
                      [1
 
  <./work.png>]
-Underfull \hbox (badness 4582) in paragraph at lines 256--257
+Underfull \hbox (badness 4582) in paragraph at lines 257--258
 []\OT1/cmr/m/n/10 The pres-sure in-creases more with adi-a-batic
  []
 
+
+Underfull \hbox (badness 1694) in paragraph at lines 261--261
+[]\OT1/cmr/bx/n/12 P13 PS03 2.18 Work done in a
+ []
+
 [2]
-Underfull \hbox (badness 1009) in paragraph at lines 322--323
+Underfull \hbox (badness 1009) in paragraph at lines 323--324
 \OT1/cmr/m/n/10 A heat pump works on the same prin-ci-ple as a
  []
 
 [3]
-Underfull \hbox (badness 1454) in paragraph at lines 469--470
+Underfull \hbox (badness 1454) in paragraph at lines 470--471
 []\OT1/cmr/m/n/10 Suppose that $\OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 = \OML/cmm
 /m/it/10 C[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 C$ \OT1/cmr/m/n/10 (a con-stant
 
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 469--470
+Underfull \hbox (badness 6141) in paragraph at lines 470--471
 \OT1/cmr/m/n/10 the form of the ex-pres-sions for the fi-nal
  []
 
 [4]
-Underfull \hbox (badness 1210) in paragraph at lines 502--503
+Underfull \hbox (badness 1210) in paragraph at lines 503--504
 \OT1/cmr/m/n/10 di-rectly to the fi-nal tem-per-a-ture. The fi-nal
  []
 
+
+Underfull \hbox (badness 1436) in paragraph at lines 515--516
+[]\OT1/cmr/m/n/10 Since the heat ca-pac-i-ties of both bod-ies are
+ []
+
+
+Underfull \hbox (badness 2409) in paragraph at lines 529--530
+\OT1/cmr/m/n/10 max-i-mum work is 0 be-cause the pro-cess is
+ []
+
 [5]
-Underfull \hbox (badness 1117) in paragraph at lines 599--600
+Underfull \hbox (badness 6910) in paragraph at lines 582--582
+[]\OT1/cmr/bx/n/12 P17 PS04 2.24 Ap-pli-ca-tions of
+ []
+
+[6]
+Underfull \hbox (badness 1210) in paragraph at lines 669--669
+[]\OT1/cmr/bx/n/12 P18 PS04 2.26 Max-i-mum use-ful
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 673--674
 \OT1/cmr/m/n/10 is zero, $\OML/cmm/m/it/10 V \OT1/cmr/m/n/10 = 0$, and the ini
 -tial and fi-nal
  []
 
-[6] [7]
-Underfull \hbox (badness 1297) in paragraph at lines 916--917
-[]\OT1/cmr/m/n/10 The change in tem-per-a-ture w.r.t. vol-ume is
+[7]
+Underfull \hbox (badness 5446) in paragraph at lines 847--847
+[]\OT1/cmr/bx/n/12 P20 PS04 2.27 More Maxwell
  []
 
 [8]
-Underfull \hbox (badness 1874) in paragraph at lines 972--973
+Underfull \hbox (badness 1297) in paragraph at lines 990--991
+[]\OT1/cmr/m/n/10 The change in tem-per-a-ture w.r.t. vol-ume is
+ []
+
+
+Underfull \hbox (badness 1292) in paragraph at lines 992--992
+[]\OT1/cmr/bx/n/12 P22 PS05 2.32 Sim-ple Leg-en-dre
+ []
+
+[9]
+Overfull \hbox (13.66805pt too wide) detected at line 1053
+[]
+ []
+
+
+Overfull \hbox (20.98476pt too wide) detected at line 1063
+[]
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 1067--1068
+\OT1/cmr/m/n/10 trans-form by vi-sual in-spec-tion. A func-tion
+ []
+
+
+Underfull \hbox (badness 4479) in paragraph at lines 1071--1071
+[]\OT1/cmr/bx/n/12 P23 PS05 2.33 Helmholtz free
+ []
+
+
+Underfull \hbox (badness 1874) in paragraph at lines 1073--1074
 \OT1/cmr/m/n/10 Start from the func-tion $\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\O
 ML/cmm/m/it/10 S; V; N\OT1/cmr/m/n/10 )$ and use the
  []
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 1007--1008
+Underfull \hbox (badness 10000) in paragraph at lines 1107--1107
+[]\OT1/cmr/bx/n/12 P24 PS05 2.54 Black hole
+ []
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 1108--1109
 \OT1/cmr/m/n/10 A black hole is cre-ated from the col-lapse of a
  []
 
-[9]
-Underfull \hbox (badness 6001) in paragraph at lines 1174--1175
+[10]
+Underfull \hbox (badness 6001) in paragraph at lines 1274--1275
 \OT1/cmr/m/n/10 Consider a sys-tem de-scribed by the van der
  []
 
-[10]
+[11]
+Overfull \hbox (26.19415pt too wide) detected at line 1346
+[]
+ []
 
-Package caption Warning: Unused \captionsetup[table] on input line 46.
-See the caption package documentation for explanation.
+
+Underfull \vbox (badness 1552) has occurred while \output is active []
+
+ [12]
+Underfull \hbox (badness 1824) in paragraph at lines 1399--1400
+[]\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 P$\OT1/cmr/m/n/10 (D) rep-re-sent the p
+rob-a-bil-ity of hav-ing
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 1442--1443
+\OT1/cmr/m/n/10 prob-a-bil-i-ties $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ($D$) = []
+$ and $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ($ND$) = []$.
+ []
+
+[13]
+Underfull \hbox (badness 1946) in paragraph at lines 1483--1484
+[]\OT1/cmr/m/n/10 What is the prob-a-bil-ity $\OML/cmm/m/it/10 p$ \OT1/cmr/m/n/
+10 that a par-tic-u-lar
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 1696--1696
+[]\OT1/cmr/bx/n/12 P31 PS07 3.39 Ex-po-nen-tial
+ []
+
+[15]
+Overfull \hbox (15.22586pt too wide) detected at line 1793
+[]
+ []
+
+[16]
+Underfull \hbox (badness 1400) in paragraph at lines 1857--1858
+[]\OT1/cmr/m/n/10 The mul-ti-ple in-te-grals de-fined in [] can be
+ []
+
+[17]
+<lorentz.png, id=805, 347.6187pt x 212.4738pt>
+File: lorentz.png Graphic file (type png)
+<use lorentz.png>
+Package pdftex.def Info: lorentz.png  used on input line 1929.
+(pdftex.def)             Requested size: 177.63632pt x 108.57741pt.
+
+Underfull \hbox (badness 3009) in paragraph at lines 1930--1930
+[]\OT1/cmr/m/n/9 Figure 2: |Com-par-i-son of Lorentzian and Gaus-sian
+ []
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 1936--1937
+[]\OT1/cmr/m/n/10 Calculate the first mo-ment of the Lorentz
+ []
+
+
+Overfull \hbox (2.81625pt too wide) detected at line 1993
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1999--1999
+[]\OT1/cmr/bx/n/12 P34 PS07 3.45 Cen-tral limit
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 2000--2001
+\OT1/cmr/m/n/10 Use Pro-gram \OT1/cmtt/m/n/10 CentralLimitTheorem \OT1/cmr/m/n/
+10 to test the
+ []
+
+[18 <./lorentz.png>]
+Underfull \hbox (badness 7362) in paragraph at lines 2004--2005
+[]\OT1/cmr/m/n/10 Assume that the vari-able $\OML/cmm/m/it/10 s[]$ \OT1/cmr/m/n
+/10 is uni-formly
+ []
+
+
+Underfull \hbox (badness 4899) in paragraph at lines 2004--2005
+\OT1/cmr/m/n/10 your nu-mer-i-cal re-sults with your an-a-lyt-i-cal
+ []
+
+
+Underfull \hbox (badness 2573) in paragraph at lines 2022--2023
+[]\OT1/cmr/m/n/10 The stan-dard de-vi-a-tion can be ob-tained by
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2049--2050
+[]\OT1/cmr/m/n/10 For $\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 = 12$, run-ning the p
+ro-gram
+ []
+
+
+Underfull \hbox (badness 2368) in paragraph at lines 2049--2050
+\OT1/cmtt/m/n/10 CentralLimitTheorem \OT1/cmr/m/n/10 for 40,000 tri-als yields
+ []
+
+
+Underfull \hbox (badness 2393) in paragraph at lines 2051--2052
+[]\OT1/cmr/m/n/10 To de-ter-mine the gen-er-al-ity of your re-sults,
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 2066--2067
+[]\OT1/cmr/m/n/10 Since $[]\OML/cmm/m/it/10 s < []e[]$\OT1/cmr/m/n/10 , the ex-
+po-nen-tial term
+ []
+
+
+Underfull \hbox (badness 7595) in paragraph at lines 2079--2080
+[]\OT1/cmr/m/n/10 Consider the Lorentz dis-tri-bu-tion $\OML/cmm/m/it/10 f\OT1/
+cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) =
+ []
+
+[19]
+Underfull \hbox (badness 1286) in paragraph at lines 2099--2100
+[]\OT1/cmr/m/n/10 Each value of $\OML/cmm/m/it/10 S$ \OT1/cmr/m/n/10 can be con
+-sid-ered to be a
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 2099--2100
+\OT1/cmr/m/n/10 mea-sure-ment. The sam-ple vari-ance $[]$ is a
+ []
+
+
+Overfull \hbox (49.19978pt too wide) detected at line 2124
+[]
+ []
+
+
+Underfull \vbox (badness 1005) has occurred while \output is active []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 2134--2135
+[]\OT1/cmr/m/n/10 The quan-tity $[]$ is known as the stan-dard
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2159--2159
+[]\OT1/cmr/bx/n/12 P35 PS07 3.72 Al-ter-na-tive
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2159--2159
+\OT1/cmr/bx/n/12 deriva-tion of the Gaus-sian
+ []
+
+[20]
+Overfull \hbox (2.43695pt too wide) detected at line 2230
+[]
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 2270--2271
+[]\OT1/cmr/m/n/10 The vari-ance of the bi-no-mial dis-tri-bu-tion is
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 2270--2271
+\OT1/cmr/m/n/10 given in (3.99) and is equal to $[] =
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 2307--2308
+\OT1/cmr/m/n/10 mo-ments of the Gaus-sian and bi-no-mial
+ []
+
+
+Underfull \hbox (badness 3354) in paragraph at lines 2307--2308
+\OT1/cmr/m/n/10 dis-tri-bu-tions are equal, then their vari-ances
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2320--2321
+[]\OT1/cmr/m/n/10 The third mo-ment is a mea-sure of the
+ []
+
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 2324.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 2324.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2324.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2324.
+
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <9> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 2340.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 2359--2360
+[]\OT1/cmr/m/n/10 The sec-ond mo-ment (raw vari-ance) $[]$ is
+ []
+
+
+Underfull \hbox (badness 6944) in paragraph at lines 2382--2383
+[]\OT1/cmr/m/n/10 Consider an Ein-stein solid of $\OML/cmm/m/it/10 N \OT1/cmr/m
+/n/10 = 20$
+ []
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 2382--2383
+\OT1/cmr/m/n/10 dis-tin-guish-able par-ti-cles. What is the to-tal
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 2384--2385
+\OT1/cmr/m/n/10 par-ti-cles, the to-tal num-ber of ac-ces-si-ble
+ []
+
+<microstates.png, id=931, 352.9185pt x 212.7147pt>
+File: microstates.png Graphic file (type png)
+<use microstates.png>
+Package pdftex.def Info: microstates.png  used on input line 2411.
+(pdftex.def)             Requested size: 177.63632pt x 107.0679pt.
+<fixedN.png, id=933, 352.9185pt x 212.4738pt>
+File: fixedN.png Graphic file (type png)
+<use fixedN.png>
+Package pdftex.def Info: fixedN.png  used on input line 2424.
+(pdftex.def)             Requested size: 177.63632pt x 106.94664pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2433--2433
+[]\OT1/cmr/bx/n/12 P38 PS08 4.14 Es-ti-ma-tion of
+ []
+
+
+Overfull \hbox (53.55894pt too wide) detected at line 2480
+\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 )\OML/cmm
+/m/it/10 E \OT1/cmr/m/n/10 = [][]
+ []
+
+[23 <./microstates.png> <./fixedN.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2488--2488
+[]\OT1/cmr/bx/n/12 P39 PS08 4.15 Ap-prox-i-mate
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2488.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\Gamma' on input line 2488.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2488.
+
+
+Underfull \hbox (badness 5622) in paragraph at lines 2489--2490
+\OT1/cmr/m/n/10 We can ob-tain an ap-prox-i-mate ex-pres-sion for
+ []
+
+
+Overfull \hbox (0.62631pt too wide) detected at line 2494
+[]
+ []
+
+
+Underfull \hbox (badness 2608) in paragraph at lines 2526--2527
+[]\OT1/cmr/m/n/10 where $  \OMS/cmsy/m/n/10 / \OML/cmm/m/it/10 V[]$\OT1/cmr/m/n
+/10 , $  \OMS/cmsy/m/n/10 / \OML/cmm/m/it/10 E[]$\OT1/cmr/m/n/10 , and $  \OMS/
+cmsy/m/n/10 /
+ []
+
+
+LaTeX Warning: Reference `eq:density-states' on page 24 undefined on input line
+ 2553.
+
+[24pdfTeX warning (ext4): destination with the same identifier (name{equation.3
+0.0.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.2578 \end{align}
+                  ]
+Underfull \hbox (badness 5359) in paragraph at lines 2604--2605
+[]\OT1/cmr/m/n/10 Perform the nec-es-sary dif-fer-en-ti-a-tion on []
+ []
+
+
+Overfull \hbox (7.69716pt too wide) detected at line 2616
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+Underfull \hbox (badness 1629) in paragraph at lines 2693--2694
+\OML/cmm/m/it/10 T$ \OT1/cmr/m/n/10 on the to-tal en-ergy $\OML/cmm/m/it/10 E$ 
+\OT1/cmr/m/n/10 in the mi-cro-canon-i-cal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2708--2709
+[]\OT1/cmr/m/n/10 The num-ber of ac-ces-si-ble mi-crostates in
+ []
+
+
+Underfull \hbox (badness 2213) in paragraph at lines 2708--2709
+\OT1/cmr/m/n/10 which $\OML/cmm/m/it/10 N$ \OT1/cmr/m/n/10 dis-tin-guish-able o
+s-cil-la-tors can share $\OML/cmm/m/it/10 Q$
+ []
+
+
+Overfull \hbox (27.43861pt too wide) detected at line 2732
+[]
+ []
+
+[26]
+Overfull \hbox (3.12152pt too wide) detected at line 2768
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 5050) in paragraph at lines 2796--2797
+\OT1/cmr/m/n/10 The hy-dro-car-bon 2-butene, CH$[]\OMS/cmsy/m/n/10  $\OT1/cmr/m
+/n/10 CH$=$CH$\OMS/cmsy/m/n/10  $\OT1/cmr/m/n/10 CH$[]$,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2805--2806
+[]\OT1/cmr/m/n/10 The rel-a-tive prob-a-bil-ity with-out
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 2811--2812
+[]\OT1/cmr/m/n/10 The en-ergy dif-fer-ence be-tween the two
+ []
+
+
+Underfull \hbox (badness 1320) in paragraph at lines 2811--2812
+\OT1/cmr/m/n/10 iso-mer lower than the cis iso-mer. The rel-a-tive
+ []
+
+
+Underfull \hbox (badness 4416) in paragraph at lines 2835--2835
+[]\OT1/cmr/bx/n/12 P46 PS08 4.25 Dis-tri-bu-tion of
+ []
+
+
+Underfull \hbox (badness 3838) in paragraph at lines 2884--2884
+[]\OT1/cmr/bx/n/12 P48 PS08 4.28 Ther-mo-dy-namic
+ []
+
+[28]
+Underfull \hbox (badness 1983) in paragraph at lines 2968--2969
+[]\OT1/cmr/m/n/10 Given the re-sult (4.132), what is the mean
+ []
+
+[29]
+Underfull \hbox (badness 2245) in paragraph at lines 3060--3061
+[]\OT1/cmr/m/n/10 Consider a sys-tem de-scribed by the van der
+ []
+
+
+Underfull \hbox (badness 3219) in paragraph at lines 3073--3074
+\OT1/cmr/m/n/10 mo-ment $\OML/cmm/m/it/10 $ \OT1/cmr/m/n/10 that can point ei-
+ther par-al-lel or
+ []
+
+[30]
+Underfull \hbox (badness 5161) in paragraph at lines 3144--3145
+[]\OT1/cmr/m/n/10 Explain each item of equal-ity that you
+ []
+
+
+Underfull \hbox (badness 5490) in paragraph at lines 3191--3192
+\OT1/cmr/m/n/10 en-thalpy by ap-pli-ca-tion of the Leg-en-dre
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3195--3196
+[]\OT1/cmr/m/n/10 Are there other ways of cal-cu-lat-ing
+ []
+
+
+Underfull \hbox (badness 7256) in paragraph at lines 3195--3196
+\OT1/cmr/m/n/10 Helmholtz free en-ergy $\OML/cmm/m/it/10 F$ \OT1/cmr/m/n/10 fro
+m en-thalpy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3197--3198
+[]\OT1/cmr/m/n/10 Yes, us-ing Leg-en-dre trans-form chang-ing
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 3291--3292
+[]\OT1/cmr/m/n/10 How do they com-pare with the
+ []
 
 
 AED: lastpage setting LastPage
-[11
+[32
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1224.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1224.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3297.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3297.
  (FINALS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1224.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1224.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3297.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3297.
 
 Package rerunfilecheck Info: File `FINALS.out' has not changed.
-(rerunfilecheck)             Checksum: 9A8F8D134614A20342BF123C91F511D6;1242.
+(rerunfilecheck)             Checksum: 288CF726BF75B34A26CF5C49A9063E0B;3539.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1224.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3297.
  ) 
 Here is how much of TeX's memory you used:
- 22998 strings out of 492973
- 412526 string characters out of 3135926
- 494964 words of memory out of 3000000
- 26415 multiletter control sequences out of 15000+200000
- 539830 words of font info for 55 fonts, out of 3000000 for 9000
+ 23719 strings out of 492973
+ 422481 string characters out of 3135926
+ 510751 words of memory out of 3000000
+ 26603 multiletter control sequences out of 15000+200000
+ 551221 words of font info for 101 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,17n,63p,472b,846s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,17n,63p,889b,940s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.p
-fb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on FINALS.pdf (13 pages, 275883 bytes).
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><D:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cmextra/cmex9.pfb><D:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr6.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.
+pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/symbols/msbm10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/symbols/msbm7.pfb>
+Output written on FINALS.pdf (34 pages, 726100 bytes).
 PDF statistics:
- 554 PDF objects out of 1000 (max. 8388607)
- 250 named destinations out of 1000 (max. 500000)
- 142 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1477 PDF objects out of 1728 (max. 8388607)
+ 753 named destinations out of 1000 (max. 500000)
+ 381 words of extra memory for PDF output out of 10000 (max. 10000000)
 

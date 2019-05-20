@@ -1,0 +1,199 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5716,        189]
+NotebookOptionsPosition[      5397,        173]
+NotebookOutlinePosition[      5745,        188]
+CellTagsIndexPosition[      5702,        185]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["\[Integral]", "V1", "V2"], 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"n", " ", "k", " ", "T"}], " ", "+", " ", 
+     RowBox[{
+      FractionBox[
+       SuperscriptBox["n", "2"], 
+       SuperscriptBox["V", "2"]], "n", " ", "a", " ", "b"}], "-", 
+     RowBox[{"a", " ", 
+      FractionBox[
+       SuperscriptBox["n", "2"], 
+       SuperscriptBox["V", "2"]], "V"}]}], 
+    RowBox[{"V", "-", 
+     RowBox[{"n", " ", "b"}]}]], 
+   RowBox[{"\[DifferentialD]", "V"}]}]}]], "Input",
+ CellChangeTimes->{{3.76724553222957*^9, 3.767245585771637*^9}, {
+  3.767245652591363*^9, 3.7672456582182007`*^9}, {3.76724569965368*^9, 
+  3.767245705700556*^9}, {3.767245758514762*^9, 3.7672457680831113`*^9}, {
+  3.767246039819124*^9, 3.767246041679121*^9}, {3.76724626686209*^9, 
+  3.7672462930582294`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ConditionalExpression", "[", 
+  RowBox[{
+   RowBox[{"n", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"a", " ", "n", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", 
+          FractionBox["1", "V1"]}], "+", 
+         FractionBox["1", "V2"]}], ")"}]}], "+", 
+      RowBox[{"k", " ", "T", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"Log", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "b"}], " ", "n"}], "+", "V1"}], "]"}]}], "+", 
+         RowBox[{"Log", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "b"}], " ", "n"}], "+", "V2"}], "]"}]}], ")"}]}]}], 
+     ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Re", "[", 
+          FractionBox["V1", 
+           RowBox[{
+            RowBox[{"-", "V1"}], "+", "V2"}]], "]"}], "\[GreaterEqual]", 
+         "0"}], "&&", 
+        RowBox[{
+         FractionBox["V1", 
+          RowBox[{"V1", "-", "V2"}]], "\[NotEqual]", "0"}]}], ")"}], "||", 
+      RowBox[{
+       FractionBox["V1", 
+        RowBox[{"V1", "-", "V2"}]], "\[NotElement]", "Reals"}], "||", 
+      RowBox[{
+       RowBox[{"Re", "[", 
+        FractionBox["V1", 
+         RowBox[{"V1", "-", "V2"}]], "]"}], ">", "1"}]}], ")"}], "&&", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Re", "[", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "b"}], " ", "n"}], "+", "V1"}], 
+             RowBox[{
+              RowBox[{"-", "V1"}], "+", "V2"}]], "]"}], "<", 
+           RowBox[{"-", "1"}]}], "||", 
+          RowBox[{
+           FractionBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "b"}], " ", "n"}], "+", "V1"}], 
+            RowBox[{
+             RowBox[{"-", "V1"}], "+", "V2"}]], "\[NotElement]", "Reals"}]}], 
+         ")"}], "&&", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Re", "[", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "b"}], " ", "n"}], "+", "V1"}], 
+             RowBox[{"V1", "-", "V2"}]], "]"}], "\[Equal]", "0"}], "||", 
+          RowBox[{
+           RowBox[{"Re", "[", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "b"}], " ", "n"}], "+", "V1"}], 
+             RowBox[{"V1", "-", "V2"}]], "]"}], "\[GreaterEqual]", "1"}]}], 
+         ")"}]}], ")"}], "||", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Re", "[", 
+          FractionBox[
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "b"}], " ", "n"}], "+", "V1"}], 
+           RowBox[{
+            RowBox[{"-", "V1"}], "+", "V2"}]], "]"}], "\[GreaterEqual]", 
+         "0"}], "&&", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Re", "[", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "b"}], " ", "n"}], "+", "V1"}], 
+             RowBox[{"V1", "-", "V2"}]], "]"}], "<", "0"}], "||", 
+          RowBox[{
+           FractionBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "b"}], " ", "n"}], "+", "V1"}], 
+            RowBox[{
+             RowBox[{"-", "V1"}], "+", "V2"}]], "\[NotElement]", "Reals"}]}], 
+         ")"}]}], ")"}], "||", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "b"}], " ", "n"}], "+", "V1"}], 
+        RowBox[{"V1", "-", "V2"}]], "\[NotElement]", "Reals"}]}], ")"}]}]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{
+  3.7672456191523333`*^9, 3.7672456638293047`*^9, {3.767245711709939*^9, 
+   3.767245733175622*^9}, {3.767245784483877*^9, 3.7672457994275923`*^9}, 
+   3.76724605061071*^9, 3.767248494866148*^9}]
+}, Open  ]]
+},
+WindowSize->{759, 697},
+WindowMargins->{{Automatic, 380}, {24, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 843, 22, 64, "Input"],
+Cell[1426, 46, 3955, 124, 189, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
